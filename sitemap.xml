@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+     <loc>https://cexiolabs.github.io/cryptopay.docs/</loc>
+     <lastmod>2019-11-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cexiolabs.github.io/cryptopay.docs/release-notes/</loc>
+     <lastmod>2019-11-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cexiolabs.github.io/cryptopay.docs/terminology/</loc>
+     <lastmod>2019-11-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cexiolabs.github.io/cryptopay.docs/api/</loc>
+     <lastmod>2019-11-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cexiolabs.github.io/cryptopay.docs/websocket-api/</loc>
+     <lastmod>2019-11-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
