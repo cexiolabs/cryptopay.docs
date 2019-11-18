@@ -243,10 +243,37 @@
     Instrument kinds
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crypto_sell" class="md-nav__link">
+    CRYPTO_SELL
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merhcant" class="md-nav__link">
+    Merhcant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    Order
+  </a>
   
 </li>
       
@@ -318,10 +345,37 @@
     Instrument kinds
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crypto_sell" class="md-nav__link">
+    CRYPTO_SELL
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merhcant" class="md-nav__link">
+    Merhcant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    Order
+  </a>
   
 </li>
       
@@ -375,6 +429,44 @@
 </tr>
 </tbody>
 </table>
+<h5 id="crypto_sell">CRYPTO_SELL</h5>
+<div class="mermaid">sequenceDiagram
+    User-&gt;&gt;+B2C Merchant: Goes to site
+        B2C Merchant-&gt;&gt;+B2B Merchant: Request crypto payment
+            B2B Merchant-&gt;&gt;+CryptoPay: Get instruments
+            CryptoPay--&gt;&gt;-B2B Merchant: Currencies, rates, etc.
+        B2B Merchant--&gt;&gt;-B2C Merchant: Available instuments
+    B2C Merchant--&gt;&gt;-User: Render instuments
+
+
+    User-&gt;&gt;+B2C Merchant: Request order
+        B2C Merchant-&gt;&gt;+B2B Merchant: Create order
+            B2B Merchant-&gt;&gt;+CryptoPay: Create order
+                CryptoPay-&gt;&gt;+Exchange: Get rate
+                Exchange--&gt;&gt;-CryptoPay: Current rate
+                opt Skip for dry-run mode
+                    CryptoPay-&gt;&gt;+Wallet: Generate new address
+                    Wallet--&gt;&gt;-CryptoPay: New address
+                end
+                CryptoPay-&gt;&gt;CryptoPay: Calulate cash flow
+                B2B Merchant--&gt;&gt;B2C Merchant: Order attribures
+                B2C Merchant--&gt;&gt;User: Render order details
+                Wallet--&gt;&gt;CryptoPay: Confirmations: 0 (configurable)
+                CryptoPay--&gt;&gt;B2B Merchant: Notify (PAID)
+                B2B Merchant--&gt;&gt;B2C Merchant: Notify (DEPOSIT)
+                Wallet--&gt;&gt;CryptoPay: Confirmations: 1 (configurable)
+                CryptoPay-&gt;&gt;+Exchange: Make exchange
+                Exchange--&gt;&gt;-CryptoPay: Exchange approved
+                B2C Merchant--&gt;&gt;User: Deposit processing
+                Wallet--&gt;&gt;CryptoPay: Confirmations: X (configurable)
+            CryptoPay--&gt;&gt;-B2B Merchant: Notify (READY TO SHIP)
+        B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
+    B2C Merchant--&gt;&gt;-User: Deposit accepted</div>
+
+<h2 id="merhcant">Merhcant</h2>
+<p>TBD</p>
+<h2 id="order">Order</h2>
+<p>TBD</p>
                 
                   
                 
