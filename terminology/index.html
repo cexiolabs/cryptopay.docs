@@ -247,6 +247,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#crypto_buy" class="md-nav__link">
+    CRYPTO_BUY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crypto_sell" class="md-nav__link">
     CRYPTO_SELL
   </a>
@@ -349,6 +356,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#crypto_buy" class="md-nav__link">
+    CRYPTO_BUY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crypto_sell" class="md-nav__link">
     CRYPTO_SELL
   </a>
@@ -423,50 +437,85 @@
 <td>CRYPTO_SELL</td>
 <td>Sell crypo asset (convert crypto to fiat)</td>
 </tr>
-<tr>
-<td>CRYPTO_PAYMENT</td>
-<td>Payment for goods (buy goods by crypto)</td>
-</tr>
 </tbody>
 </table>
+<h5 id="crypto_buy">CRYPTO_BUY</h5>
+<div class="mermaid">sequenceDiagram
+User-&gt;&gt;+B2C Merchant: Goes to site
+B2C Merchant-&gt;&gt;+B2B Merchant: Request crypto payment
+B2B Merchant-&gt;&gt;+CryptoPay: Get instruments
+CryptoPay--&gt;&gt;-B2B Merchant: Currencies, rates, etc.
+B2B Merchant--&gt;&gt;-B2C Merchant: Available instuments
+B2C Merchant--&gt;&gt;-User: Render instuments
+
+User-&gt;&gt;+B2C Merchant: Request order
+B2C Merchant-&gt;&gt;+B2B Merchant: Create order
+B2B Merchant-&gt;&gt;+CryptoPay: Create order
+CryptoPay-&gt;&gt;+Exchange: Get rate
+Exchange--&gt;&gt;-CryptoPay: Current rate
+CryptoPay-&gt;&gt;CryptoPay: Calulate cash flow
+CryptoPay--&gt;&gt;B2B Merchant: Order details
+B2B Merchant--&gt;&gt;B2C Merchant: Order attribures
+B2C Merchant--&gt;&gt;User: Render order details
+opt Skip for dry-run mode
+User-&gt;&gt;B2C Merchant: Accept order details
+B2C Merchant-&gt;&gt;B2B Merchant: Approve order
+B2B Merchant-&gt;&gt;+CryptoPay: Start order
+CryptoPay--&gt;&gt;B2B Merchant: Started
+B2B Merchant--&gt;&gt;B2C Merchant: Started
+B2C Merchant--&gt;&gt;User: Started
+CryptoPay-&gt;&gt;+Exchange: Get rate
+Exchange--&gt;&gt;-CryptoPay: Current rate
+CryptoPay-&gt;&gt;+Exchange: Make exchange
+Exchange--&gt;&gt;-CryptoPay: Exchange approved
+CryptoPay-&gt;&gt;+Wallet: Make withdrawal
+Wallet--&gt;&gt;-CryptoPay: Withdrawal approved
+CryptoPay--&gt;&gt;-B2B Merchant: Notify (READY TO SHIP)
+B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
+B2C Merchant--&gt;&gt;-User: Final details
+end</div>
+
 <h5 id="crypto_sell">CRYPTO_SELL</h5>
 <div class="mermaid">sequenceDiagram
-    User-&gt;&gt;+B2C Merchant: Goes to site
-        B2C Merchant-&gt;&gt;+B2B Merchant: Request crypto payment
-            B2B Merchant-&gt;&gt;+CryptoPay: Get instruments
-            CryptoPay--&gt;&gt;-B2B Merchant: Currencies, rates, etc.
-        B2B Merchant--&gt;&gt;-B2C Merchant: Available instuments
-    B2C Merchant--&gt;&gt;-User: Render instuments
+User-&gt;&gt;+B2C Merchant: Goes to site
+B2C Merchant-&gt;&gt;+B2B Merchant: Request crypto payment
+B2B Merchant-&gt;&gt;+CryptoPay: Get instruments
+CryptoPay--&gt;&gt;-B2B Merchant: Currencies, rates, etc.
+B2B Merchant--&gt;&gt;-B2C Merchant: Available instuments
+B2C Merchant--&gt;&gt;-User: Render instuments
 
 
-    User-&gt;&gt;+B2C Merchant: Request order
-        B2C Merchant-&gt;&gt;+B2B Merchant: Create order
-            B2B Merchant-&gt;&gt;+CryptoPay: Create order
-                CryptoPay-&gt;&gt;+Exchange: Get rate
-                Exchange--&gt;&gt;-CryptoPay: Current rate
-                opt Skip for dry-run mode
-                    CryptoPay-&gt;&gt;+Wallet: Generate new address
-                    Wallet--&gt;&gt;-CryptoPay: New address
-                end
-                CryptoPay-&gt;&gt;CryptoPay: Calulate cash flow
-                CryptoPay--&gt;&gt;B2B Merchant: Order details
-                B2B Merchant--&gt;&gt;B2C Merchant: Order attribures
-                B2C Merchant--&gt;&gt;User: Render order details
-                Wallet--&gt;&gt;CryptoPay: Confirmations: 0 (configurable)
-                CryptoPay--&gt;&gt;B2B Merchant: Notify (PAID)
-                B2B Merchant--&gt;&gt;B2C Merchant: Notify (DEPOSIT)
-                Wallet--&gt;&gt;CryptoPay: Confirmations: 1 (configurable)
-                CryptoPay-&gt;&gt;+Exchange: Make exchange
-                Exchange--&gt;&gt;-CryptoPay: Exchange approved
-                B2C Merchant--&gt;&gt;User: Deposit processing
-                Wallet--&gt;&gt;CryptoPay: Confirmations: X (configurable)
-            CryptoPay--&gt;&gt;-B2B Merchant: Notify (READY TO SHIP)
-        B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
-    B2C Merchant--&gt;&gt;-User: Deposit accepted</div>
+User-&gt;&gt;+B2C Merchant: Request order
+B2C Merchant-&gt;&gt;+B2B Merchant: Create order
+B2B Merchant-&gt;&gt;+CryptoPay: Create order
+CryptoPay-&gt;&gt;+Exchange: Get rate
+Exchange--&gt;&gt;-CryptoPay: Current rate
+opt Skip for dry-run mode
+CryptoPay-&gt;&gt;+Wallet: Generate new address
+Wallet--&gt;&gt;-CryptoPay: New address
+end
+CryptoPay-&gt;&gt;CryptoPay: Calulate cash flow
+CryptoPay--&gt;&gt;B2B Merchant: Order details
+B2B Merchant--&gt;&gt;B2C Merchant: Order attribures
+B2C Merchant--&gt;&gt;User: Render order details
+opt Skip for dry-run mode
+Wallet--&gt;&gt;CryptoPay: Confirmations: 0 (configurable)
+CryptoPay--&gt;&gt;B2B Merchant: Notify (PAID)
+B2B Merchant--&gt;&gt;B2C Merchant: Notify (DEPOSIT)
+B2C Merchant--&gt;&gt;User: Deposit processing
+Wallet--&gt;&gt;CryptoPay: Confirmations: 1 (configurable)
+CryptoPay-&gt;&gt;+Exchange: Make exchange
+Exchange--&gt;&gt;-CryptoPay: Exchange approved
+Wallet--&gt;&gt;CryptoPay: Confirmations: X (configurable)
+CryptoPay--&gt;&gt;-B2B Merchant: Notify (READY TO SHIP)
+B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
+B2C Merchant--&gt;&gt;-User: Final details
+end</div>
 
 <h2 id="merhcant">Merhcant</h2>
 <p>TBD</p>
 <h2 id="order">Order</h2>
+<p>CryptoPay Orders are time-sensitive payment requests addressed to specific buyers.</p>
 <p>TBD</p>
                 
                   

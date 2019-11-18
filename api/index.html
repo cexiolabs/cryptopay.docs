@@ -347,22 +347,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-sub-merchants" class="md-nav__link">
-    List sub-merchants
+  <a href="#list-merchants" class="md-nav__link">
+    List merchants
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-sub-merchant" class="md-nav__link">
-    Create sub-merchant
+  <a href="#create-merchant" class="md-nav__link">
+    Create merchant
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-sub-merchants" class="md-nav__link">
-    Update sub-merchants
+  <a href="#update-merchant" class="md-nav__link">
+    Update merchant
   </a>
   
 </li>
@@ -582,22 +582,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-sub-merchants" class="md-nav__link">
-    List sub-merchants
+  <a href="#list-merchants" class="md-nav__link">
+    List merchants
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-sub-merchant" class="md-nav__link">
-    Create sub-merchant
+  <a href="#create-merchant" class="md-nav__link">
+    Create merchant
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-sub-merchants" class="md-nav__link">
-    Update sub-merchants
+  <a href="#update-merchant" class="md-nav__link">
+    Update merchant
   </a>
   
 </li>
@@ -810,15 +810,52 @@
 <p>The <code>epoch</code> field represents decimal seconds since <a href="http://en.wikipedia.org/wiki/Unix_time">Unix Epoch</a></p>
 <h2 id="v2merchant">/v2/merchant</h2>
 <p>Merchant endpoint is available for sub-merchants management. Every request must be signed using the described authentication scheme.</p>
-<h3 id="list-sub-merchants">List sub-merchants</h3>
+<h3 id="list-merchants">List merchants</h3>
 <p>Returns list of sub-merchants according filter defined by parameters
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Agument</th>
+<th>Type</th>
+<th>Mandatory</th>
+<th>Descripton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>ENUM</td>
+<td>NO</td>
+<td>Active, Installing, Blocked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-merchant">Create merchant</h3>
+<p>Register a new merchant
+<div class="codehilite"><pre><span></span><span class="err">POST /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Request body:</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
 </pre></div>
-TBD</p>
-<h3 id="create-sub-merchant">Create sub-merchant</h3>
-<p>TBD</p>
-<h3 id="update-sub-merchants">Update sub-merchants</h3>
-<p>TBD</p>
+
+<h3 id="update-merchant">Update merchant</h3>
+<p>Update an existing merchant
+<div class="codehilite"><pre><span></span><span class="err">PUT /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Request body:</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
 <h2 id="v2order">/v2/order</h2>
 <p>Order endpoint is available for order management. Every request must be signed using the described authentication scheme.</p>
 <p><strong>Order statuses:</strong></p>
@@ -899,6 +936,10 @@ TBD</p>
 of the first request within 24 hours from  the first request. This behaviour in conclustion
 with <code>clientOrderId</code> prevents potential order duplicates.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You are able to make <strong>dry-run</strong> call before creating real orders. Add header: <strong>CP-EXECUTE-MODE: dry-run</strong> when execute this method.</p>
+</div>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
 <p><strong>Request body:</strong></p>
 <div class="superfences-tabs">
@@ -954,8 +995,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;150.42&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;autoStart&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_4" />
@@ -969,14 +1009,13 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;autoStart&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Instrument specific fields are described </p>
+<p>Instrument specific fields are described in <a href="https://github.com/cexiolabs/cryptopay.schemas">JSON schemas</a></p>
 </div>
 <h3 id="fetch-order">Fetch order</h3>
 <p>Fetch single order by ID
