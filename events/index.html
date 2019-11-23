@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/webhooks/">
+        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/events/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Webhooks - CryptoPay Service API</title>
+        <title>Events - CryptoPay Service API</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#webhooks" tabindex="1" class="md-skip">
+      <a href="#events" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Webhooks
+                Events
               
             </span>
           
@@ -229,6 +229,39 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Callbacks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Callbacks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notifier/" title="Notifier" class="md-nav__link">
+      Notifier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -236,100 +269,15 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Webhooks
-      </label>
-    
-    <a href="./" title="Webhooks" class="md-nav__link md-nav__link--active">
-      Webhooks
+    <a href="./" title="Events" class="md-nav__link md-nav__link--active">
+      Events
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssl-verification" class="md-nav__link">
-    SSL verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-token" class="md-nav__link">
-    Secret token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypt-event" class="md-nav__link">
-    Encrypt event
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#signing-event" class="md-nav__link">
-    Signing event
-  </a>
-  
-</li>
+  </li>
+
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#events" class="md-nav__link">
-    Events
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#order-execution" class="md-nav__link">
-    Order execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operation-execution" class="md-nav__link">
-    Operation execution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -350,83 +298,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssl-verification" class="md-nav__link">
-    SSL verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-token" class="md-nav__link">
-    Secret token
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypt-event" class="md-nav__link">
-    Encrypt event
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#signing-event" class="md-nav__link">
-    Signing event
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#events" class="md-nav__link">
-    Events
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#order-execution" class="md-nav__link">
-    Order execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operation-execution" class="md-nav__link">
-    Operation execution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -438,30 +309,7 @@
               
                 
                 
-                <h1 id="webhooks">Webhooks</h1>
-<p><a href="https://en.wikipedia.org/wiki/Webhook">Webhooks</a> are "user-defined HTTP
-callbacks".
-When that event occurs, the source app makes an HTTP request to the URI
-configured for the webhook. The action taken may be anything.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Your endpoint should ALWAYS return a valid HTTP response with HTTP status 2XX. If you do not do this then CryptoPay will think the hook failed and retry it.</p>
-</div>
-<h2 id="security">Security</h2>
-<p>CryptoPay provides modern methods to verify that the request is legitimate. Feel free to use any (or all) of that.</p>
-<h3 id="ssl-verification">SSL verification</h3>
-<p>If you specify a CA Certificate, it will be used to verify the SSL certificate of the webhook endpoint. Otherwise the SSL certificate of the webhook endpoint is verified based on an internal list of Certificate Authorities.</p>
-<h3 id="secret-token">Secret token</h3>
-<p>If you specify a <code>secret token</code>, it will be sent with the hook request in the <strong>X-CP-TOKEN</strong> HTTP header.</p>
-<h3 id="encrypt-event">Encrypt event</h3>
-<p>If you specify a <code>encrypt password</code>, event message will be encrypted.</p>
-<h3 id="signing-event">Signing event</h3>
-<p>To sign events CryptoPay uses same algorithm as for incoming request, except the header <strong>CP-ACCESS-PASSPHRASE</strong> is omitted.</p>
-<h2 id="events">Events</h2>
-<h3 id="order-execution">Order execution</h3>
-<p>TBD</p>
-<h3 id="operation-execution">Operation execution</h3>
-<p>TBD</p>
+                <h1 id="events">Events</h1>
                 
                   
                 
@@ -482,7 +330,7 @@ configured for the webhook. The action taken may be anything.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../api/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../notifier/" title="Notifier" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -491,7 +339,7 @@ configured for the webhook. The action taken may be anything.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                REST API
+                Notifier
               </span>
             </div>
           </a>
