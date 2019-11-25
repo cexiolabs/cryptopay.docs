@@ -373,6 +373,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2instument" class="md-nav__link">
+    /v2/instument
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-available-instuments" class="md-nav__link">
+    List available instuments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2order" class="md-nav__link">
     /v2/order
   </a>
@@ -644,6 +664,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2instument" class="md-nav__link">
+    /v2/instument
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-available-instuments" class="md-nav__link">
+    List available instuments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2order" class="md-nav__link">
     /v2/order
   </a>
@@ -892,6 +932,20 @@
 <span class="p">}</span>
 </pre></div>
 
+<h2 id="v2instument">/v2/instument</h2>
+<h3 id="list-available-instuments">List available instuments</h3>
+<p>Returns list of instuments
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/instument</span>
+</pre></div></p>
+<div class="codehilite"><pre><span></span><span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;CRYPTO_BUY&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;CRYPTO_SELL&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <h2 id="v2order">/v2/order</h2>
 <p>Order endpoint is available for order management. Every request must be signed using the described authentication scheme.</p>
 <p><strong>Order statuses:</strong></p>
@@ -977,21 +1031,28 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p>You are able to make <strong>dry-run</strong> call before creating real orders. Add header: <strong>CP-EXECUTE-MODE: dry-run</strong> when execute this method.</p>
 </div>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
-<p><strong>Request body:</strong></p>
+<p><strong>Request/Response body:</strong></p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
 <label for="__tab_2_0">Generic</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
   <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
   <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;some info to be stored along the order&quot;</span><span class="p">,</span>
   <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;NAME&gt;&quot;</span><span class="p">,</span>
   <span class="err">...instrument</span> <span class="err">specific</span> <span class="err">fields...</span>
 <span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/instuments.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_1" />
 <label for="__tab_2_1">CRYPTO_BUY (fait)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/createOrder.CRYPTO_BUY.json&quot;</span><span class="p">,</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Buy some BTC for 150.42$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
@@ -1003,11 +1064,17 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
     <span class="nt">&quot;autoStart&quot;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_2" />
 <label for="__tab_2_2">CRYPTO_BUY (crypto)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/createOrder.CRYPTO_BUY.json&quot;</span><span class="p">,</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Buy 0.05142111 BTC for some $&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
@@ -1019,11 +1086,17 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
     <span class="nt">&quot;autoStart&quot;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_3" />
 <label for="__tab_2_3">CRYPTO_SELL (fait)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/createOrder.CRYPTO_SELL.json&quot;</span><span class="p">,</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Sell some BTC for 150.42$&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
@@ -1033,11 +1106,17 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;150.42&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
 <span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_4" />
 <label for="__tab_2_4">CRYPTO_SELL (crypto)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/createOrder.CRYPTO_SELL.json&quot;</span><span class="p">,</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Sell 0.05142111 BTC for some $&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
@@ -1046,6 +1125,11 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
+<span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
 </div>
