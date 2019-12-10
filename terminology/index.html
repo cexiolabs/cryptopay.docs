@@ -231,6 +231,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#merhcant" class="md-nav__link">
+    Merhcant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#instrument" class="md-nav__link">
     Instrument
   </a>
@@ -260,6 +267,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#crypto_sell_infinity" class="md-nav__link">
+    CRYPTO_SELL_INFINITY
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -271,15 +285,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merhcant" class="md-nav__link">
-    Merhcant
+  <a href="#order" class="md-nav__link">
+    Order
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
-    Order
+  <a href="#breakpoint" class="md-nav__link">
+    Breakpoint
   </a>
   
 </li>
@@ -376,6 +390,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#merhcant" class="md-nav__link">
+    Merhcant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#instrument" class="md-nav__link">
     Instrument
   </a>
@@ -405,6 +426,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#crypto_sell_infinity" class="md-nav__link">
+    CRYPTO_SELL_INFINITY
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -416,15 +444,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merhcant" class="md-nav__link">
-    Merhcant
+  <a href="#order" class="md-nav__link">
+    Order
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#order" class="md-nav__link">
-    Order
+  <a href="#breakpoint" class="md-nav__link">
+    Breakpoint
   </a>
   
 </li>
@@ -447,6 +475,8 @@
                 
                 
                 <h1 id="terminology">Terminology</h1>
+<h2 id="merhcant">Merhcant</h2>
+<p>TBD</p>
 <h2 id="instrument">Instrument</h2>
 <p>CryptoPay's Instrument defines kind of service. An instrument decribes how to process an order. Different instrument has own set of attributes according <code>kind</code> field.</p>
 <div class="admonition note">
@@ -467,11 +497,15 @@
 <tbody>
 <tr>
 <td>CRYPTO_BUY</td>
-<td>Buy crypo asset (convert fiat to crypto)</td>
+<td>Buy crypo asset (convert fiat to crypto). One time order with fixed amount.</td>
 </tr>
 <tr>
 <td>CRYPTO_SELL</td>
-<td>Sell crypo asset (convert crypto to fiat)</td>
+<td>Sell crypo asset (convert crypto to fiat). One time order with fixed amount.</td>
+</tr>
+<tr>
+<td>CRYPTO_SELL_INFINITY</td>
+<td>Sell crypo asset (convert crypto to fiat). The <code>Order</code> works infinitely (may be cancelled via API). Each crypto deposit will automatically scheduled processing (breakpoints allowed)</td>
 </tr>
 </tbody>
 </table>
@@ -548,10 +582,39 @@ B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
 B2C Merchant--&gt;&gt;-User: Final details
 end</div>
 
-<h2 id="merhcant">Merhcant</h2>
-<p>TBD</p>
+<h5 id="crypto_sell_infinity">CRYPTO_SELL_INFINITY</h5>
+<div class="mermaid">sequenceDiagram
+User-&gt;&gt;+B2C Merchant: Request order
+B2C Merchant-&gt;&gt;+B2B Merchant: Create order
+B2B Merchant-&gt;&gt;+CryptoPay: Create order
+CryptoPay-&gt;&gt;+Exchange: Get rate
+Exchange--&gt;&gt;-CryptoPay: Current rate
+CryptoPay-&gt;&gt;+Wallet: Generate new address
+Wallet--&gt;&gt;-CryptoPay: New address
+CryptoPay-&gt;&gt;CryptoPay: Calulate cash flow
+CryptoPay--&gt;&gt;B2B Merchant: Order details
+B2B Merchant--&gt;&gt;B2C Merchant: Order attribures
+B2C Merchant--&gt;&gt;User: Render order details
+opt Infinity Loop
+Wallet--&gt;&gt;CryptoPay: Confirmations: 0 (configurable)
+CryptoPay--&gt;&gt;B2B Merchant: Notify (PAID)
+B2B Merchant--&gt;&gt;B2C Merchant: Notify (DEPOSIT)
+B2C Merchant--&gt;&gt;User: Deposit processing
+Wallet--&gt;&gt;CryptoPay: Confirmations: 1 (configurable)
+CryptoPay-&gt;&gt;+Exchange: Make exchange
+Exchange--&gt;&gt;-CryptoPay: Exchange approved
+Wallet--&gt;&gt;CryptoPay: Confirmations: X (configurable)
+CryptoPay--&gt;&gt;-B2B Merchant: Notify (READY TO SHIP)
+B2B Merchant--&gt;&gt;-B2C Merchant: Notify (ACCEPTED)
+B2C Merchant--&gt;&gt;-User: Final details
+end</div>
+
 <h2 id="order">Order</h2>
-<p>CryptoPay Orders are time-sensitive payment requests addressed to specific buyers.</p>
+<p>CryptoPay Order is time-sensitive payment requests addressed to specific buyers. In another words, <code>Order</code> is set of attributes like <code>fiatCurrency</code>, <code>cryptoCurrency</code>, <code>amount</code>, etc.</p>
+<p>TBD</p>
+<h2 id="breakpoint">Breakpoint</h2>
+<p><code>Breakpoint</code> is a point in <code>instrument</code>'s workflow where processing may pauses for manual approve. Each <code>instument</code> provides own set of breakpoints.
+Breakpoints by default settings may be active or inactive. Instrument's default behavior may be overridden in <code>merchant</code>'s settings or via order creation attibutes.</p>
 <p>TBD</p>
                 
                   

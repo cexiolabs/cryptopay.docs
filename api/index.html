@@ -939,9 +939,9 @@
 </pre></div></p>
 <div class="codehilite"><pre><span></span><span class="err">&lt;--</span>
 <span class="p">{</span>
-    <span class="nt">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;CRYPTO_BUY&quot;</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="nt">&quot;CRYPTO_SELL&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="nt">&quot;CRYPTO_SELL&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;CRYPTO_SELL_INFINITY&quot;</span><span class="p">:</span> <span class="p">{}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -1058,7 +1058,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;150.42&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
@@ -1080,7 +1079,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
@@ -1102,7 +1100,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;150.42&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
 <span class="p">}</span>
@@ -1122,7 +1119,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
     <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amountCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
 <span class="p">}</span>
@@ -1130,6 +1126,35 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.response.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_5" />
+<label for="__tab_2_5">CRYPTO_SELL_INFINITY</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL_INFINITY.request.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;My inifinity exchnage order&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL_INFINITY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
+<span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL_INFINITY.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14-4395-43c0-b7c3-f627cb8d0e87&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;My inifinity exchnage order&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL_INFINITY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fiatCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cryptoCurrency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;refill&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;mainnet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1xxXXxxXXxxXXxxXXxxXXxxXXxxXXxxXXx&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PROCESSING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;WAIT_DEPOSIT&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
 </div>
