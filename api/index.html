@@ -373,6 +373,60 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2notification" class="md-nav__link">
+    /v2/notification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topic" class="md-nav__link">
+    Topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribers" class="md-nav__link">
+    Subscribers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2instument" class="md-nav__link">
     /v2/instument
   </a>
@@ -456,6 +510,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#deposits" class="md-nav__link">
+    Deposits
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-deposits" class="md-nav__link">
+    List deposits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-deposit" class="md-nav__link">
+    Fetch deposit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#withdrawals" class="md-nav__link">
     Withdrawals
   </a>
@@ -497,46 +578,10 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
+  <li class="md-nav__item">
+    <a href="../callbacks/" title="Callbacks" class="md-nav__link">
       Callbacks
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Callbacks
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notifier/" title="Notifier" class="md-nav__link">
-      Notifier
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../events/" title="Events" class="md-nav__link">
-      Events
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -691,6 +736,60 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2notification" class="md-nav__link">
+    /v2/notification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topic" class="md-nav__link">
+    Topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribers" class="md-nav__link">
+    Subscribers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2instument" class="md-nav__link">
     /v2/instument
   </a>
@@ -764,6 +863,33 @@
           <li class="md-nav__item">
   <a href="#toggle-breakpoint" class="md-nav__link">
     Toggle breakpoint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deposits" class="md-nav__link">
+    Deposits
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-deposits" class="md-nav__link">
+    List deposits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-deposit" class="md-nav__link">
+    Fetch deposit
   </a>
   
 </li>
@@ -986,6 +1112,99 @@
 <span class="p">}</span>
 </pre></div>
 
+<h2 id="v2notification">/v2/notification</h2>
+<p>See more details about our notification engine in <a href="../callbacks/">Callbacks</a> documentation. There defines managment methods only.</p>
+<h3 id="topic">Topic</h3>
+<p>Allows to see your topics and message history</p>
+<p>TBD</p>
+<h3 id="subscribers">Subscribers</h3>
+<p>Allows to manage your subscribes</p>
+<h4 id="list">List</h4>
+<p>Returns list of subscribers according filter defined by parameters
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/notification/subscriber</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;subscriber.webhook.784293b3-2000-4f89-aaff-887c04b7c97a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;subscriber.webhook.c4c77664-e09a-46f6-9ef6-b360b7120da0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_DEPOSIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;subscriber.webhook.5395414e-7936-441e-b5b9-44a5f8bad7d0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_WITHDRAWAL&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+<span class="p">]</span>
+</pre></div></p>
+<h4 id="create">Create</h4>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Request/Response body:</strong></p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Webhook</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span> <span class="err">POST</span> <span class="err">/v</span><span class="mi">2</span><span class="err">/notification/subscriber/webhook</span>
+<span class="p">{</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
+    <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+<span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;subscriber.webhook.784293b3-2000-4f89-aaff-887c04b7c97a&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
+    <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">WebSocket (Host Mode)</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span> <span class="err">POST</span> <span class="err">/v</span><span class="mi">2</span><span class="err">/notification/subscriber/websockethost</span>
+<span class="p">{</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ssl&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">TBD</span>
+        <span class="err">...</span> <span class="err">optional</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;websockethost&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;subscriber.websockethost.8f737ce5-9b10-4d88-b698-e6e9fe2219e0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;wss://cpnotifier.xxxxxxxxx.xxx/subscriber/websockethost/8f737ce5-9b10-4d88-b698-e6e9fe2219e0&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
+<h4 id="delete">Delete</h4>
+<div class="codehilite"><pre><span></span><span class="err">DELETE /v2/notification/subscriber/subscriber.webhook.784293b3-2000-4f89-aaff-887c04b7c97a</span>
+</pre></div>
+
+<p><strong>No request body</strong></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;deleteDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-10T12:00:01.223Z&quot;</span>
+<span class="p">}</span>
+</pre></div></p>
 <h2 id="v2instument">/v2/instument</h2>
 <h3 id="list-available-instuments">List available instuments</h3>
 <p>Returns list of instuments
@@ -1110,8 +1329,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
 <p><strong>Request/Response body:</strong></p>
 <div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Generic</label>
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Generic</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
   <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -1125,8 +1344,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">CRYPTO_BUY (fait)</label>
+<input name="__tabs_3" type="radio" id="__tab_3_1" />
+<label for="__tab_3_1">CRYPTO_BUY (fait)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
@@ -1146,8 +1365,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_2" />
-<label for="__tab_2_2">CRYPTO_BUY (crypto)</label>
+<input name="__tabs_3" type="radio" id="__tab_3_2" />
+<label for="__tab_3_2">CRYPTO_BUY (crypto)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
@@ -1167,8 +1386,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_3" />
-<label for="__tab_2_3">CRYPTO_SELL (fait)</label>
+<input name="__tabs_3" type="radio" id="__tab_3_3" />
+<label for="__tab_3_3">CRYPTO_SELL (fait)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
@@ -1186,8 +1405,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_4" />
-<label for="__tab_2_4">CRYPTO_SELL (crypto)</label>
+<input name="__tabs_3" type="radio" id="__tab_3_4" />
+<label for="__tab_3_4">CRYPTO_SELL (crypto)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
@@ -1205,8 +1424,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_5" />
-<label for="__tab_2_5">CRYPTO_SELL_INFINITY</label>
+<input name="__tabs_3" type="radio" id="__tab_3_5" />
+<label for="__tab_3_5">CRYPTO_SELL_INFINITY</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL_INFINITY.request.json&quot;</span><span class="p">,</span>
@@ -1256,8 +1475,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}</span>
 </pre></div></p>
 <div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">CRYPTO_BUY</label>
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">CRYPTO_BUY</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14-4395-43c0-b7c3-f627cb8d0e87&quot;</span><span class="p">,</span>
@@ -1277,8 +1496,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_3" type="radio" id="__tab_3_1" />
-<label for="__tab_3_1">CRYPTO_SELL</label>
+<input name="__tabs_4" type="radio" id="__tab_4_1" />
+<label for="__tab_4_1">CRYPTO_SELL</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14-4395-43c0-b7c3-f627cb8d0e87&quot;</span><span class="p">,</span>
@@ -1310,8 +1529,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div></div>
-<input name="__tabs_3" type="radio" id="__tab_3_2" />
-<label for="__tab_3_2">CRYPTO_SELL_INFINITY</label>
+<input name="__tabs_4" type="radio" id="__tab_4_2" />
+<label for="__tab_4_2">CRYPTO_SELL_INFINITY</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL_INFINITY.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14-4395-43c0-b7c3-f627cb8d0e87&quot;</span><span class="p">,</span>
@@ -1408,7 +1627,66 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>No request body</strong></p>
+<p><strong>No response body</strong></p>
+<h3 id="deposits">Deposits</h3>
+<h4 id="list-deposits">List deposits</h4>
+<p>Returns list of deposits according filter defined by parameters
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}/deposit</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Agument</th>
+<th>Type</th>
+<th>Mandatory</th>
+<th>Descripton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fromId</td>
+<td>STRING</td>
+<td>NO</td>
+<td>ID to get deposits from INCLUSIVE</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>ISO 8601</td>
+<td>NO</td>
+<td>Date to get orders from INCLUSIVE</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>ISO 8601</td>
+<td>NO</td>
+<td>Date to get orders until EXCLUSIVE</td>
+</tr>
+<tr>
+<td>status</td>
+<td>STRING</td>
+<td>NO</td>
+<td>Status: NEW, PENDING, ACCEPTED or REJECTED</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>INT</td>
+<td>NO</td>
+<td>Default 500; max 1000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fetch-deposit">Fetch deposit</h4>
+<p>This method allows to get information of a deposit operation.</p>
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}/deposit/{{depositId}}</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The method will return HTTP 405 Not allowed, if order's instument does not support deposit</p>
+</div>
+<p><strong>Permission:</strong> <a href="#view-permission">View</a></p>
 <h3 id="withdrawals">Withdrawals</h3>
 <p>This method allows to get all nformation about all withdrawal operations related to an order</p>
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}/withdrawal</span>
@@ -1418,7 +1696,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p class="admonition-title">Note</p>
 <p>The method will return HTTP 405 Not allowed, if order's instument does not support withdrawal</p>
 </div>
-<p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
+<p><strong>Permission:</strong> <a href="#view-permission">View</a></p>
 <h3 id="create-withdrawal">Create withdrawal</h3>
 <p>There are several cases when crypto amount holds on order balance. This method allows to make withdrawal amount to desired crypto address</p>
 <div class="codehilite"><pre><span></span><span class="err">POST /v2/order/{{orderId}}/withdrawal</span>
@@ -1483,13 +1761,13 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
           </a>
         
         
-          <a href="../notifier/" title="Notifier" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../callbacks/" title="Callbacks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Notifier
+                Callbacks
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

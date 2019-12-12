@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/notifier/">
+        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/callbacks/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Notifier - CryptoPay Service API</title>
+        <title>Callbacks - CryptoPay Service API</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#notifier" tabindex="1" class="md-skip">
+      <a href="#callbacks" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Notifier
+                Callbacks
               
             </span>
           
@@ -229,27 +229,6 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      Callbacks
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Callbacks
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -258,11 +237,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Notifier
+        Callbacks
       </label>
     
-    <a href="./" title="Notifier" class="md-nav__link md-nav__link--active">
-      Notifier
+    <a href="./" title="Callbacks" class="md-nav__link md-nav__link--active">
+      Callbacks
     </a>
     
       
@@ -284,8 +263,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    Use-cases
+  <a href="#topics" class="md-nav__link">
+    Topics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use-case
   </a>
   
 </li>
@@ -398,6 +384,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#subscribeunsibscribe" class="md-nav__link">
+    Subscribe/Unsibscribe
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -411,23 +404,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../events/" title="Events" class="md-nav__link">
-      Events
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -460,8 +436,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    Use-cases
+  <a href="#topics" class="md-nav__link">
+    Topics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use-case
   </a>
   
 </li>
@@ -574,6 +557,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#subscribeunsibscribe" class="md-nav__link">
+    Subscribe/Unsibscribe
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -596,46 +586,73 @@
               
                 
                 
-                <h1 id="notifier">Notifier</h1>
-<p><code>Notifier</code> is a Notification Server that implements <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish–Subscribe</a> Pattern. Main responsibility is to deliver callback messages via Webhooks and other messaging providers.</p>
+                <h1 id="callbacks">Callbacks</h1>
+<p>Callbacks are based on <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish–Subscribe</a> pattern via a <code>Notifier</code> service. The <code>Notifier</code> service's responsibility is to deliver callback messages via Webhooks and other messaging providers.</p>
 <div class="admonition note">
 <p class="admonition-title">Recommendation</p>
 <p>Although notification includes real and valid data, we recommend to use notifications just as notifications and retvieve data via appropriate method of Pull API (<a href="../api">REST API</a> for example).
 In general, any notifications system by design may delay messages. Good practice for end-application is to check status via Pull API if expected message was not received in expected time frame.</p>
 </div>
 <h2 id="general-information">General information</h2>
-<h3 id="use-cases">Use-cases</h3>
+<h3 id="topics">Topics</h3>
+<table>
+<thead>
+<tr>
+<th>Topic Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ORDER</strong></td>
+<td>Emit messages when <code>order</code>'s <code>status</code> or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+</tr>
+<tr>
+<td><strong>ORDER_DEPOSIT</strong></td>
+<td>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></td>
+</tr>
+<tr>
+<td><strong>ORDER_WITHDRAWAL</strong></td>
+<td>Emit messages when <code>withdrawal</code> created/updated. Message body same as response of <a href="../api/#fetch-withdrawal">Fetch withdrawal</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-case">Use-case</h3>
+<ol>
+<li>Client subscribe a desired topic</li>
+<li><code>Notifier</code> deliver events</li>
+<li>Client unsubscribe the topic</li>
+<li>No delivery</li>
+</ol>
 <div class="mermaid">sequenceDiagram
     participant Subscriber1
     participant Subscriber2
-    participant `Notifier`
-    participant Publisher
-    opt Event A happend
-        Publisher-&gt;&gt;`Notifier`: Message A for "my" topic
-        `Notifier`-&gt;&gt;`Notifier`: Skip, just audit
+    participant Notifier
+    opt Event A
+        Notifier-&gt;&gt;Notifier: Skip, just audit
     end
-    Subscriber2-&gt;&gt;+`Notifier`: Subscribe "my" topic
-    `Notifier`--&gt;&gt;-Subscriber2: OK
-    opt Event B happend
-        Publisher-&gt;&gt;`Notifier`: Message B for "my" topic
-        `Notifier`-&gt;&gt;+Subscriber2: Message B for "my" topic
-        Subscriber2--&gt;&gt;-`Notifier`: OK
+    Subscriber2-&gt;&gt;+Notifier: Subscribe "ORDER" topic
+    Notifier--&gt;&gt;-Subscriber2: OK
+    opt Event B
+        Notifier-&gt;&gt;Notifier: Schedule delivery
+        Notifier-&gt;&gt;+Subscriber2: Message B for "ORDER"
+        Subscriber2--&gt;&gt;-Notifier: OK
     end
-    Subscriber1-&gt;&gt;+`Notifier`: Subscribe "my" topic
-    `Notifier`--&gt;&gt;-Subscriber1: OK
-    opt Event C happend
-        Publisher-&gt;&gt;`Notifier`: Message C for "my" topic
-        `Notifier`-&gt;&gt;+Subscriber2: Message C for "my" topic
-        Subscriber2--&gt;&gt;-`Notifier`: OK
-        `Notifier`-&gt;&gt;+Subscriber1: Message C for "my" topic
-        Subscriber1--&gt;&gt;-`Notifier`: OK
+    Subscriber1-&gt;&gt;+Notifier: Subscribe "ORDER" topic
+    Notifier--&gt;&gt;-Subscriber1: OK
+    opt Event C
+        Notifier-&gt;&gt;Notifier: Schedule delivery
+        Notifier-&gt;&gt;+Subscriber2: Message C for "ORDER"
+        Subscriber2--&gt;&gt;-Notifier: OK
+        Notifier-&gt;&gt;+Subscriber1: Message C for "ORDER"
+        Subscriber1--&gt;&gt;-Notifier: OK
     end
-    Subscriber1-&gt;&gt;+`Notifier`: UNsubscribe "my" topic
-    `Notifier`--&gt;&gt;-Subscriber1: OK
-    opt Event D happend
-        Publisher-&gt;&gt;`Notifier`: Message D for "my" topic
-        `Notifier`-&gt;&gt;+Subscriber2: Message D for "my" topic
-        Subscriber2--&gt;&gt;-`Notifier`: OK
+    Subscriber1-&gt;&gt;+Notifier: Unsubscribe "ORDER" topic
+    Notifier--&gt;&gt;-Subscriber1: OK
+    opt Event D
+        Notifier-&gt;&gt;Notifier: Schedule delivery
+        Notifier-&gt;&gt;+Subscriber2: Message D for "ORDER"
+        Subscriber2--&gt;&gt;-Notifier: OK
     end</div>
 
 <h3 id="delivery">Delivery</h3>
@@ -654,11 +671,9 @@ In general, any notifications system by design may delay messages. Good practice
 <h4 id="protocol-buffers-version-2"><a href="https://developers.google.com/protocol-buffers/docs/reference/proto2-spec">Protocol Buffers Version 2</a></h4>
 <p>Using Protocol Buffers for message serialization. See definition .proto file for details.</p>
 <h3 id="message-security">Message security</h3>
-<p><code>Notifier</code> provides Signing and Encrypt methods to verify that the request is legitimate.</p>
+<p>Security model provides Signing and Encrypt(optional) methods to verify that the request is legitimate.</p>
 <h4 id="signing-message">Signing message</h4>
-<p>Message signature provides by a <code>Publisher</code> service. <code>Notifier</code> does not modify provided signature, just deliver it along with message. See for details in events documentation.</p>
-<h4 id="encrypt-message-optional">Encrypt message (Optional)</h4>
-<p>Optionally (along with signing), you may setup(via Management API) an <code>encrypt password</code>, messages will be encrypted.</p>
+<p>TBD</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Bash + OpenSSL</label>
@@ -673,19 +688,35 @@ In general, any notifications system by design may delay messages. Good practice
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="x">TBD</span>
 </pre></div></div>
 </div>
+<h4 id="encrypt-message-optional">Encrypt message (Optional)</h4>
+<p>Optionally (along with signing), you may setup an <code>encrypt password</code>, messages will be encrypted.</p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Bash + OpenSSL</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>TBD
+</pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">NodeJS</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nx">TBD</span>
+</pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_2" />
+<label for="__tab_2_2">PHP</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="x">TBD</span>
+</pre></div></div>
+</div>
 <h2 id="webhooks">Webhooks</h2>
-<p><a href="https://en.wikipedia.org/wiki/Webhook">Webhooks</a> are "user-defined HTTP
-callbacks".
+<p><a href="https://en.wikipedia.org/wiki/Webhook">Webhooks</a> are "user-defined HTTP callbacks".
 When an event occurs, <code>Notifier</code> makes an HTTP request to the URI configured for the webhook.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Your endpoint should ALWAYS return a valid HTTP response with HTTP status 2XX. If you do not do this then Notifier will think the hook failed and <a href="#delivery">retry</a> it.</p>
 </div>
 <h3 id="headers">Headers</h3>
-<p>Notification server will include following headers to each request:</p>
+<p><code>Notifier</code> will include following headers to each request:</p>
 <ul>
 <li><strong>NF-TIMESTAMP</strong> - A timestamp that was used in <a href="#signing-message">signature</a> calculation</li>
 <li><strong>NF-SIGN</strong> - The base64-encoded <a href="#signing-message">signature</a></li>
+<li><strong>NF-TOKEN</strong> - <a href="#secret-token">Secret token</a> (if set)</li>
 </ul>
 <h3 id="security">Security</h3>
 <h4 id="ssl-verification">SSL verification</h4>
@@ -696,6 +727,8 @@ When an event occurs, <code>Notifier</code> makes an HTTP request to the URI con
 </div>
 <h4 id="secret-token">Secret token</h4>
 <p>If you setup a <code>secret token</code> (via Merchant Management API), it will be sent with the hook request in the <strong>NF-TOKEN</strong> HTTP header.</p>
+<h3 id="subscribeunsibscribe">Subscribe/Unsibscribe</h3>
+<p>To subscribe or unsibscribe a <a href="#topics">topic</a> use appropriate methods from <a href="../api/#fetch-withdrawal">REST API</a></p>
                 
                   
                 
@@ -730,20 +763,6 @@ When an event occurs, <code>Notifier</code> makes an HTTP request to the URI con
             </div>
           </a>
         
-        
-          <a href="../events/" title="Events" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Events
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
