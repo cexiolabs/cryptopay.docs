@@ -38,7 +38,7 @@
     
     
       
-        <title>Callbacks - CryptoPay Service API</title>
+        <title>Basics - CryptoPay Service API (v2.alpha)</title>
       
     
     
@@ -94,7 +94,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API" class="md-header-nav__button md-logo">
+        <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API (v2.alpha)" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.jpg" width="24" height="24">
           
@@ -107,11 +107,11 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              CryptoPay Service API
+              CryptoPay Service API (v2.alpha)
             </span>
             <span class="md-header-nav__topic">
               
-                Callbacks
+                Basics
               
             </span>
           
@@ -164,12 +164,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API" class="md-nav__button md-logo">
+    <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API (v2.alpha)" class="md-nav__button md-logo">
       
         <img src="../images/logo.jpg" width="48" height="48">
       
     </a>
-    CryptoPay Service API
+    CryptoPay Service API (v2.alpha)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -229,6 +229,27 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Callbacks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Callbacks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -237,11 +258,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Callbacks
+        Basics
       </label>
     
-    <a href="./" title="Callbacks" class="md-nav__link md-nav__link--active">
-      Callbacks
+    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
+      Basics
     </a>
     
       
@@ -255,144 +276,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#topics" class="md-nav__link">
     Topics
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
     Use-case
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery" class="md-nav__link">
-    Delivery
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#selecting-message-format" class="md-nav__link">
-    Selecting message format
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#json-rpc" class="md-nav__link">
-    JSON-RPC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#protocol-buffers-version-2" class="md-nav__link">
-    Protocol Buffers Version 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-security" class="md-nav__link">
-    Message security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#signing-message" class="md-nav__link">
-    Signing message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypt-message-optional" class="md-nav__link">
-    Encrypt message (Optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#webhooks" class="md-nav__link">
-    Webhooks
+  <a href="#delivery-under-re-view" class="md-nav__link">
+    Delivery (under re-view)
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    Headers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssl-verification" class="md-nav__link">
-    SSL verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-token" class="md-nav__link">
-    Secret token
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscribeunsibscribe" class="md-nav__link">
-    Subscribe/Unsibscribe
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -404,6 +304,23 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../callbacks-webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -428,144 +345,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#topics" class="md-nav__link">
     Topics
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
     Use-case
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery" class="md-nav__link">
-    Delivery
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#selecting-message-format" class="md-nav__link">
-    Selecting message format
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#json-rpc" class="md-nav__link">
-    JSON-RPC
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#protocol-buffers-version-2" class="md-nav__link">
-    Protocol Buffers Version 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-security" class="md-nav__link">
-    Message security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#signing-message" class="md-nav__link">
-    Signing message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypt-message-optional" class="md-nav__link">
-    Encrypt message (Optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#webhooks" class="md-nav__link">
-    Webhooks
+  <a href="#delivery-under-re-view" class="md-nav__link">
+    Delivery (under re-view)
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    Headers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ssl-verification" class="md-nav__link">
-    SSL verification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-token" class="md-nav__link">
-    Secret token
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscribeunsibscribe" class="md-nav__link">
-    Subscribe/Unsibscribe
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -593,8 +389,7 @@
 <p>Although notification includes real and valid data, we recommend to use notifications just as notifications and retvieve data via appropriate method of Pull API (<a href="../api">REST API</a> for example).
 In general, any notifications system by design may delay messages. Good practice for end-application is to check status via Pull API if expected message was not received in expected time frame.</p>
 </div>
-<h2 id="general-information">General information</h2>
-<h3 id="topics">Topics</h3>
+<h2 id="topics">Topics</h2>
 <table>
 <thead>
 <tr>
@@ -605,19 +400,19 @@ In general, any notifications system by design may delay messages. Good practice
 <tbody>
 <tr>
 <td><strong>ORDER</strong></td>
-<td>Emit messages when <code>order</code>'s <code>status</code> or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+<td>Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
 </tr>
 <tr>
-<td><strong>ORDER_DEPOSIT</strong></td>
+<td><strong>DEPOSIT</strong></td>
 <td>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></td>
 </tr>
 <tr>
-<td><strong>ORDER_WITHDRAWAL</strong></td>
+<td><strong>WITHDRAWAL</strong></td>
 <td>Emit messages when <code>withdrawal</code> created/updated. Message body same as response of <a href="../api/#fetch-withdrawal">Fetch withdrawal</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="use-case">Use-case</h3>
+<h2 id="use-case">Use-case</h2>
 <ol>
 <li>Client subscribe a desired topic</li>
 <li><code>Notifier</code> deliver events</li>
@@ -655,80 +450,13 @@ In general, any notifications system by design may delay messages. Good practice
         Subscriber2--&gt;&gt;-Notifier: OK
     end</div>
 
-<h3 id="delivery">Delivery</h3>
+<h2 id="delivery-under-re-view">Delivery (under re-view)</h2>
 <p>Messages are sent immediately after an operation was performed.</p>
 <p><code>Notifier</code> records the fact of message delivery to your system after receiving the response from your system.</p>
 <p>If message delivery is failed the server will retry with delay between attempts according to a scale was choosen at subscription phase.</p>
+<p>// TBD(Is this proper scale?) //</p>
 <p>For example powers of two scale will retry delivery until the period does not exceed 16384 seconds (~4.5hours): 1, 2, 4, 8, 16, ..., 16384(max).</p>
 <p>Notification server performs attempts to deliver a message within 3 days.</p>
-<h3 id="selecting-message-format">Selecting message format</h3>
-<p>Along with setup your notification endpoint, you may choose message format.</p>
-<h4 id="json-rpc"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></h4>
-<p>Using JSON-RPC in notification manner
-<div class="codehilite"><pre><span></span><span class="err">--&gt;</span> <span class="p">{</span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;somethingChanged&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;68ac6741f92d41fbbc894ab406fcc91d&quot;</span><span class="p">,</span> <span class="err">......</span> <span class="p">}}</span>
-<span class="err">--&gt;</span> <span class="p">{</span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;somethingAdded&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3d80cbbe&quot;</span><span class="p">,</span> <span class="err">......</span> <span class="p">}}</span>
-</pre></div></p>
-<h4 id="protocol-buffers-version-2"><a href="https://developers.google.com/protocol-buffers/docs/reference/proto2-spec">Protocol Buffers Version 2</a></h4>
-<p>Using Protocol Buffers for message serialization. See definition .proto file for details.</p>
-<h3 id="message-security">Message security</h3>
-<p>Security model provides Signing and Encrypt(optional) methods to verify that the request is legitimate.</p>
-<h4 id="signing-message">Signing message</h4>
-<p>TBD</p>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Bash + OpenSSL</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span>TBD
-</pre></div></div>
-<input name="__tabs_1" type="radio" id="__tab_1_1" />
-<label for="__tab_1_1">NodeJS</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nx">TBD</span>
-</pre></div></div>
-<input name="__tabs_1" type="radio" id="__tab_1_2" />
-<label for="__tab_1_2">PHP</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="x">TBD</span>
-</pre></div></div>
-</div>
-<h4 id="encrypt-message-optional">Encrypt message (Optional)</h4>
-<p>Optionally (along with signing), you may setup an <code>encrypt password</code>, messages will be encrypted.</p>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Bash + OpenSSL</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span>TBD
-</pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">NodeJS</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nx">TBD</span>
-</pre></div></div>
-<input name="__tabs_2" type="radio" id="__tab_2_2" />
-<label for="__tab_2_2">PHP</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="x">TBD</span>
-</pre></div></div>
-</div>
-<h2 id="webhooks">Webhooks</h2>
-<p><a href="https://en.wikipedia.org/wiki/Webhook">Webhooks</a> are "user-defined HTTP callbacks".
-When an event occurs, <code>Notifier</code> makes an HTTP request to the URI configured for the webhook.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Your endpoint should ALWAYS return a valid HTTP response with HTTP status 2XX. If you do not do this then Notifier will think the hook failed and <a href="#delivery">retry</a> it.</p>
-</div>
-<h3 id="headers">Headers</h3>
-<p><code>Notifier</code> will include following headers to each request:</p>
-<ul>
-<li><strong>NF-TIMESTAMP</strong> - A timestamp that was used in <a href="#signing-message">signature</a> calculation</li>
-<li><strong>NF-SIGN</strong> - The base64-encoded <a href="#signing-message">signature</a></li>
-<li><strong>NF-TOKEN</strong> - <a href="#secret-token">Secret token</a> (if set)</li>
-</ul>
-<h3 id="security">Security</h3>
-<h4 id="ssl-verification">SSL verification</h4>
-<p>SSL Verification enables automatically for URL scheme <code>https:</code>. No additional configuration required.</p>
-<div class="admonition note">
-<p class="admonition-title">Optional</p>
-<p>If you specify a CA Certificates (via Merchant Management API), it will be used to verify the SSL certificate of the webhook endpoint. Otherwise the SSL certificate of the webhook endpoint is verified based on an internal list of Certificate Authorities.</p>
-</div>
-<h4 id="secret-token">Secret token</h4>
-<p>If you setup a <code>secret token</code> (via Merchant Management API), it will be sent with the hook request in the <strong>NF-TOKEN</strong> HTTP header.</p>
-<h3 id="subscribeunsibscribe">Subscribe/Unsibscribe</h3>
-<p>To subscribe or unsibscribe a <a href="#topics">topic</a> use appropriate methods from <a href="../api/#subscribers">REST API</a></p>
                 
                   
                 
@@ -763,6 +491,20 @@ When an event occurs, <code>Notifier</code> makes an HTTP request to the URI con
             </div>
           </a>
         
+        
+          <a href="../callbacks-webhooks/" title="Webhooks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Webhooks
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
