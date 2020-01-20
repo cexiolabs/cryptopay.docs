@@ -1,0 +1,11 @@
+{
+	"accountId": "CPA-4bd95e67ddd842908b3225ba64950f7c",
+	"depositId": "CPD-7902170dd2124b80b3d4c46e4806026f",
+	"status": "PENDING",
+	"amount": "0.55133277",
+	"tag": "Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"currency": "BTC",
+	"confirmations": 0,
+	"block": 12345678,
+	"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}

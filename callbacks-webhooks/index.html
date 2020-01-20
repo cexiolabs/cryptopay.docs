@@ -413,12 +413,64 @@
     Topic DEPOSIT
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#btc" class="md-nav__link">
+    BTC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sunshine_2" class="md-nav__link">
+    Sunshine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#topic-withdrawal" class="md-nav__link">
     Topic WITHDRAWAL
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usd" class="md-nav__link">
+    USD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sunshine_3" class="md-nav__link">
+    Sunshine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -584,12 +636,64 @@
     Topic DEPOSIT
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#btc" class="md-nav__link">
+    BTC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sunshine_2" class="md-nav__link">
+    Sunshine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#topic-withdrawal" class="md-nav__link">
     Topic WITHDRAWAL
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usd" class="md-nav__link">
+    USD
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sunshine_3" class="md-nav__link">
+    Sunshine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1008,10 +1112,70 @@ When an event occurs, <code>Notifier</code> makes an HTTP request to the URI con
 </div>
 <h2 id="topic-deposit">Topic DEPOSIT</h2>
 <p>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></p>
-<p>//TBD</p>
+<h3 id="btc">BTC</h3>
+<h4 id="sunshine_2">Sunshine</h4>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">PENDING</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
+    <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_3" type="radio" id="__tab_3_1" />
+<label for="__tab_3_1">ACCEPTED</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
+    <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
 <h2 id="topic-withdrawal">Topic WITHDRAWAL</h2>
 <p>Emit messages when <code>withdrawal</code> created/updated. Message body same as response of <a href="../api/#fetch-withdrawal">Fetch withdrawal</a></p>
-<p>//TBD</p>
+<h3 id="usd">USD</h3>
+<h4 id="sunshine_3">Sunshine</h4>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">PENDING</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-87d903426d9448a0ac5e8402a7973654&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;599.44&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Sent withdrawal to CEX:upXXXXXXXXXX according to processing instrument flow&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+<input name="__tabs_4" type="radio" id="__tab_4_1" />
+<label for="__tab_4_1">ACCEPTED</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-87d903426d9448a0ac5e8402a7973654&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;599.44&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Sent withdrawal to CEX:upXXXXXXXXXX according to processing instrument flow&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
+<span class="p">}</span>
+</pre></div></div>
+</div>
                 
                   
                 
