@@ -1901,7 +1901,7 @@
                 <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
             <span class="p">},</span>
             <span class="nt">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order is wait for deposit.&quot;</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order is waiting for deposit.&quot;</span>
             <span class="p">},</span>
             <span class="nt">&quot;READY_TO_EXCHANGE&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Ready to exchange.&quot;</span><span class="p">,</span>
@@ -2627,19 +2627,14 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;breakpoints&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;NEW&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order was created. Ready start processing.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
         <span class="p">},</span>
         <span class="nt">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Ready to exchange.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order is waiting for deposit.&quot;</span>
         <span class="p">},</span>
-        <span class="nt">&quot;EXCHANGE&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;READY_TO_EXCHANGE&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Ready to exchange.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">false</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;WITHDRAWAL&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Ready to exchange.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
