@@ -482,6 +482,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2merchant" class="md-nav__link">
+    /v2/merchant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-merchants" class="md-nav__link">
+    List merchants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-merchant" class="md-nav__link">
+    Create merchant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-merchant" class="md-nav__link">
+    Update merchant
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2notification" class="md-nav__link">
     /v2/notification
   </a>
@@ -559,40 +593,6 @@
           <li class="md-nav__item">
   <a href="#network-fees" class="md-nav__link">
     Network fees
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v2merchant" class="md-nav__link">
-    /v2/merchant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#list-merchants" class="md-nav__link">
-    List merchants
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-merchant" class="md-nav__link">
-    Create merchant
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-merchant" class="md-nav__link">
-    Update merchant
   </a>
   
 </li>
@@ -1009,6 +1009,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2merchant" class="md-nav__link">
+    /v2/merchant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-merchants" class="md-nav__link">
+    List merchants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-merchant" class="md-nav__link">
+    Create merchant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-merchant" class="md-nav__link">
+    Update merchant
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2notification" class="md-nav__link">
     /v2/notification
   </a>
@@ -1086,40 +1120,6 @@
           <li class="md-nav__item">
   <a href="#network-fees" class="md-nav__link">
     Network fees
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v2merchant" class="md-nav__link">
-    /v2/merchant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#list-merchants" class="md-nav__link">
-    List merchants
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-merchant" class="md-nav__link">
-    Create merchant
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-merchant" class="md-nav__link">
-    Update merchant
   </a>
   
 </li>
@@ -1806,7 +1806,7 @@
 </pre></div></div>
 </div>
 <h3 id="make-withdrawal">Make withdrawal</h3>
-<p>Prepate withdrawal</p>
+<p>Prepare withdrawal</p>
 <div class="codehilite"><pre><span></span><span class="err">POST /v2/account/{{accountId}}/withdrawal</span>
 </pre></div>
 
@@ -1911,6 +1911,55 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div></p>
+<hr />
+<h2 id="v2merchant">/v2/merchant</h2>
+<p>Merchant endpoint is available for sub-merchants management. Every request must be signed using the described authentication scheme.</p>
+<h3 id="list-merchants">List merchants</h3>
+<p>Returns list of sub-merchants according filter defined by parameters
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Descripton</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>status</strong></td>
+<td>ENUM</td>
+<td>NO</td>
+<td>ACTIVE, INSATLLING, BLOCKED</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-merchant">Create merchant</h3>
+<p>Register a new merchant
+<div class="codehilite"><pre><span></span><span class="err">POST /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Request body:</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="update-merchant">Update merchant</h3>
+<p>Update an existing merchant
+<div class="codehilite"><pre><span></span><span class="err">PUT /v2/merchant</span>
+</pre></div></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Request body:</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
 <hr />
 <h2 id="v2notification">/v2/notification</h2>
 <p>The endpoint allows to control notifications like subscribe/unsibscribe, see topics, see message history
@@ -2079,55 +2128,6 @@ There are three network fee levels available for withdrawal transactions.</p>
 </pre></div>
 The network <strong>feeLevel</strong> can be specified in a <a href="#make-withdrawal">Make withdrawal</a> request body.</p>
 <hr />
-<h2 id="v2merchant">/v2/merchant</h2>
-<p>Merchant endpoint is available for sub-merchants management. Every request must be signed using the described authentication scheme.</p>
-<h3 id="list-merchants">List merchants</h3>
-<p>Returns list of sub-merchants according filter defined by parameters
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/merchant</span>
-</pre></div></p>
-<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#view-permission">View</a></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Name</strong></th>
-<th><strong>Type</strong></th>
-<th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>status</strong></td>
-<td>ENUM</td>
-<td>NO</td>
-<td>ACTIVE, INSATLLING, BLOCKED</td>
-</tr>
-</tbody>
-</table>
-<h3 id="create-merchant">Create merchant</h3>
-<p>Register a new merchant
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/merchant</span>
-</pre></div></p>
-<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
-<p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="update-merchant">Update merchant</h3>
-<p>Update an existing merchant
-<div class="codehilite"><pre><span></span><span class="err">PUT /v2/merchant</span>
-</pre></div></p>
-<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
-<p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-<hr />
 <h2 id="v2order">/v2/order</h2>
 <p>Order endpoint is available for order management. Every request must be signed using the described authentication scheme.</p>
 <p><strong>Order statuses:</strong></p>
@@ -2260,7 +2260,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_1" />
-<label for="__tab_4_1">CRYPTO_BUY (fait)</label>
+<label for="__tab_4_1">CRYPTO_BUY (fiat)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
@@ -2378,7 +2378,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <span class="p">}</span>
 </pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_3" />
-<label for="__tab_4_3">CRYPTO_SELL (fait)</label>
+<label for="__tab_4_3">CRYPTO_SELL (fiat)</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
@@ -2388,7 +2388,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;feeModel&quot;</span><span class="p">:</span> <span class="s2">&quot;INCLUDED&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">optional</span>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span> <span class="err">//</span> <span class="err">optional</span><span class="p">,</span> <span class="err">will</span> <span class="err">create</span> <span class="err">new</span> <span class="err">if</span> <span class="err">skiped</span>
+        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span> <span class="err">//</span> <span class="err">optional</span><span class="p">,</span> <span class="err">will</span> <span class="err">create</span> <span class="err">new</span> <span class="err">if</span> <span class="err">skipped</span>
     <span class="p">},</span>
     <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
@@ -2449,7 +2449,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
         <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span> <span class="err">//</span> <span class="err">optional</span><span class="p">,</span> <span class="err">will</span> <span class="err">create</span> <span class="err">new</span> <span class="err">if</span> <span class="err">skiped</span>
+        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span> <span class="err">//</span> <span class="err">optional</span><span class="p">,</span> <span class="err">will</span> <span class="err">create</span> <span class="err">new</span> <span class="err">if</span> <span class="err">skipped</span>
     <span class="p">},</span>
     <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
