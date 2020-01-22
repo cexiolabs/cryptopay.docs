@@ -516,6 +516,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2network" class="md-nav__link">
+    /v2/network
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-fees" class="md-nav__link">
+    Network fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2notification" class="md-nav__link">
     /v2/notification
   </a>
@@ -532,8 +552,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    List
+  <a href="#list-topics" class="md-nav__link">
+    List topics
   </a>
   
 </li>
@@ -574,26 +594,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v2network" class="md-nav__link">
-    /v2/network
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#network-fees" class="md-nav__link">
-    Network fees
-  </a>
   
 </li>
         
@@ -1043,6 +1043,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2network" class="md-nav__link">
+    /v2/network
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-fees" class="md-nav__link">
+    Network fees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2notification" class="md-nav__link">
     /v2/notification
   </a>
@@ -1059,8 +1079,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    List
+  <a href="#list-topics" class="md-nav__link">
+    List topics
   </a>
   
 </li>
@@ -1101,26 +1121,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#v2network" class="md-nav__link">
-    /v2/network
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#network-fees" class="md-nav__link">
-    Network fees
-  </a>
   
 </li>
         
@@ -1255,7 +1255,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Error Reason Phrase</p>
-<p>An unsuccessful response DOES NOT HAVE body. Error message passed via <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">Reason Phrase</a> along with Status Code</p>
+<p>An unsuccessful response DOES NOT HAVE body. Error message passed via <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">Reason Phrase</a> along with Status Code and <strong>CP-REASON-PHRASE</strong> header</p>
 </div>
 <table>
 <thead>
@@ -1861,6 +1861,7 @@
 <div class="codehilite"><pre><span></span><span class="err">POST /v2/account/{{accountId}}/withdrawal/{{withdrawalId}}/commit</span>
 </pre></div>
 
+<p><strong>Permission</strong>: Account</p>
 <p><strong>No request body:</strong></p>
 <p><strong>Response body:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -1918,7 +1919,7 @@
 <p>Returns list of sub-merchants according filter defined by parameters
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/merchant</span>
 </pre></div></p>
-<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#view-permission">View</a></p>
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1934,12 +1935,12 @@
 <td><strong>status</strong></td>
 <td>ENUM</td>
 <td>NO</td>
-<td>ACTIVE, INSATLLING, BLOCKED</td>
+<td>ACTIVE, INSTALLING, BLOCKED</td>
 </tr>
 </tbody>
 </table>
 <h3 id="create-merchant">Create merchant</h3>
-<p>Register a new merchant
+<p>Register a new sub-merchant
 <div class="codehilite"><pre><span></span><span class="err">POST /v2/merchant</span>
 </pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
@@ -1950,7 +1951,7 @@
 </pre></div>
 
 <h3 id="update-merchant">Update merchant</h3>
-<p>Update an existing merchant
+<p>Update an existing sub-merchant
 <div class="codehilite"><pre><span></span><span class="err">PUT /v2/merchant</span>
 </pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
@@ -1961,11 +1962,85 @@
 </pre></div>
 
 <hr />
+<h2 id="v2network">/v2/network</h2>
+<p>Provides information about cryptocurrency network.</p>
+<h3 id="network-fees">Network fees</h3>
+<p>Cryptocurrency network fees are a fee that spenders may include in their on-chain transaction in order to have it included in a block.
+There are three network fee levels available for withdrawal transactions.</p>
+<p>Example for Bitcoin network:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Expected blocks</strong></th>
+<th><strong>Expected time</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SLOW</strong></td>
+<td>7</td>
+<td>~1 hour</td>
+</tr>
+<tr>
+<td><strong>AVERAGE</strong></td>
+<td>3</td>
+<td>~30 minutes</td>
+</tr>
+<tr>
+<td><strong>FAST</strong></td>
+<td>1</td>
+<td>~10 minutes</td>
+</tr>
+</tbody>
+</table>
+<p>It is a very dynamic thing, therefore each level changes its value every minute in such a way as to guarantee that the transaction will be included in a specific block within a given time frame.</p>
+<div class="codehilite"><pre><span></span><span class="err">GET /v2/network/{{currency}}/fee</span>
+</pre></div>
+
+<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Descripton</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>IDENTIFIER</td>
+<td>YES</td>
+<td>Crypto currency like BTC, LTC, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;SLOW&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00004162&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;AVERAGE&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00004357&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
+    <span class="p">},</span> 
+    <span class="nt">&quot;FAST&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00005612&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+The network <strong>feeLevel</strong> can be specified in a <a href="#make-withdrawal">Make withdrawal</a> request body.</p>
+<hr />
 <h2 id="v2notification">/v2/notification</h2>
 <p>The endpoint allows to control notifications like subscribe/unsibscribe, see topics, see message history
 See more details about our notification engine in <a href="../callbacks/">Callbacks</a> documentation. There defines management methods only.</p>
 <h3 id="topic">Topic</h3>
-<h4 id="list">List</h4>
+<h4 id="list-topics">List topics</h4>
 <p>Returns list of available topics</p>
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/notification/topic</span>
 </pre></div>
@@ -2053,80 +2128,6 @@ See more details about our notification engine in <a href="../callbacks/">Callba
     <span class="nt">&quot;deleteDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-10T12:00:01.223Z&quot;</span>
 <span class="p">}</span>
 </pre></div></p>
-<hr />
-<h2 id="v2network">/v2/network</h2>
-<p>Provides information about cryptocurrency network.</p>
-<h3 id="network-fees">Network fees</h3>
-<p>Cryptocurrency network fees are a fee that spenders may include in their on-chain transaction in order to have it included in a block.
-There are three network fee levels available for withdrawal transactions.</p>
-<p>Example for Bitcoin network:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Level</strong></th>
-<th><strong>Expected blocks</strong></th>
-<th><strong>Expected time</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SLOW</strong></td>
-<td>7</td>
-<td>~1 hour</td>
-</tr>
-<tr>
-<td><strong>AVERAGE</strong></td>
-<td>3</td>
-<td>~30 minutes</td>
-</tr>
-<tr>
-<td><strong>FAST</strong></td>
-<td>1</td>
-<td>~10 minutes</td>
-</tr>
-</tbody>
-</table>
-<p>It is a very dynamic thing, therefore each level changes its value every minute in such a way as to guarantee that the transaction will be included in a specific block within a given time frame.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/network/{{currency}}/fee</span>
-</pre></div>
-
-<p><strong>Permission:</strong> <a href="#view-permission">View</a></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Name</strong></th>
-<th><strong>Type</strong></th>
-<th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>currency</strong></td>
-<td>IDENTIFIER</td>
-<td>YES</td>
-<td>Crypto currency like BTC, LTC, etc.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;SLOW&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00004162&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;AVERAGE&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00004357&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
-    <span class="p">},</span> 
-    <span class="nt">&quot;FAST&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00005612&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-The network <strong>feeLevel</strong> can be specified in a <a href="#make-withdrawal">Make withdrawal</a> request body.</p>
 <hr />
 <h2 id="v2order">/v2/order</h2>
 <p>Order endpoint is available for order management. Every request must be signed using the described authentication scheme.</p>
@@ -2620,6 +2621,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p>Returns list of flow breakpoints
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}/breakpoint</span>
 </pre></div></p>
+<p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
+<p><strong>Response body</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.breakpoints.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
@@ -2640,7 +2643,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <h4 id="resume-breakpoint">Resume breakpoint</h4>
 <div class="codehilite"><pre><span></span><span class="err">POST /v2/order/{{orderId}}/breakpoint/{{breakpointName}}</span>
 </pre></div>
