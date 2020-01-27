@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/callbacks/">
+        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/support-notes/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Basics - CryptoPay Service API (v2.alpha)</title>
+        <title>Support Notes - CryptoPay Service API (v2.alpha)</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#callbacks" tabindex="1" class="md-skip">
+      <a href="#support-notes" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Basics
+                Support Notes
               
             </span>
           
@@ -226,12 +226,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Callbacks
@@ -247,63 +245,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Basics
-      </label>
-    
-    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../callbacks/" title="Basics" class="md-nav__link">
       Basics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use-case
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delivery-under-re-view" class="md-nav__link">
-    Delivery (under re-view)
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -328,11 +274,76 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../support-notes/" title="Support Notes" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Support Notes
+      </label>
+    
+    <a href="./" title="Support Notes" class="md-nav__link md-nav__link--active">
       Support Notes
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crypto_sell" class="md-nav__link">
+    CRYPTO_SELL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidences" class="md-nav__link">
+    Evidences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    Form
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidences-crypto_buy" class="md-nav__link">
+    Evidences CRYPTO_BUY
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -357,22 +368,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
+  <a href="#crypto_sell" class="md-nav__link">
+    CRYPTO_SELL
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidences" class="md-nav__link">
+    Evidences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    Form
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use-case
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delivery-under-re-view" class="md-nav__link">
-    Delivery (under re-view)
+  <a href="#evidences-crypto_buy" class="md-nav__link">
+    Evidences CRYPTO_BUY
   </a>
   
 </li>
@@ -394,81 +418,42 @@
               
                 
                 
-                <h1 id="callbacks">Callbacks</h1>
-<p>Callbacks are based on <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish–Subscribe</a> pattern via a <code>Notifier</code> service. The <code>Notifier</code> service's responsibility is to deliver callback messages via Webhooks and other messaging providers.</p>
+                <h1 id="support-notes">Support Notes</h1>
+<p>This page contains recommendations to solve support requests as quick as possible and as time-less as possible.</p>
+<p>Please, collect following evidences before submit support request to the development team.</p>
+<h2 id="crypto_sell">CRYPTO_SELL</h2>
+<h3 id="evidences">Evidences</h3>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox"/> Ask an user for a <a href="https://en.bitcoin.it/wiki/Address"><code>Deposit Crypto Address</code></a> where funds were sent. Example BTC: <code>3ELfDMmDEeVG85ZKmfgLf9yw4rZSgbrie5</code></p>
 <div class="admonition note">
-<p class="admonition-title">Recommendation</p>
-<p>Although notification includes real and valid data, we recommend to use notifications just as notifications and retvieve data via appropriate method of Pull API (<a href="../api">REST API</a> for example).
-In general, any notifications system by design may delay messages. Good practice for end-application is to check status via Pull API if expected message was not received in expected time frame.</p>
+<p class="admonition-title">Note</p>
+<p>Each order (invoice) has unique <code>Deposit Crypto Address</code>. The user uses this address as destination of crypto transfer. </p>
 </div>
-<h2 id="topics">Topics</h2>
-<table>
-<thead>
-<tr>
-<th>Topic Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>ORDER</strong></td>
-<td>Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
-</tr>
-<tr>
-<td><strong>DEPOSIT</strong></td>
-<td>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></td>
-</tr>
-<tr>
-<td><strong>WITHDRAWAL</strong></td>
-<td>Emit messages when <code>withdrawal</code> created/updated. Message body same as response of <a href="../api/#fetch-withdrawal">Fetch withdrawal</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="use-case">Use-case</h2>
-<ol>
-<li>Client subscribe a desired topic</li>
-<li><code>Notifier</code> deliver events</li>
-<li>Client unsubscribe the topic</li>
-<li>No delivery</li>
-</ol>
-<div class="mermaid">sequenceDiagram
-    participant Subscriber1
-    participant Subscriber2
-    participant Notifier
-    opt Event A
-        Notifier-&gt;&gt;Notifier: Skip, just audit
-    end
-    Subscriber2-&gt;&gt;+Notifier: Subscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber2: OK
-    opt Event B
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message B for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-    end
-    Subscriber1-&gt;&gt;+Notifier: Subscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber1: OK
-    opt Event C
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message C for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-        Notifier-&gt;&gt;+Subscriber1: Message C for "ORDER"
-        Subscriber1--&gt;&gt;-Notifier: OK
-    end
-    Subscriber1-&gt;&gt;+Notifier: Unsubscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber1: OK
-    opt Event D
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message D for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-    end</div>
-
-<h2 id="delivery-under-re-view">Delivery (under re-view)</h2>
-<p>Messages are sent immediately after an operation was performed.</p>
-<p><code>Notifier</code> records the fact of message delivery to your system after receiving the response from your system.</p>
-<p>If message delivery is failed the server will retry with delay between attempts according to a scale was choosen at subscription phase.</p>
-<p>// TBD(Is this proper scale?) //</p>
-<p>For example powers of two scale will retry delivery until the period does not exceed 16384 seconds (~4.5hours): 1, 2, 4, 8, 16, ..., 16384(max).</p>
-<p>Notification server performs attempts to deliver a message within 3 days.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox"/> Ask an user for a <code>Transaction Hash</code>. Example BTC: <code>543f9323c5c7323793749a0ea3154e3550ac0301773875d026bd6b16abd0e857</code></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox"/> Check the <code>Deposit Crypto Address</code> for available transactions and ensure that crypto funds were sent by the user in appropriate time frame.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To obtain information, use blockchain explorer (each crypto currency has own blockchain explorer). For example: <a href="https://blockchair.com/bitcoin/">BTC, BCH, LTC</a></p>
+</div>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox"/> Obtain <code>Order(invoice) identifier</code>. For example: <code>CPSa3f5588cc0c742138b1a78df53032469</code> or <code>CPO-b3987b14439543c0b7c3f627cb8d0e87</code></p>
+</li>
+</ul>
+<h3 id="form">Form</h3>
+<ul>
+<li><strong>Deposit Crypto Address</strong></li>
+<li><strong>Transaction Hash</strong></li>
+<li><strong>Order(invoice) identifier</strong></li>
+<li><strong>Description</strong> of user's request</li>
+</ul>
+<h2 id="evidences-crypto_buy">Evidences CRYPTO_BUY</h2>
+<p>TBD</p>
                 
                   
                 
@@ -489,7 +474,7 @@ In general, any notifications system by design may delay messages. Good practice
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../api/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../callbacks-webhooks/" title="Webhooks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -498,25 +483,11 @@ In general, any notifications system by design may delay messages. Good practice
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                REST API
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../callbacks-webhooks/" title="Webhooks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 Webhooks
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
