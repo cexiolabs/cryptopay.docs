@@ -20,7 +20,8 @@
 		"amount": "150.42"
 	},
 	"rate": {
-		"initial": "2925.25773947",
+		"symbol": "BTC/USD",
+		"initial": "9403.12773947",
 		"exchange": null
 	},
 	"fees": [

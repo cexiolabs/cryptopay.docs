@@ -20,7 +20,8 @@
 		"amount": "0.05142111"
 	},
 	"rate": {
-		"initial": "2925.25773947",
+		"symbol": "BTC/USD",
+		"initial": "9403.12773947",
 		"exchange": null
 	},
 	"fees": [
@@ -33,6 +34,7 @@
 	"withdrawal": {
 		"kind": "BTC",
 		"network": "mainnet",
+		"networkFeeLevel": "AVERAGE",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"transactions": []
 	}
