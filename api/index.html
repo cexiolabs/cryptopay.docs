@@ -625,6 +625,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cancel-order" class="md-nav__link">
+    Cancel order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fetch-order" class="md-nav__link">
     Fetch order
   </a>
@@ -1164,6 +1171,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cancel-order" class="md-nav__link">
+    Cancel order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fetch-order" class="md-nav__link">
     Fetch order
   </a>
@@ -1265,6 +1279,10 @@
 <li>4xx (Client Error): The request contains bad syntax or cannot be fulfilled</li>
 <li>5xx (Server Error): The server failed to fulfill an apparently valid request</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">5xx</p>
+<p>It is important to NOT treat this as a failure operation. The execution status is UNKNOWN and could have been a success.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Error Reason Phrase</p>
 <p>An unsuccessful response DOES NOT HAVE body. Error message passed via <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">Reason Phrase</a> along with Status Code and <strong>CP-REASON-PHRASE</strong> header</p>
@@ -2262,7 +2280,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <span class="p">}</span>
 <span class="err">&lt;--</span>
 <span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/instruments.response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
@@ -2531,6 +2549,50 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p class="admonition-title">Note</p>
 <p>Instrument specific fields are described in <a href="https://github.com/cexiolabs/cryptopay.schemas">JSON schemas</a></p>
 </div>
+<h3 id="cancel-order">Cancel order</h3>
+<p>Cancel an execution process of the order (if possible)</p>
+<div class="codehilite"><pre><span></span><span class="err">DELETE /v2/order/{{orderId}}</span>
+</pre></div>
+
+<p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Descripton</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>orderId</strong></td>
+<td>IDENTIFIER</td>
+<td>YES</td>
+<td>Identifier of the order</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body:</strong></p>
+<div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<span class="p">{</span>
+    <span class="nt">&quot;cancellationReason&quot;</span><span class="p">:</span> <span class="s2">&quot;A text message describes cancellation reason&quot;</span>
+<span class="p">}</span>
+<span class="err">&lt;--</span>
+<span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;CANCELLED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cancellationReason&quot;</span><span class="p">:</span> <span class="s2">&quot;A text message describes cancellation reason&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;NAME&gt;&quot;</span><span class="p">,</span>
+    <span class="err">...instrument</span> <span class="err">specific</span> <span class="err">fields...</span>
+<span class="p">}</span>
+</pre></div>
+
 <h3 id="fetch-order">Fetch order</h3>
 <p>Fetch single order by ID
 <div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}</span>
