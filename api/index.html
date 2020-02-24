@@ -1505,6 +1505,63 @@
 <span class="k">print</span><span class="p">(</span><span class="nb">base64_encode</span><span class="p">(</span><span class="nb">hash_hmac</span><span class="p">(</span><span class="s2">&quot;sha256&quot;</span><span class="p">,</span> <span class="nv">$what</span><span class="p">,</span> <span class="nv">$secretKey</span><span class="p">,</span> <span class="k">true</span><span class="p">)));</span>
 <span class="c1"># Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo=</span>
 </pre></div></div>
+<input name="__tabs_1" type="radio" id="__tab_1_3" />
+<label for="__tab_1_3">Java</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1">// file: SignatureCalculator.java</span>
+<span class="kn">package</span> <span class="nn">band.cryptopay</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.nio.charset.Charset</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.security.InvalidKeyException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.crypto.Mac</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.spec.SecretKeySpec</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.codec.binary.Base64</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.ArrayUtils</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SignatureCalculator</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">_secret</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">SignatureCalculator</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">_secret</span> <span class="o">=</span> <span class="n">Base64</span><span class="o">.</span><span class="na">decodeBase64</span><span class="o">(</span><span class="n">secretBase64</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="o">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="o">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="o">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">sing</span><span class="o">(</span><span class="n">timeStampStr</span><span class="o">,</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">urlPath</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="o">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="o">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bodyRaw</span><span class="o">)</span>
+            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="o">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="o">{</span>
+
+        <span class="kd">final</span> <span class="n">String</span> <span class="n">prefixStr</span> <span class="o">=</span> <span class="n">timeStampStr</span> <span class="o">+</span> <span class="n">httpMethod</span> <span class="o">+</span> <span class="n">urlPath</span><span class="o">;</span>
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">prefixRaw</span> <span class="o">=</span> <span class="n">prefixStr</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&quot;UTF-8&quot;</span><span class="o">));</span>
+
+        <span class="kd">final</span> <span class="n">String</span> <span class="n">algo</span> <span class="o">=</span> <span class="s">&quot;HmacSHA256&quot;</span><span class="o">;</span>
+        <span class="kd">final</span> <span class="n">Mac</span> <span class="n">sha256_HMAC</span> <span class="o">=</span> <span class="n">Mac</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">algo</span><span class="o">);</span>
+        <span class="n">sha256_HMAC</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="k">new</span> <span class="n">SecretKeySpec</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">_secret</span><span class="o">,</span> <span class="n">algo</span><span class="o">));</span>
+
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">what</span> <span class="o">=</span> <span class="n">bodyRaw</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">ArrayUtils</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">prefixRaw</span><span class="o">,</span> <span class="n">bodyRaw</span><span class="o">)</span> <span class="o">:</span> <span class="n">prefixRaw</span><span class="o">;</span>
+
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">sha256_HMAC</span><span class="o">.</span><span class="na">doFinal</span><span class="o">(</span><span class="n">what</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">Base64</span><span class="o">.</span><span class="na">encodeBase64String</span><span class="o">(</span><span class="n">signature</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Make signature</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span> <span class="o">=</span> <span class="s">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">timeStampStr</span> <span class="o">=</span> <span class="s">&quot;1573753848&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">httpMethod</span> <span class="o">=</span> <span class="s">&quot;POST&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="s">&quot;/v2/order?something=42&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">bodyStr</span> <span class="o">=</span> <span class="s">&quot;{\&quot;clientOrderId\&quot;:\&quot;1490548887804-XA-1112-TU\&quot;,\&quot;clientOrderTag\&quot;:\&quot;My inifinity exchange order\&quot;,\&quot;instrument\&quot;:\&quot;CRYPTO_SELL_INFINITY\&quot;,\&quot;fiatCurrency\&quot;:\&quot;EUR\&quot;,\&quot;cryptoCurrency\&quot;:\&quot;BTC\&quot;}&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">body</span> <span class="o">=</span> <span class="n">bodyStr</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&quot;UTF-8&quot;</span><span class="o">));</span>
+
+<span class="kd">final</span> <span class="n">SignatureCalculator</span> <span class="n">signatureCalculator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SignatureCalculator</span><span class="o">(</span><span class="n">secretBase64</span><span class="o">);</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">signatureCalculator</span><span class="o">.</span><span class="na">sing</span><span class="o">(</span><span class="n">timeStampStr</span><span class="o">,</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">urlPath</span><span class="o">,</span> <span class="n">body</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">signature</span><span class="o">);</span>
+<span class="c1">// Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo=</span>
+</pre></div></div>
 </div>
 <h3 id="selecting-a-timestamp">Selecting a Timestamp</h3>
 <p>The <strong>CP-ACCESS-TIMESTAMP</strong> header MUST be number of seconds since Unix Epoch in UTC. Decimal values are allowed.</p>
@@ -2790,8 +2847,8 @@ A level attribute that is available in callbacks that we send to a merchant's se
 </div>
 <p><strong>Response body</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;iso&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-11-16T10:57:37.209Z&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;epoch&quot;</span><span class="p">:</span> <span class="mf">1573901857.209</span>
+    <span class="nt">&quot;iso8601&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-20T15:39:14.285Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;epoch&quot;</span><span class="p">:</span> <span class="mf">1582213154.285</span>
 <span class="p">}</span>
 </pre></div></p>
 <p>The <code>epoch</code> field represents decimal seconds since <a href="http://en.wikipedia.org/wiki/Unix_time">Unix Epoch</a>.</p>
