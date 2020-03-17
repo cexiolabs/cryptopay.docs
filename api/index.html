@@ -11,8 +11,6 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://cexiolabs.github.io/cryptopay.docs/api/">
-      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -34,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../images/favicon.jpg">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -85,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#rest-api" tabindex="1" class="md-skip">
+      <a href="#rest-api" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -94,9 +92,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API (v2.alpha)" class="md-header-nav__button md-logo">
+        <a href=".." title="CryptoPay Service API (v2.alpha)" aria-label="CryptoPay Service API (v2.alpha)" class="md-header-nav__button md-logo">
           
-            <img src="../images/logo.jpg" width="24" height="24">
+            <img alt="logo" src="../images/logo.jpg" width="24" height="24">
           
         </a>
       </div>
@@ -125,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -164,9 +162,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://cexiolabs.github.io/cryptopay.docs" title="CryptoPay Service API (v2.alpha)" class="md-nav__button md-logo">
+    <a href=".." title="CryptoPay Service API (v2.alpha)" class="md-nav__button md-logo">
       
-        <img src="../images/logo.jpg" width="48" height="48">
+        <img alt="logo" src="../images/logo.jpg" width="48" height="48">
       
     </a>
     CryptoPay Service API (v2.alpha)
@@ -408,8 +406,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-accounts" class="md-nav__link">
-    List accounts
+  <a href="#list-of-accounts" class="md-nav__link">
+    List of accounts
   </a>
   
 </li>
@@ -429,8 +427,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#list-of-deposits" class="md-nav__link">
+    List of deposits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-deposit-details" class="md-nav__link">
     Get deposit details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-withdrawals" class="md-nav__link">
+    List of withdrawals
   </a>
   
 </li>
@@ -544,6 +556,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#callback-key" class="md-nav__link">
+    Callback key
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-callback-key" class="md-nav__link">
+    Generate callback key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#topic" class="md-nav__link">
     Topic
   </a>
@@ -564,23 +596,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subscribers" class="md-nav__link">
-    Subscribers
+  <a href="#subscription" class="md-nav__link">
+    Subscription
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-subscribers" class="md-nav__link">
-    List subscribers
+  <a href="#list-subscriptions" class="md-nav__link">
+    List subscriptions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-subscriber" class="md-nav__link">
-    Create subscriber
+  <a href="#get-subscription" class="md-nav__link">
+    Get subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" class="md-nav__link">
+    Subscribe
   </a>
   
 </li>
@@ -954,8 +993,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-accounts" class="md-nav__link">
-    List accounts
+  <a href="#list-of-accounts" class="md-nav__link">
+    List of accounts
   </a>
   
 </li>
@@ -975,8 +1014,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#list-of-deposits" class="md-nav__link">
+    List of deposits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-deposit-details" class="md-nav__link">
     Get deposit details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-withdrawals" class="md-nav__link">
+    List of withdrawals
   </a>
   
 </li>
@@ -1090,6 +1143,26 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#callback-key" class="md-nav__link">
+    Callback key
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-callback-key" class="md-nav__link">
+    Generate callback key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#topic" class="md-nav__link">
     Topic
   </a>
@@ -1110,23 +1183,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#subscribers" class="md-nav__link">
-    Subscribers
+  <a href="#subscription" class="md-nav__link">
+    Subscription
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#list-subscribers" class="md-nav__link">
-    List subscribers
+  <a href="#list-subscriptions" class="md-nav__link">
+    List subscriptions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-subscriber" class="md-nav__link">
-    Create subscriber
+  <a href="#get-subscription" class="md-nav__link">
+    Get subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" class="md-nav__link">
+    Subscribe
   </a>
   
 </li>
@@ -1351,7 +1431,7 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1383,10 +1463,10 @@
 <h4 id="ids">IDs</h4>
 <p>Most of identifiers are UUID-based with kind prefix.</p>
 <p>For example order identifier CPO-8075c1c9d7334be0860e3b57f0de43e5 comes from UUID 8075c1c9-d733-4be0-860e-3b57f0de43e5</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span><span class="s2">&quot;CPO-8075c1c9d7334be0860e3b57f0de43e5&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Case insensitive</p>
@@ -1394,24 +1474,24 @@
 </div>
 <h4 id="dates">Dates</h4>
 <p>All timestamps from API are returned in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> with milliseconds. Make sure you can parse the following ISO 8601 format. Most modern languages and libraries will handle this without issues.</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="s2">&quot;2020-01-16T07:35:32.129Z&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h4 id="decimal-financial">Decimal (Financial)</h4>
 <p>All numbers that represent financial values are returned as strings to preserve full precision across platforms. When making a request, you must convert your numbers to strings to avoid truncation and precision errors.</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="s2">&quot;12345678.12345678&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h4 id="integer">Integer</h4>
 <p>Integer numbers (like counter) are unquoted.</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span><span class="mi">5</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="rate-limit">Rate Limit</h3>
 <p>When a rate limit is exceeded, a status of <strong>429 Too Many Requests</strong> will be returned.</p>
@@ -1456,12 +1536,12 @@
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Bash + OpenSSL</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nv">SECRET</span><span class="o">=</span><span class="s2">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="nv">SECRET</span><span class="o">=</span><span class="s2">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span>
 <span class="c1">#TIMESTAMP=$(date +%s)</span>
 <span class="nv">TIMESTAMP</span><span class="o">=</span><span class="m">1573753848</span>
 <span class="nv">METHOD</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span>
 <span class="nv">URLPATH</span><span class="o">=</span><span class="s2">&quot;/v2/order?something=42&quot;</span>
-<span class="nv">BODY</span><span class="o">=</span><span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My inifinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span>
+<span class="nv">BODY</span><span class="o">=</span><span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My infinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span>
 
 <span class="nv">WHAT</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">TIMESTAMP</span><span class="si">}${</span><span class="nv">METHOD</span><span class="si">}${</span><span class="nv">URLPATH</span><span class="si">}${</span><span class="nv">BODY</span><span class="si">}</span><span class="s2">&quot;</span>
 
@@ -1469,15 +1549,15 @@
 
 <span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="si">${</span><span class="nv">WHAT</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">|</span> openssl dgst -sha256 -mac HMAC -macopt <span class="s2">&quot;hexkey:</span><span class="nv">$SECRET_KEY</span><span class="s2">&quot;</span> <span class="p">|</span> xxd -r -p <span class="p">|</span> base64
 // <span class="nv">Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo</span><span class="o">=</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_1" type="radio" id="__tab_1_1" />
 <label for="__tab_1_1">NodeJS</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="s2">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="p">;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="kr">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="s2">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="p">;</span>
 <span class="c1">//const timestamp = Date.now() / 1000;</span>
 <span class="kr">const</span> <span class="nx">timestamp</span> <span class="o">=</span> <span class="mi">1573753848</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">method</span> <span class="o">=</span> <span class="s2">&quot;POST&quot;</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">urlPath</span> <span class="o">=</span> <span class="s2">&quot;/v2/order?something=42&quot;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My inifinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My infinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">what</span> <span class="o">=</span> <span class="nx">timestamp</span> <span class="o">+</span> <span class="nx">method</span> <span class="o">+</span> <span class="nx">urlPath</span> <span class="o">+</span> <span class="nx">body</span><span class="p">;</span>
 
@@ -1487,16 +1567,16 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hmac</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">what</span><span class="p">).</span><span class="nx">digest</span><span class="p">(</span><span class="s2">&quot;base64&quot;</span><span class="p">));</span>
 <span class="c1">// Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo=</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_1" type="radio" id="__tab_1_2" />
 <label for="__tab_1_2">PHP</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$secret</span> <span class="o">=</span> <span class="s2">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="p">;</span>
 <span class="c1">#$timestamp = time()</span>
 <span class="nv">$timestamp</span> <span class="o">=</span> <span class="mi">1573753848</span><span class="p">;</span>
 <span class="nv">$method</span> <span class="o">=</span> <span class="s2">&quot;POST&quot;</span><span class="p">;</span>
 <span class="nv">$urlPath</span> <span class="o">=</span> <span class="s2">&quot;/v2/order?something=42&quot;</span><span class="p">;</span>
-<span class="nv">$body</span> <span class="o">=</span> <span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My inifinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span><span class="p">;</span>
+<span class="nv">$body</span> <span class="o">=</span> <span class="s1">&#39;{&quot;clientOrderId&quot;:&quot;1490548887804-XA-1112-TU&quot;,&quot;clientOrderTag&quot;:&quot;My infinity exchange order&quot;,&quot;instrument&quot;:&quot;CRYPTO_SELL_INFINITY&quot;,&quot;fiatCurrency&quot;:&quot;EUR&quot;,&quot;cryptoCurrency&quot;:&quot;BTC&quot;}&#39;</span><span class="p">;</span>
 
 <span class="nv">$what</span> <span class="o">=</span> <span class="nv">$timestamp</span> <span class="o">.</span> <span class="nv">$method</span> <span class="o">.</span> <span class="nv">$urlPath</span> <span class="o">.</span> <span class="nv">$body</span><span class="p">;</span>
 
@@ -1504,69 +1584,69 @@
 
 <span class="k">print</span><span class="p">(</span><span class="nb">base64_encode</span><span class="p">(</span><span class="nb">hash_hmac</span><span class="p">(</span><span class="s2">&quot;sha256&quot;</span><span class="p">,</span> <span class="nv">$what</span><span class="p">,</span> <span class="nv">$secretKey</span><span class="p">,</span> <span class="k">true</span><span class="p">)));</span>
 <span class="c1"># Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo=</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_1" type="radio" id="__tab_1_3" />
 <label for="__tab_1_3">Java</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1">// file: SignatureCalculator.java</span>
-<span class="kn">package</span> <span class="nn">band.cryptopay</span><span class="o">;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="c1">// file: SignatureCalculator.java</span>
+<span class="kn">package</span> <span class="nn">band.cryptopay</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">java.nio.charset.Charset</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.security.InvalidKeyException</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.charset.Charset</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.security.InvalidKeyException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.security.NoSuchAlgorithmException</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">javax.crypto.Mac</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">javax.crypto.spec.SecretKeySpec</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.apache.commons.codec.binary.Base64</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.ArrayUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.Mac</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.spec.SecretKeySpec</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.codec.binary.Base64</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.ArrayUtils</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SignatureCalculator</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">_secret</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SignatureCalculator</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">_secret</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">SignatureCalculator</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">_secret</span> <span class="o">=</span> <span class="n">Base64</span><span class="o">.</span><span class="na">decodeBase64</span><span class="o">(</span><span class="n">secretBase64</span><span class="o">);</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">SignatureCalculator</span><span class="p">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">_secret</span> <span class="o">=</span> <span class="n">Base64</span><span class="p">.</span><span class="na">decodeBase64</span><span class="p">(</span><span class="n">secretBase64</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="o">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="o">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="o">)</span>
-            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="o">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">sing</span><span class="o">(</span><span class="n">timeStampStr</span><span class="o">,</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">urlPath</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="p">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="p">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="p">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="p">)</span>
+            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="p">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">sing</span><span class="p">(</span><span class="n">timeStampStr</span><span class="p">,</span> <span class="n">httpMethod</span><span class="p">,</span> <span class="n">urlPath</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="o">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="o">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bodyRaw</span><span class="o">)</span>
-            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="o">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sing</span><span class="p">(</span><span class="n">String</span> <span class="n">timeStampStr</span><span class="p">,</span> <span class="n">String</span> <span class="n">httpMethod</span><span class="p">,</span> <span class="n">String</span> <span class="n">urlPath</span><span class="p">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bodyRaw</span><span class="p">)</span>
+            <span class="kd">throws</span> <span class="n">InvalidKeyException</span><span class="p">,</span> <span class="n">NoSuchAlgorithmException</span> <span class="p">{</span>
 
-        <span class="kd">final</span> <span class="n">String</span> <span class="n">prefixStr</span> <span class="o">=</span> <span class="n">timeStampStr</span> <span class="o">+</span> <span class="n">httpMethod</span> <span class="o">+</span> <span class="n">urlPath</span><span class="o">;</span>
-        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">prefixRaw</span> <span class="o">=</span> <span class="n">prefixStr</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&quot;UTF-8&quot;</span><span class="o">));</span>
+        <span class="kd">final</span> <span class="n">String</span> <span class="n">prefixStr</span> <span class="o">=</span> <span class="n">timeStampStr</span> <span class="o">+</span> <span class="n">httpMethod</span> <span class="o">+</span> <span class="n">urlPath</span><span class="p">;</span>
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">prefixRaw</span> <span class="o">=</span> <span class="n">prefixStr</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(</span><span class="n">Charset</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">));</span>
 
-        <span class="kd">final</span> <span class="n">String</span> <span class="n">algo</span> <span class="o">=</span> <span class="s">&quot;HmacSHA256&quot;</span><span class="o">;</span>
-        <span class="kd">final</span> <span class="n">Mac</span> <span class="n">sha256_HMAC</span> <span class="o">=</span> <span class="n">Mac</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">algo</span><span class="o">);</span>
-        <span class="n">sha256_HMAC</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="k">new</span> <span class="n">SecretKeySpec</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">_secret</span><span class="o">,</span> <span class="n">algo</span><span class="o">));</span>
+        <span class="kd">final</span> <span class="n">String</span> <span class="n">algo</span> <span class="o">=</span> <span class="s">&quot;HmacSHA256&quot;</span><span class="p">;</span>
+        <span class="kd">final</span> <span class="n">Mac</span> <span class="n">sha256_HMAC</span> <span class="o">=</span> <span class="n">Mac</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">algo</span><span class="p">);</span>
+        <span class="n">sha256_HMAC</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="k">new</span> <span class="n">SecretKeySpec</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">_secret</span><span class="p">,</span> <span class="n">algo</span><span class="p">));</span>
 
-        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">what</span> <span class="o">=</span> <span class="n">bodyRaw</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">ArrayUtils</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">prefixRaw</span><span class="o">,</span> <span class="n">bodyRaw</span><span class="o">)</span> <span class="o">:</span> <span class="n">prefixRaw</span><span class="o">;</span>
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">what</span> <span class="o">=</span> <span class="n">bodyRaw</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">ArrayUtils</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">prefixRaw</span><span class="p">,</span> <span class="n">bodyRaw</span><span class="p">)</span> <span class="p">:</span> <span class="n">prefixRaw</span><span class="p">;</span>
 
-        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">sha256_HMAC</span><span class="o">.</span><span class="na">doFinal</span><span class="o">(</span><span class="n">what</span><span class="o">);</span>
+        <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">sha256_HMAC</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">what</span><span class="p">);</span>
 
-        <span class="k">return</span> <span class="n">Base64</span><span class="o">.</span><span class="na">encodeBase64String</span><span class="o">(</span><span class="n">signature</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+        <span class="k">return</span> <span class="n">Base64</span><span class="p">.</span><span class="na">encodeBase64String</span><span class="p">(</span><span class="n">signature</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
 <span class="c1">// Make signature</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span> <span class="o">=</span> <span class="s">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">timeStampStr</span> <span class="o">=</span> <span class="s">&quot;1573753848&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">httpMethod</span> <span class="o">=</span> <span class="s">&quot;POST&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="s">&quot;/v2/order?something=42&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">bodyStr</span> <span class="o">=</span> <span class="s">&quot;{\&quot;clientOrderId\&quot;:\&quot;1490548887804-XA-1112-TU\&quot;,\&quot;clientOrderTag\&quot;:\&quot;My inifinity exchange order\&quot;,\&quot;instrument\&quot;:\&quot;CRYPTO_SELL_INFINITY\&quot;,\&quot;fiatCurrency\&quot;:\&quot;EUR\&quot;,\&quot;cryptoCurrency\&quot;:\&quot;BTC\&quot;}&quot;</span><span class="o">;</span>
-<span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">body</span> <span class="o">=</span> <span class="n">bodyStr</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">&quot;UTF-8&quot;</span><span class="o">));</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">secretBase64</span> <span class="o">=</span> <span class="s">&quot;cNmgFLOwbckPszgJdUe4rdpcUo2IBHtNPsyxAScjl7CN4omMN64UJAvODT8PsrPIfR7TosKUfEFROyhz/YJxsw==&quot;</span><span class="p">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">timeStampStr</span> <span class="o">=</span> <span class="s">&quot;1573753848&quot;</span><span class="p">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">httpMethod</span> <span class="o">=</span> <span class="s">&quot;POST&quot;</span><span class="p">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">urlPath</span> <span class="o">=</span> <span class="s">&quot;/v2/order?something=42&quot;</span><span class="p">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">bodyStr</span> <span class="o">=</span> <span class="s">&quot;{\&quot;clientOrderId\&quot;:\&quot;1490548887804-XA-1112-TU\&quot;,\&quot;clientOrderTag\&quot;:\&quot;My infinity exchange order\&quot;,\&quot;instrument\&quot;:\&quot;CRYPTO_SELL_INFINITY\&quot;,\&quot;fiatCurrency\&quot;:\&quot;EUR\&quot;,\&quot;cryptoCurrency\&quot;:\&quot;BTC\&quot;}&quot;</span><span class="p">;</span>
+<span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">body</span> <span class="o">=</span> <span class="n">bodyStr</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(</span><span class="n">Charset</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">));</span>
 
-<span class="kd">final</span> <span class="n">SignatureCalculator</span> <span class="n">signatureCalculator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SignatureCalculator</span><span class="o">(</span><span class="n">secretBase64</span><span class="o">);</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">signatureCalculator</span><span class="o">.</span><span class="na">sing</span><span class="o">(</span><span class="n">timeStampStr</span><span class="o">,</span> <span class="n">httpMethod</span><span class="o">,</span> <span class="n">urlPath</span><span class="o">,</span> <span class="n">body</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">signature</span><span class="o">);</span>
+<span class="kd">final</span> <span class="n">SignatureCalculator</span> <span class="n">signatureCalculator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SignatureCalculator</span><span class="p">(</span><span class="n">secretBase64</span><span class="p">);</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">signatureCalculator</span><span class="p">.</span><span class="na">sing</span><span class="p">(</span><span class="n">timeStampStr</span><span class="p">,</span> <span class="n">httpMethod</span><span class="p">,</span> <span class="n">urlPath</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">signature</span><span class="p">);</span>
 <span class="c1">// Re1ny7V8OHYixrjZ7YZzGYWUnjGQzknpn53FUHdE7Qo=</span>
-</pre></div></div>
+</code></pre></div></div>
 </div>
 <h3 id="selecting-a-timestamp">Selecting a Timestamp</h3>
 <p>The <strong>CP-ACCESS-TIMESTAMP</strong> header MUST be number of seconds since Unix Epoch in UTC. Decimal values are allowed.</p>
-<div class="codehilite"><pre><span></span><span class="n">CP</span><span class="o">-</span><span class="k">ACCESS</span><span class="o">-</span><span class="k">TIMESTAMP</span><span class="p">:</span> <span class="mi">1579161402</span><span class="p">.</span><span class="mi">051</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c">CP-ACCESS-TIMESTAMP: 1579161402.051</span>
+</code></pre></div>
 
 <p>Your timestamp must be within 30 seconds of the api service time or your request will be considered expired and rejected. We recommend using the <a href="#v2time">time endpoint</a> to query for the API server time if you believe there many be time skew between your server and the API servers.</p>
 <hr />
@@ -1574,7 +1654,7 @@
 <table>
 <thead>
 <tr>
-<th><strong>Type</strong></th>
+<th><strong>Classifier</strong></th>
 <th><strong>Description</strong></th>
 </tr>
 </thead>
@@ -1588,19 +1668,15 @@
 <td>Long-term account to handle a lot of orders</td>
 </tr>
 <tr>
-<td><strong>TRANSIT</strong></td>
-<td>Transit account (temprary hold funds)</td>
-</tr>
-<tr>
 <td><strong>HOLD</strong></td>
 <td>Long-term account to hold funds</td>
 </tr>
 </tbody>
 </table>
-<h3 id="list-accounts">List accounts</h3>
+<h3 id="list-of-accounts">List of accounts</h3>
 <p>Retrieve a list of all your accounts.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/account</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
@@ -1610,7 +1686,7 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1647,57 +1723,57 @@
 </tbody>
 </table>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">[</span>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-67f28d8f27b0430f8ced612f678bc0c6&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;TRANSIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;TRANSIT&quot;</span><span class="p">,</span>
         <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Destination for order CPO-9706cb6acb1c4d8599394374b10022a0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
         <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-7d7f94fecfbb4e5ea94cc540c9935ae4&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
         <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Deposit for order CPO-b1b4203251094b0983f33133340e7672&quot;</span><span class="p">,</span>
         <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
         <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
         <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Deposit for order CPO-19824601944647cda1d2541df563dc26&quot;</span><span class="p">,</span>
         <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0223&quot;</span><span class="p">,</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
         <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-dbcbcf25a5b145c88e0d4e40db864a65&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
         <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Deposit for order CPO-9706cb6acb1c4d8599394374b10022a0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;15236.97272057&quot;</span><span class="p">,</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;LTC&quot;</span>
     <span class="p">},</span>
     <span class="err">...</span>
 <span class="p">]</span>
-</pre></div></p>
+</code></pre></div></p>
 <h3 id="create-account">Create account</h3>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/account</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/account</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a></p>
 <p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;clientAccountId&quot;</span><span class="p">:</span> <span class="s2">&quot;unique merchant&#39;s identifier&quot;</span><span class="p">,</span>
     <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Account for merchant&#39;s user XXX&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;INFINITY&quot;</span>
+    <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;INFINITY&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <p><strong>Response body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-283eb9706cf448969798eca9c54fc438&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientAccountId&quot;</span><span class="p">:</span> <span class="s2">&quot;unique merchant&#39;s identifier&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;INFINITY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;classifier&quot;</span><span class="p">:</span> <span class="s2">&quot;INFINITY&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:57:11.183Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Account for merchant&#39;s user XXX&quot;</span><span class="p">,</span>
     <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
@@ -1708,12 +1784,12 @@
     <span class="nt">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;mainnet&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="get-account-details">Get account details</h3>
 <p>Retrieve details of an account.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/account/{{accountId}}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account/{{accountId}}</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
@@ -1723,7 +1799,7 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1736,7 +1812,7 @@
 </tbody>
 </table>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientAccountId&quot;</span><span class="p">:</span> <span class="s2">&quot;unique merchant&#39;s identifier&quot;</span><span class="p">,</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ONCE&quot;</span><span class="p">,</span>
@@ -1744,20 +1820,8 @@
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Deposit for order CPO-19824601944647cda1d2541df563dc26&quot;</span><span class="p">,</span>
     <span class="nt">&quot;balance&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0223&quot;</span><span class="p">,</span>
     <span class="nt">&quot;deposits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0123&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-20T11:43:51.807Z&quot;</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;CPD-eeb6dff743824161a7e031528c48b5b2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-20T11:43:51.807Z&quot;</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;CPD-245ace41a0b848a09dfab548797c19fc&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span>
-        <span class="p">}</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mf">0.0223</span><span class="p">,</span>
+        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span> 
     <span class="p">},</span>
     <span class="nt">&quot;withdrawals&quot;</span><span class="p">:</span> <span class="p">{},</span>
     <span class="nt">&quot;orders&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">],</span>
@@ -1765,11 +1829,11 @@
     <span class="nt">&quot;network&quot;</span><span class="p">:</span> <span class="s2">&quot;mainnet&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
-</pre></div></p>
-<h3 id="get-deposit-details">Get deposit details</h3>
-<p>Retrieve details of a deposit.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/account/{{accountId}}/deposit/{{depositId}}</span>
-</pre></div>
+</code></pre></div></p>
+<h3 id="list-of-deposits">List of deposits</h3>
+<p>Retrieve a list of account deposits.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account/{{accountId}}/deposit</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
@@ -1779,7 +1843,74 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>accountId</strong></td>
+<td>IDENTIFIER</td>
+<td>YES</td>
+<td>Account identifier, like "CPA-4bd95e67ddd842908b3225ba64950f7c"</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>One of values: "PENDING", "ACCEPTED", "REJECTED"</td>
+</tr>
+<tr>
+<td><strong>includeZero</strong></td>
+<td>BOOLEAN</td>
+<td>NO</td>
+<td>Include zero balance accounts. Default: false.</td>
+</tr>
+<tr>
+<td><strong>beforeId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page before (newer) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>afterId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page after (older) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>INT</td>
+<td>NO</td>
+<td>Number of results per request. Default 500; max 1000. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<h3 id="get-deposit-details">Get deposit details</h3>
+<p>Retrieve details of a deposit.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account/{{accountId}}/deposit/{{depositId}}</span>
+</code></pre></div>
+
+<p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1793,15 +1924,15 @@
 <td><strong>depositId</strong></td>
 <td>IDENTIFIER</td>
 <td>YES</td>
-<td>Account identifier, like "CPD-eeb6dff743824161a7e031528c48b5b2"</td>
+<td>Deposit identifier, like "CPD-eeb6dff743824161a7e031528c48b5b2"</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Response body</strong></p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">PENDING</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<label for="__tab_2_0">CRYTPO PENDING</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
@@ -1812,10 +1943,10 @@
     <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
     <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">ACCEPTED</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<label for="__tab_2_1">CRYTPO ACCEPTED</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
@@ -1827,16 +1958,28 @@
     <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
     <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_2" type="radio" id="__tab_2_2" />
-<label for="__tab_2_2">REJECTED</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span>
-</pre></div></div>
+<label for="__tab_2_2">CRYTPO REJECTED</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code>
+</code></pre></div></div>
+<input name="__tabs_2" type="radio" id="__tab_2_3" />
+<label for="__tab_2_3">FIAT ACCEPTED</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-2302170dd2344b80b3d4c46e480603sd&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;152.34&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Received deposit from exchange&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 </div>
-<h3 id="get-withdrawal-details">Get withdrawal details</h3>
-<p>Retrieve details of a withdrawal.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/account/{{accountId}}/withdrawal/{{withdrawalId}}</span>
-</pre></div>
+<h3 id="list-of-withdrawals">List of withdrawals</h3>
+<p>Retrieve a list of account withdrawals.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account/{{accountId}}/withdrawal</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
@@ -1846,7 +1989,74 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>accountId</strong></td>
+<td>IDENTIFIER</td>
+<td>YES</td>
+<td>Account identifier, like "CPA-4bd95e67ddd842908b3225ba64950f7c"</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>One of values: "PENDING", "ACCEPTED", "REJECTED"</td>
+</tr>
+<tr>
+<td><strong>includeZero</strong></td>
+<td>BOOLEAN</td>
+<td>NO</td>
+<td>Include zero balance accounts. Default: false.</td>
+</tr>
+<tr>
+<td><strong>beforeId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page before (newer) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>afterId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page after (older) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>INT</td>
+<td>NO</td>
+<td>Number of results per request. Default 500; max 1000. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<h3 id="get-withdrawal-details">Get withdrawal details</h3>
+<p>Retrieve details of a withdrawal.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/account/{{accountId}}/withdrawal/{{withdrawalId}}</span>
+</code></pre></div>
+
+<p><strong>Permission:</strong> <a href="#account-permission">Account</a> or <a href="#view-permission">View</a></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1860,7 +2070,7 @@
 <td><strong>withdrawalId</strong></td>
 <td>IDENTIFIER</td>
 <td>YES</td>
-<td>Account identifier, like "CPW-87d903426d9448a0ac5e8402a7973654"</td>
+<td>Withdrawal identifier, like "CPW-87d903426d9448a0ac5e8402a7973654"</td>
 </tr>
 </tbody>
 </table>
@@ -1868,7 +2078,7 @@
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
 <label for="__tab_3_0">PENDING</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-87d903426d9448a0ac5e8402a7973654&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
@@ -1877,10 +2087,10 @@
     <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_3" type="radio" id="__tab_3_1" />
 <label for="__tab_3_1">ACCEPTED</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-87d903426d9448a0ac5e8402a7973654&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
@@ -1890,12 +2100,12 @@
     <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 </div>
 <h3 id="make-withdrawal">Make withdrawal</h3>
 <p>Prepare withdrawal</p>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/account/{{accountId}}/withdrawal</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/account/{{accountId}}/withdrawal</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#account-permission">Account</a></p>
 <p><strong>Parameters:</strong></p>
@@ -1905,7 +2115,7 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1918,7 +2128,7 @@
 </tbody>
 </table>
 <p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/account-withdrawal-make.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientWithdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;333548887804-RET&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Return fund to end-user&quot;</span><span class="p">,</span>
@@ -1928,10 +2138,10 @@
     <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;... currency specific fields&quot;</span><span class="p">,</span>
     <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <p><strong>Response body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span><span class="p">,</span>
     <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-87d903426d9448a0ac5e8402a7973654&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
@@ -1941,31 +2151,31 @@
     <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;//&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="commit-withdrawal">Commit withdrawal</h3>
 <p>Approve withdrawal</p>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/account/{{accountId}}/withdrawal/{{withdrawalId}}/commit</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/account/{{accountId}}/withdrawal/{{withdrawalId}}/commit</span>
+</code></pre></div>
 
 <p><strong>Permission</strong>: Account</p>
 <p><strong>No request body:</strong></p>
 <p><strong>Response body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="err">//</span> <span class="err">TBD</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <hr />
 <h2 id="v2instrument">/v2/instrument</h2>
 <h3 id="list-available-instruments">List available instruments</h3>
 <p>Returns list of instruments</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/instrument</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/instrument</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;CRYPTO_BUY&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;breakpoints&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;NEW&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1998,14 +2208,14 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></p>
+</code></pre></div></p>
 <hr />
 <h2 id="v2merchant">/v2/merchant</h2>
 <p>Merchant endpoint is available for sub-merchants management. Every request must be signed using the described authentication scheme.</p>
 <h3 id="list-merchants">List merchants</h3>
 <p>Returns list of sub-merchants according filter defined by parameters
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/merchant</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/merchant</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2014,7 +2224,7 @@
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2028,25 +2238,25 @@
 </table>
 <h3 id="create-merchant">Create merchant</h3>
 <p>Register a new sub-merchant
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/merchant</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/merchant</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="update-merchant">Update merchant</h3>
 <p>Update an existing sub-merchant
-<div class="codehilite"><pre><span></span><span class="err">PUT /v2/merchant</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">PUT /v2/merchant</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;TBD&quot;</span><span class="p">:</span> <span class="s2">&quot;//&quot;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <hr />
 <h2 id="v2network">/v2/network</h2>
@@ -2082,8 +2292,8 @@ There are three network fee levels available for withdrawal transactions.</p>
 </tbody>
 </table>
 <p>It is a very dynamic thing, therefore each level changes its value every minute in such a way as to guarantee that the transaction will be included in a specific block within a given time frame.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/network/{{currency}}/fee</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/network/{{currency}}/fee</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a> or <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
@@ -2093,7 +2303,7 @@ There are three network fee levels available for withdrawal transactions.</p>
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2106,7 +2316,7 @@ There are three network fee levels available for withdrawal transactions.</p>
 </tbody>
 </table>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;SLOW&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00004162&quot;</span><span class="p">,</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
@@ -2120,101 +2330,157 @@ There are three network fee levels available for withdrawal transactions.</p>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 The network <strong>feeLevel</strong> can be specified in a <a href="#make-withdrawal">Make withdrawal</a> request body.</p>
 <hr />
 <h2 id="v2notification">/v2/notification</h2>
-<p>The endpoint allows to control notifications like subscribe/unsibscribe, see topics, see message history
-See more details about our notification engine in <a href="../callbacks/">Callbacks</a> documentation. There defines management methods only.</p>
+<p>The endpoint allows to control notifications like subscribe/unsubscribe, see topics, see message history
+See more details about our notification engine in <a href="../callbacks/">Callbacks</a> documentation. Only management 
+api described here.</p>
+<h3 id="callback-key">Callback key</h3>
+<h4 id="generate-callback-key">Generate callback key</h4>
+<p>Generates new <a href="../callbacks-webhooks/#callback-key-secret-pair">key-secret pairs</a> for <a href="../callbacks-webhooks/#message-signature">callbacks singing</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All new callbacks will be signed with new secret immediately after new pair generation.
+And there is no way to return back to old keys.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Secret key is returning only once, in response of current api method. 
+There is no way to get generated key again, only generation of new key available.</p>
+</div>
+<p><div class="codehilite"><pre><span></span><code><span class="err">GET /v2/notification/key</span>
+</code></pre></div>
+<strong>Response body:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;78f0be5cd16ee9dc7a6e563ba11c8455&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;24d4lCcoHiKpvtDE2d5W3Mosx9KR5TgH3aJO0b3CZxzUdWkIJGqdaZyA0NZARPeW2m3IrX6caZmswGpQMJS56w==&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <h3 id="topic">Topic</h3>
 <h4 id="list-topics">List topics</h4>
-<p>Returns list of available topics</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/notification/topic</span>
-</pre></div>
+<p>Returns list of available topics.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/notification/topic</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;ORDER&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when order&#39;s status or state have been changed. Message body same as response of Fetch order.&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;DEPOSIT&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when deposit detected/updated. Message body same as response of Fetch deposit.&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;WITHDRAWAL&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when withdrawal created/updated. Message body same as response of Fetch withdrawal.&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;EXCHANGE&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when exchange flow completed. Includes accounting information.&quot;</span>
-    <span class="err">...</span>
-<span class="p">}</span>
-</pre></div></p>
-<h3 id="subscribers">Subscribers</h3>
-<p>Allows to manage your subscribes</p>
-<h4 id="list-subscribers">List subscribers</h4>
-<p>Returns list of subscribers according filter defined by parameters
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/notification/subscriber</span>
-</pre></div></p>
-<p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
-<p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;webhook.784293b3-2000-4f89-aaff-887c04b7c97a&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
         <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
-        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when order&#39;s status or state have been changed. Message body same as response of Fetch order.&quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;webhook.c4c77664-e09a-46f6-9ef6-b360b7120da0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+    <span class="p">{</span>
         <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;DEPOSIT&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
-        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when deposit detected/updated. Message body same as response of Fetch deposit.&quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;webhook.8aab27a3-2b25-4312-a55a-2d487e40d086&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
-        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;webhook.5395414e-7936-441e-b5b9-44a5f8bad7d0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
+    <span class="p">{</span>
         <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;WITHDRAWAL&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
-        <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when withdrawal created/updated. Message body same as response of Fetch withdrawal.&quot;</span>
     <span class="p">},</span>
-    <span class="err">...</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Emit messages when exchange flow completed. Includes accounting information.&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<h3 id="subscription">Subscription</h3>
+<p>Allows to manage your subscriptions.</p>
+<h4 id="list-subscriptions">List subscriptions</h4>
+<p>Returns list of active subscriptions.
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/notification/subscription</span>
+</code></pre></div>
+<strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="s2">&quot;19df0eeb-75ff-46de-8b5a-dcf965f068c9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:22:20.592Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:22:20.592Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://localhost/onOrder&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_R * * * OKEN&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;rootCertificate&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMIIF * * * /8BQ=\n-----END CERTIFICATE-----\n&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="s2">&quot;62447d5a-8aa6-46bd-9347-8c66ee135887&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;DEPOSIT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:50:13.188Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:50:13.188Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://localhost/onDeposit&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<h4 id="get-subscription">Get subscription</h4>
+<p>Returns subscription details. 
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/notification/subscription/19df0eeb-75ff-46de-8b5a-dcf965f068c9</span>
+</code></pre></div>
+<strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
+<p><strong>Response body</strong>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="s2">&quot;19df0eeb-75ff-46de-8b5a-dcf965f068c9&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:22:20.592Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T10:22:20.592Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://localhost/onOrder&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_R * * * OKEN&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rootCertificate&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMIIF * * * /8BQ=\n-----END CERTIFICATE-----\n&quot;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></p>
-<h4 id="create-subscriber">Create subscriber</h4>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/notification/subscriber</span>
-</pre></div>
-
+</code></pre></div></p>
+<h4 id="subscribe">Subscribe</h4>
+<p>Subscribe on specific topic.
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/notification/subscription</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Request body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.yourdomain.ltd/callbacks&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;trustedCA&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMII.....\n-----END CERTIFICATE-----&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">...optional</span>
-    <span class="nt">&quot;headerToken&quot;</span><span class="p">:</span> <span class="s2">&quot;my-secret-words-for-NF-TOKEN-header&quot;</span> <span class="err">//</span> <span class="err">...optional</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;DEPOSIT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.mycompany.com/onDeposit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rootCertificate&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMIIFDjCCAvagAwIBAgIITh0Z3zvTGzJty8FLnJAW/8BQ=\n-----END CERTIFICATE-----\n&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_REALLY_SECRET_TOKEN&quot;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <p><strong>Response body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;subscriberId&quot;</span><span class="p">:</span> <span class="s2">&quot;webhook.784293b3-2000-4f89-aaff-887c04b7c97a&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="s2">&quot;35e0ed6d-ef65-4454-bf2f-041da5f97ded&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;DEPOSIT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T13:41:20.702Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T13:41:20.702Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://callback.mycompany.com/onDeposit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;Webhook&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_R * * * OKEN&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rootCertificate&quot;</span><span class="p">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE-----\nMIIF * * * /8BQ=\n-----END CERTIFICATE-----\n&quot;</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h4 id="delete-subscriber">Delete subscriber</h4>
-<div class="codehilite"><pre><span></span><span class="err">DELETE /v2/notification/subscriber/webhook.784293b3-2000-4f89-aaff-887c04b7c97a</span>
-</pre></div>
-
+<p>Remove subscription.
+<div class="codehilite"><pre><span></span><code><span class="err">DELETE /v2/notification/subscription/cf61596e-a39d-4989-849f-d779f6528b98</span>
+</code></pre></div></p>
 <p><strong>No request body</strong></p>
 <p><strong>Permission:</strong> <a href="#merchant-permission">Merchant</a></p>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;deleteDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-10T12:00:01.223Z&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;deletedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-03T13:42:37.043Z&quot;</span>
 <span class="p">}</span>
-</pre></div></p>
+</code></pre></div></p>
 <hr />
 <h2 id="v2order">/v2/order</h2>
 <p>Order endpoint is available for order management. Every request must be signed using the described authentication scheme.</p>
@@ -2234,8 +2500,8 @@ See more details about our notification engine in <a href="../callbacks/">Callba
 
 <h3 id="list-orders">List orders</h3>
 <p>Returns list of orders according filter defined by parameters
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/order</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/order</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2244,7 +2510,7 @@ See more details about our notification engine in <a href="../callbacks/">Callba
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2293,7 +2559,7 @@ See more details about our notification engine in <a href="../callbacks/">Callba
 </tbody>
 </table>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">[</span>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
         <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
@@ -2308,15 +2574,15 @@ See more details about our notification engine in <a href="../callbacks/">Callba
     <span class="p">},</span>
     <span class="err">...</span>
 <span class="p">]</span>
-</pre></div></p>
+</code></pre></div></p>
 <h3 id="create-order">Create order</h3>
 <p>Register a new order
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/order</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/order</span>
+</code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is an idempotent POST. Any duplicate request will be completed with response 
-of the first request within 24 hours from  the first request. This behaviour in conclustion
+of the first request within 24 hours from  the first request. This behaviour in conclusion
 with <code>clientOrderId</code> prevents potential order duplicates.</p>
 </div>
 <div class="admonition note">
@@ -2328,7 +2594,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <div class="superfences-tabs">
 <input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
 <label for="__tab_4_0">Generic</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
@@ -2346,10 +2612,10 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;NAME&gt;&quot;</span><span class="p">,</span>
     <span class="err">...instrument</span> <span class="err">specific</span> <span class="err">fields...</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_1" />
 <label for="__tab_4_1">CRYPTO_BUY (fiat)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2412,10 +2678,10 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_2" />
 <label for="__tab_4_2">CRYPTO_BUY (crypto)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2478,10 +2744,10 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_3" />
 <label for="__tab_4_3">CRYPTO_SELL (fiat)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2539,10 +2805,10 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_4" type="radio" id="__tab_4_4" />
 <label for="__tab_4_4">CRYPTO_SELL (crypto)</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.request.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2600,7 +2866,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2608,8 +2874,8 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 </div>
 <h3 id="cancel-order">Cancel order</h3>
 <p>Cancel an execution process of the order (if possible)</p>
-<div class="codehilite"><pre><span></span><span class="err">DELETE /v2/order/{{orderId}}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">DELETE /v2/order/{{orderId}}</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
 <p><strong>Parameters:</strong></p>
@@ -2619,7 +2885,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2632,7 +2898,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 </tbody>
 </table>
 <p><strong>Response body:</strong></p>
-<div class="codehilite"><pre><span></span><span class="err">--&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;cancellationReason&quot;</span><span class="p">:</span> <span class="s2">&quot;A text message describes cancellation reason&quot;</span>
 <span class="p">}</span>
@@ -2648,12 +2914,12 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;NAME&gt;&quot;</span><span class="p">,</span>
     <span class="err">...instrument</span> <span class="err">specific</span> <span class="err">fields...</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="fetch-order">Fetch order</h3>
 <p>Fetch single order by ID
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/order/{{orderId}}</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2662,7 +2928,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <th><strong>Name</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Mandatory</strong></th>
-<th><strong>Descripton</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2678,7 +2944,7 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <div class="superfences-tabs">
 <input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
 <label for="__tab_5_0">CRYPTO_BUY</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_BUY.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2719,10 +2985,10 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 <input name="__tabs_5" type="radio" id="__tab_5_1" />
 <label for="__tab_5_1">CRYPTO_SELL</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
@@ -2763,17 +3029,17 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="nt">&quot;transactions&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 </div>
 <h3 id="breakpoints">Breakpoints</h3>
 <p><a href="../terminology/#breakpoint">Breakpoints</a> allow to control processing execution flow.</p>
 <h4 id="list-breakpoints">List breakpoints</h4>
 <p>Returns list of flow breakpoints
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/order/{{orderId}}/breakpoint</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/order/{{orderId}}/breakpoint</span>
+</code></pre></div></p>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Response body</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.breakpoints.json&quot;</span><span class="p">,</span>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
@@ -2791,11 +3057,11 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <h4 id="resume-breakpoint">Resume breakpoint</h4>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/order/{{orderId}}/breakpoint/{{breakpointName}}</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/order/{{orderId}}/breakpoint/{{breakpointName}}</span>
+</code></pre></div>
 
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a></p>
 <p><strong>No request body</strong></p>
@@ -2831,29 +3097,30 @@ A level attribute that is available in callbacks that we send to a merchant's se
 </tbody>
 </table>
 <h3 id="score">Score</h3>
-<div class="codehilite"><pre><span></span><span class="err">POST /v2/risk/score</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">POST /v2/risk/score</span>
+</code></pre></div>
 
 <p>TBD</p>
 <hr />
 <h2 id="v2time">/v2/time</h2>
 <p>Get the API server time.</p>
-<div class="codehilite"><pre><span></span><span class="err">GET /v2/time</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /v2/time</span>
+</code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This endpoint does not require authentication.</p>
 </div>
 <p><strong>Response body</strong>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;iso8601&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-20T15:39:14.285Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;epoch&quot;</span><span class="p">:</span> <span class="mf">1582213154.285</span>
 <span class="p">}</span>
-</pre></div></p>
+</code></pre></div></p>
 <p>The <code>epoch</code> field represents decimal seconds since <a href="http://en.wikipedia.org/wiki/Unix_time">Unix Epoch</a>.</p>
                 
                   
+                
                 
               
               
@@ -2909,9 +3176,9 @@ A level attribute that is available in callbacks that we send to a merchant's se
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -2921,9 +3188,9 @@ A level attribute that is available in callbacks that we send to a merchant's se
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="../js/mermaid.min.js"></script>
       
