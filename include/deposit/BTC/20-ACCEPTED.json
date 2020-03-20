@@ -5,7 +5,6 @@
 	"date": "2020-01-16T12:56:07.111Z",
 	"amount": "0.55133277",
 	"tag": "Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-	"currency": "BTC",
 	"confirmations": 6,
 	"block": 12345678,
 	"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

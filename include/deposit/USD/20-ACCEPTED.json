@@ -4,6 +4,5 @@
 	"status": "ACCEPTED",
 	"date": "2020-01-16T12:56:07.111Z",
 	"amount": "152.34",
-	"tag": "Received deposit from exchange",
-	"currency": "USD"
+	"tag": "Received deposit from exchange"
 }

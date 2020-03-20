@@ -186,9 +186,65 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
+    
     <a href="." title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-purple" class="md-nav__link">
+    Sandbox (​purple​)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testnet-orange" class="md-nav__link">
+    Testnet (​orange​)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-blue" class="md-nav__link">
+    Production (​blue​)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -306,6 +362,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-purple" class="md-nav__link">
+    Sandbox (​purple​)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testnet-orange" class="md-nav__link">
+    Testnet (​orange​)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-blue" class="md-nav__link">
+    Production (​blue​)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -324,6 +423,99 @@
 <li>Payment service (like buying goods)</li>
 <li>Crypto holding</li>
 </ul>
+<h2 id="environments">Environments</h2>
+<h3 id="sandbox-purple"><span style="color:Purple">Sandbox (​purple​)</span></h3>
+<p><span style="color:Purple">Fully emulated/virtual (nothing real) environment. Good start point for integration and performance testing.</span></p>
+<ul>
+<li><span style="color:Purple">Virtual/Emulated crypto funds</span></li>
+<li><span style="color:Purple">Virtual/Emulated fiat funds</span></li>
+<li><span style="color:Purple">Virtual/Emulated exchange trading</span></li>
+<li><span style="color:Purple">Allows stress testing</span></li>
+<li><span style="color:Purple">Manual and automate deposits (see “Emulator” section inside Dashboard)</span></li>
+<li><span style="color:Purple">Data wipe often (orders, accounts)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="color:Purple">Main Information/Status Page</span></td>
+<td>https://sandbox.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:Purple">REST API</span></td>
+<td>https://api-sandbox.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:Purple">Dashboard Web Application</span></td>
+<td>https://dashboard-sandbox.cryptopay.band/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="testnet-orange"><span style="color:Orange">Testnet (​orange​)</span></h3>
+<p><span style="color:Orange">Testnet environment. Pre-production testing. ​Do not use this environment for performance testing.</span> </p>
+<ul>
+<li><span style="color:Orange">Testnet coins</span></li>
+<li><span style="color:Orange">Virtual/Emulated fiat funds</span></li>
+<li><span style="color:Orange">Virtual/Emulated exchange trading</span></li>
+<li><span style="color:Orange">Testnet deposits</span></li>
+<li><span style="color:Orange">Testnet withdrawals</span></li>
+<li><span style="color:Orange">Data wipe rarely (orders, accounts)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="color:Orange">Main Information/Status Page</span></td>
+<td>https://testnet.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:Orange">REST API</span></td>
+<td>https://api-testnet.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:Orange">Dashboard Web Application</span></td>
+<td>https://dashboard-testnet.cryptopay.band/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="production-blue"><span style="color:DarkBlue">Production (​blue​)</span></h3>
+<p><span style="color:DarkBlue">Operational environment.</span></p>
+<ul>
+<li><span style="color:DarkBlue">Real crypto finds</span></li>
+<li><span style="color:DarkBlue">Real fiat funds</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span style="color:DarkBlue">Main Information/Status Page</span></td>
+<td>https://www.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:DarkBlue">REST API</span></td>
+<td>https://api.cryptopay.band/</td>
+</tr>
+<tr>
+<td><span style="color:DarkBlue">Dashboard Web Application</span></td>
+<td>https://dashboard.cryptopay.band/</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

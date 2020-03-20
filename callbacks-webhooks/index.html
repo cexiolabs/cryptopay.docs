@@ -784,7 +784,7 @@ You can refresh key-secret pair over <a href="../api/#generate-callback-key">API
 <li>key from key-secret pair sent in <strong>CP-ACCESS-KEY</strong> header.</li>
 </ul>
 <h2 id="subscribe">Subscribe</h2>
-<p>To start receiving messaged, you need yo subscribe a <a href="../callbacks/#topic">topic</a>. Use appropriate methods from <a href="../api/#subscribe">REST API</a>.</p>
+<p>To start receiving messaged, you need to subscribe a <a href="../callbacks/#topic">topic</a>. Use appropriate methods from <a href="../api/#subscribe">REST API</a>.</p>
 <h2 id="topic-order">Topic ORDER</h2>
 <p>Emit messages when <code>Order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></p>
 <h3 id="instrument-crypto_buy">Instrument CRYPTO_BUY</h3>
@@ -1172,8 +1172,8 @@ You can refresh key-secret pair over <a href="../api/#generate-callback-key">API
     <span class="nt">&quot;depositId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPD-7902170dd2124b80b3d4c46e4806026f&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
     <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
@@ -1188,7 +1188,6 @@ You can refresh key-secret pair over <a href="../api/#generate-callback-key">API
     <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-16T12:56:07.111Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.55133277&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Received deposit for BTC:mainnet:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
     <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="nt">&quot;block&quot;</span><span class="p">:</span> <span class="mi">12345678</span><span class="p">,</span>
     <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
