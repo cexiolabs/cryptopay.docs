@@ -7,6 +7,7 @@
 	"networkFeeLevel": "AVERAGE",
 	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "REJECTED",
+	"rejectReason": "....human readable reason...",
 	"date": "2020-01-16T12:56:07.111Z",
 	"networkFee": null,
 	"transactionAmount": null,

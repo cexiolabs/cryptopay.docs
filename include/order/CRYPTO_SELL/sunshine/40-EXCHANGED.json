@@ -43,12 +43,14 @@
 			{
 				"depositId": "CPD-d57cb20a736b4703ba21d401e55c3d41",
 				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"status": "ACCEPTED"
+				"confirmations": 2,
+				"status": "PENDING"
 			},
 			{
 				"depositId": "CPD-eabb9d8e575145fc9a05d778592c0e3d",
 				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"status": "ACCEPTED"
+				"confirmations": 4,
+				"status": "PENDING"
 			}
 		]
 	}
