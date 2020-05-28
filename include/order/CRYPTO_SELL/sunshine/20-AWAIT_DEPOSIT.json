@@ -6,16 +6,17 @@
 	"status": "SLEEPING",
 	"state": "AWAIT_DEPOSIT",
 	"instrument": "CRYPTO_SELL",
-	"feeModel": "INCLUDED",
+	"model": "DEFAULT",
 	"createdAt": "2020-01-17T15:10:12.550Z",
-	"updatedAt": "2020-01-17T15:10:19.445Z",
+	"updatedAt": "2020-01-17T15:10:19.128Z",
+	"expiredAt": "2020-01-17T15:25:12.550Z",
 	"from": {
-		"account": "CPA-4bd95e67ddd842908b3225ba64950f7c",
+		"accountId": "CPA-4bd95e67ddd842908b3225ba64950f7c",
 		"currency": "BTC",
 		"amount": "0.05142111"
 	},
 	"to": {
-		"account": "CPA-67f28d8f27b0430f8ced612f678bc0c6",
+		"accountId": "CPA-67f28d8f27b0430f8ced612f678bc0c6",
 		"currency": "USD",
 		"amount": "150.42"
 	},
@@ -31,11 +32,24 @@
 			"currency": "USD"
 		}
 	],
+	"paidStatus": "NONE",
 	"deposit": {
 		"kind": "BTC",
 		"network": "mainnet",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"amount": "0.05180448",
 		"uri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.05142111&label=Sell%20some%20BTC%20for%20150.42",
-		"transactions": []
+		"transactions": [
+			{
+				"depositId": "CPD-d57cb20a736b4703ba21d401e55c3d41",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"status": "PENDING"
+			},
+			{
+				"depositId": "CPD-eabb9d8e575145fc9a05d778592c0e3d",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"status": "PENDING"
+			}
+		]
 	}
 }

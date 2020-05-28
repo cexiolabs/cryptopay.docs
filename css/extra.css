@@ -1,0 +1,15 @@
+/* .md-grid {
+	max-width: unset;
+}
+
+@media screen and (min-width: 76.25em) {
+	.md-sidebar--secondary {
+		display: block;
+		margin-left: calc(100% - 12.1rem);
+	}
+} */
+
+table {
+	word-break: break-all;
+}
+

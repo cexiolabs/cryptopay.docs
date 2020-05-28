@@ -1,11 +1,14 @@
 {
-	"accountId": "CPA-4bd95e67ddd842908b3225ba64950f7c",
-	"withdrawalId": "CPW-87d903426d9448a0ac5e8402a7973654",
-	"status": "ACCEPTED",
-	"date": "2020-01-16T12:56:07.111Z",
-	"tag": "Return fund to end-user",
-	"feeLevel": "AVERAGE",
-	"amount": "0.05",
+	"withdrawalId": "CPW-f248fb235227473e8a2e95d125f8fd80",
+	"accountId": "CPA-a64e2b0dbd4144cdab993d4f99c8030f",
+	"tag": "Return funds to end-user by L3 ticker XYZ",
+	"amount": "0.052",
 	"currency": "BTC",
-	"//": "..."
+	"networkFeeLevel": "AVERAGE",
+	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"status": "ACCEPTED",
+	"date": "2020-04-03T07:32:11.718Z",
+	"networkFee": "0.001",
+	"transactionAmount": "0.051",
+	"txHash": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 }

@@ -1,0 +1,583 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../images/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>[@cexiolabs/сrypto.cex](https://nexus.infra.kube/#browse/browse:npm:%40cexiolabs%2Fсrypto.cex) - CryptoPay Service API (v2.alpha)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/font-awesome.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="darkblue" data-md-color-accent="orange">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cexiolabsryptocex" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="CryptoPay Service API (v2.alpha)" class="md-header-nav__button md-logo" aria-label="CryptoPay Service API (v2.alpha)">
+      
+  <img src="../images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CryptoPay Service API (v2.alpha)
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              [@cexiolabs/сrypto.cex](https://nexus.infra.kube/#browse/browse:npm:%40cexiolabs%2Fсrypto.cex)
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CryptoPay Service API (v2.alpha)" class="md-nav__button md-logo" aria-label="CryptoPay Service API (v2.alpha)">
+      
+  <img src="../images/logo.jpg" alt="logo">
+
+    </a>
+    CryptoPay Service API (v2.alpha)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="REST API" class="md-nav__link">
+      REST API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Callbacks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Callbacks" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Callbacks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../callbacks/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../callbacks-webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../support-notes/" title="Support Notes" class="md-nav__link">
+      Support Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Структура проекта
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Немного теории
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pss-es" class="md-nav__link">
+    Установка ключей в PSS ES
+  </a>
+  
+    <nav class="md-nav" aria-label="Установка ключей в PSS ES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keys-upload-configjson" class="md-nav__link">
+    keys-upload-config.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keys-uploadjs" class="md-nav__link">
+    keys-upload.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encode_ccw_keyjs" class="md-nav__link">
+    encode_ccw_key.js
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Генерация нового wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hot-address" class="md-nav__link">
+    Генерация нового HOT-address
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="cexiolabsryptocex"><a href="https://nexus.infra.kube/#browse/browse:npm:%40cexiolabs%2Fсrypto.cex">@cexiolabs/сrypto.cex</a></h1>
+<p><strong>CEX Crytpo Wallet</strong> - Реализации контрактного интерфейса <code>CrytpoWallet</code> через WTF2/pss-provider-wtf2</p>
+<h2 id="configuration">Configuration</h2>
+<p>Этот <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup">проект</a> содержит конфигурационную информацию по интеграции с CEX Crypto Wallet (WTF2 и pss-provider-wtf2). Включает в себя:</p>
+<ul>
+<li>конфигурацию криптокошельков и хот-адресов</li>
+<li>набор вспомогательных скриптов (генерация ключей PSSES, загрузка ключей в PSSES, etc.)</li>
+<li>загрузка ключей в PSS ES через Pipeline</li>
+</ul>
+<h2 id="_1">Структура проекта</h2>
+<div class="highlight"><pre><span></span><code>TBD
+</code></pre></div>
+
+<h2 id="_2">Немного теории</h2>
+<p>В криптовалюте каждому <code>wallet</code>(группа блокчейн адресов) есть соответствующий приватный ключ, с помощью которого нужно подписывать(ЭЦП) транзакции перед отправкой в блокчейн. Процессниг-сервисам не нужно знать деталей работы с конкретным блокчейном, и процесс работы делегирован вспомогательным сервисам:</p>
+<ul>
+<li><code>wtf2</code> - фасад в блокчейн</li>
+<li><code>pss-es</code> - Экспертная система, которая выполняет подпись транзакций (должна знать приватный ключ от <code>wallet</code>)</li>
+<li><code>pss-provider-wtf2</code> - процессинг депозитов, виздавалов, генерация адресов. Этот сервис скрывается под собой работу с wtf2 и pss-es</li>
+</ul>
+<h2 id="pss-es">Установка ключей в PSS ES</h2>
+<p>Одна из задач системы PSS ES - проводить подпись транзакций для блокчейнов. Для осуществления данной операции, PSS ES должна знать приватный ключ кошелька. PSS ES не хранит ключи в своей конфигурации (а лишь в памяти процесса) и следовательно, теряет их после перезапуска. Ключи от кошельков передаются в PSS ES средствами предоставляемого PSS ES API. Конфигурация данного сервиса хранит лишь секретную фразу, которая была использована для шифрования приватного ключа клиентом (нами).</p>
+<p><i class="fa fa-bullhorn"></i> На момент написания этого документа, файл конфигурации PSS ES находится в <code>d1dev-test:/app/conf/psses/dev/config-processing.json</code>. После редактирования файла требуется помощь коллег из PSS Team, для перезагрузки PSS ES.</p>
+<p>Пример конфигурации <code>wallet</code>-а для монеты ADA:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&quot;rma&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+    <span class="nt">&quot;ccw&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">...,</span>
+        <span class="nt">&quot;merchants&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;cex&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="nt">&quot;aggr&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="nt">&quot;aggrTHR&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="nt">&quot;bundcexd&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="nt">&quot;cpwtf&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;ADA&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;DaPribudetSNamiSila&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;keychainId&quot;</span><span class="p">:</span> <span class="s2">&quot;2cWKMJemoBaksXqTdsWG8rXZTCBuZ1jX8yv3ienS5JE9WF3xLKvH5cNv2ANAeUjzmkHSC&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;publicKey&quot;</span><span class="p">:</span> <span class="s2">&quot;31b3a2773045381f2978cd7ef89883670a06984c6de2af22e0f5e510f1770c874bc4bd65b9ef8805133362ceeb6213cf781fa6be0d966373b5797564bac04fd0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;blockchain&quot;</span><span class="p">:</span> <span class="s2">&quot;cardano&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;confirmations&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;merchant&quot;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+                        <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="mi">-1</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;BTC&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+                <span class="nt">&quot;BCH&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+                <span class="nt">&quot;LTC&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+                <span class="nt">&quot;MHC&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+                <span class="nt">&quot;TRX&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;cpwtf-demo&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;hunter&quot;</span><span class="p">:</span> <span class="err">...</span><span class="p">,</span>
+    <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Повторимся, PSS ES должна знать приватные ключи от <code>wallet</code>-ов, чтобы подписывать исходящие транзакции (виздравалы)</p>
+<p>Для автоматизации установки ключей, имеем следующее:</p>
+<ul>
+<li>конфиг-файл <code>./keys-upload-config.json</code> - содержит список зашифрованных ключей (массив <code>keys</code>)</li>
+<li>скрипт <code>./bin/keys-upload.js</code> - программа отправляющая содержимое конфига в PSS ES</li>
+<li>скрипт <code>./bin/encode_ccw_key.js</code> - программа шифрования приватного ключа (в PSS ES ключи передаются в зашифрованном виде)</li>
+</ul>
+<p>Выполнение <code>keys-upload.js</code> настроено в GitLab CI (Pipeline)</p>
+<h3 id="keys-upload-configjson"><code>keys-upload-config.json</code></h3>
+<p>Мерчанту PSS (т.е. нам CryptoPay), по каждой валюте, создается 1+ элемент(ов) в массиве <code>keys</code> (для каждого приватного ключа который участвует в подписи транзакций):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;mid&quot;</span><span class="p">:</span> <span class="s2">&quot;cpwtf&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;es&quot;</span><span class="p">:</span> <span class="s2">&quot;psse&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;76b72284db5a5ddf361cde01113ce3098a4e292ccb2411385bf6859d53984fcf4f27ffac011de67aae604c8745d89ecbb17020072542f09eea6536879309f4f7b5f587e9be53c81766956bfb1bb969b8afabfd5ae6182ae16154cbf12c7eeb6026acf1f542fe9242c5ea1957ce2a549c&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Где:</p>
+<ul>
+<li><code>mid</code> - имя мерчанта в PSS. Мы, CryptoPay, имеем два имени <code>cpwtf</code> и <code>cpwtf-demo</code> для <code>evolution</code> и <code>presentation</code> окружений соответственно</li>
+<li><code>currency</code> - идентификатор крипто-валюты</li>
+<li><code>es</code> - имя экспертной системы, куда устанавливается ключ</li>
+<li><code>key</code> - приватный ключ крипто-кошелька зашифрованный секретной фразой с помощью <code>aes-128-cbc</code></li>
+</ul>
+<h3 id="keys-uploadjs"><code>keys-upload.js</code></h3>
+<div class="highlight"><pre><span></span><code>$ ./bin/keys-upload.js
+</code></pre></div>
+
+<h3 id="encode_ccw_keyjs"><code>encode_ccw_key.js</code></h3>
+<div class="highlight"><pre><span></span><code>$ ./bin/encode_ccw_key.js &lt;keychains/privateKey&gt; <span class="o">[</span>PSSES shared secret<span class="o">]</span>
+</code></pre></div>
+
+<p><img alt="./images/devel/encode_ccw_key-usage.png" src="../images/devel/encode_ccw_key-usage.png" /></p>
+<p>Note: Если параметр <code>PSSES shared secret</code> упустить, скрипт сгенерирует пароль самостоятельно</p>
+<ul>
+<li>Результатирующий ключ добавляется в <code>keys-upload-config.json</code>.</li>
+<li>Пароль <code>PSSES shared secret</code> добавился в конфигурацию PSS ES (при помощи коллег из PSS Team)</li>
+</ul>
+<h2 id="wallet">Генерация нового wallet</h2>
+<ol>
+<li>Get list of supported currencies: GET /currencies. See swagger: https://pss-provider-wtf2.dev.kube/api/#/currencies/CurrencyController_getCurrencies
+    <div class="highlight"><pre><span></span><code>curl -X GET <span class="s2">&quot;https://pss-provider-wtf2.dev.kube/currencies&quot;</span> -H <span class="s2">&quot;accept: application/json&quot;</span>
+</code></pre></div></li>
+<li>Create new wallets for supported currencies: POST /wallets. See swagger: https://pss-provider-wtf2.dev.kube/api/#/wallets/WalletController_generateWallet
+    <div class="highlight"><pre><span></span><code><span class="o">{</span>
+    <span class="s2">&quot;currency&quot;</span>: <span class="s2">&quot;ATOM&quot;</span>,
+    <span class="s2">&quot;keychainOwners&quot;</span>: <span class="o">[</span>
+        <span class="s2">&quot;psses&quot;</span>
+    <span class="o">]</span>,
+    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cryptopay-evolution-atom&quot;</span>,
+    <span class="s2">&quot;processingUrl&quot;</span>: <span class="s2">&quot;https://evolution-cryptopay.dev.kube/v2/callback/cryptoproviders/cex/wtf2pss/ATOM/c8f93cc5-4c6f-44b7-9db4-bf089a7fc7f7&quot;</span>,
+    <span class="s2">&quot;encrypt&quot;</span>: <span class="nb">true</span>
+<span class="o">}</span>
+</code></pre></div></li>
+<li>If "multiSign": true - use this body:
+    <div class="highlight"><pre><span></span><code><span class="o">{</span>
+    <span class="s2">&quot;currency&quot;</span>: <span class="s2">&quot;ONT&quot;</span>,
+    <span class="s2">&quot;keychainOwners&quot;</span>: <span class="o">[</span>
+        <span class="s2">&quot;psses&quot;</span>,
+        <span class="s2">&quot;faes&quot;</span>
+    <span class="o">]</span>,
+    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cryptopay-evolution-ont&quot;</span>,
+    <span class="s2">&quot;processingUrl&quot;</span>: <span class="s2">&quot;https://evolution-cryptopay.dev.kube/v2/callback/cryptoproviders/cex/wtf2pss/ONT/04398c66-94e3-4b66-9c97-ab45d9b1d446&quot;</span>,
+    <span class="s2">&quot;encrypt&quot;</span>: <span class="nb">true</span>
+<span class="o">}</span>
+</code></pre></div></li>
+</ol>
+<h2 id="hot-address">Генерация нового <strong>HOT</strong>-address</h2>
+<ol>
+<li>After create wallet execute POST /addresses. Use a unique key "name". See swagger: https://pss-provider-wtf2.dev.kube/api/#/addresses/AddressController_getOrCreateAddress
+    <i class="fa fa-upload"></i>
+    <div class="highlight"><pre><span></span><code><span class="o">{</span>
+    <span class="s2">&quot;currency&quot;</span>: <span class="s2">&quot;ADA&quot;</span>,
+    <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;hot&quot;</span>,
+    <span class="s2">&quot;walletId&quot;</span>: <span class="s2">&quot;0b5eef1e-c83f-409b-8c79-51ca6e49a983&quot;</span>,
+    <span class="s2">&quot;chain&quot;</span>: <span class="m">0</span>,
+    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cryptopay-evolution-ada-intermediate-merchant-hot&quot;</span>,
+    <span class="s2">&quot;info&quot;</span>: <span class="o">{}</span>
+<span class="o">}</span>
+</code></pre></div>
+    <i class="fa fa-download"></i>
+    <div class="highlight"><pre><span></span><code><span class="o">{</span>
+    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;cryptopay-evolution-ada-intermediate-merchant-hot&quot;</span>,
+    <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;hot&quot;</span>,
+    <span class="s2">&quot;walletId&quot;</span>: <span class="m">53</span>,
+    <span class="s2">&quot;info&quot;</span>: <span class="o">{}</span>,
+    <span class="s2">&quot;address&quot;</span>: <span class="s2">&quot;2cWKMJemoBajB4bxUnQnGveCN3BWpoFeVKt7UgBAY2kypfSHuRTHmxb87mdZqhxnY1etS&quot;</span>,
+    <span class="s2">&quot;version&quot;</span>: null,
+    <span class="s2">&quot;options&quot;</span>: <span class="o">{}</span>,
+    <span class="s2">&quot;id&quot;</span>: <span class="m">6905</span>,
+    <span class="s2">&quot;createdAt&quot;</span>: <span class="s2">&quot;2020-04-21T09:56:05.717Z&quot;</span>,
+    <span class="s2">&quot;updatedAt&quot;</span>: <span class="s2">&quot;2020-04-21T09:56:05.717Z&quot;</span>
+<span class="o">}</span>
+</code></pre></div></li>
+<li>For edit wallet copy id from request GET /addresses. After execute PUT /wallets/{id}. See swagger: https://pss-provider-wtf2.dev.kube/api/#/wallets/WalletController_update</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

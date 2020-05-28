@@ -1,10 +1,8 @@
 {
 	"$schema": "https://cexiolabs.github.io/cryptopay.schemas/v2/account-withdrawal-make.request.json",
-	"clientWithdrawalId": "333548887804-RET",
-	"tag": "Return fund to end-user",
-	"feeLevel": "AVERAGE",
-	"amount": "0.05",
+	"tag": "Return funds to end-user by L3 ticker XYZ",
+	"amount": "0.052",
 	"currency": "BTC",
-	"//": "... currency specific fields",
-	"destinationAddress": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	"networkFeeLevel": "AVERAGE",
+	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
