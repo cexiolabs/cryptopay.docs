@@ -7,7 +7,6 @@
 	"rejectReason": "Expired. The order was not paid in appropriate time limit.",
 	"state": "AWAIT_DEPOSIT",
 	"instrument": "CRYPTO_SELL",
-	"model": "DEFAULT",
 	"createdAt": "2020-01-17T15:10:12.550Z",
 	"updatedAt": "2020-01-17T15:10:19.128Z",
 	"expiredAt": "2020-01-17T15:25:12.550Z",

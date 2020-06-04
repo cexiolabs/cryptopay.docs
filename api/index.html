@@ -732,6 +732,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2rate" class="md-nav__link">
+    /v2/rate
+  </a>
+  
+    <nav class="md-nav" aria-label="/v2/rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-rates" class="md-nav__link">
+    Get rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2risk" class="md-nav__link">
     /v2/risk
   </a>
@@ -1350,6 +1370,26 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2rate" class="md-nav__link">
+    /v2/rate
+  </a>
+  
+    <nav class="md-nav" aria-label="/v2/rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-rates" class="md-nav__link">
+    Get rates
+  </a>
   
 </li>
         
@@ -2296,9 +2336,34 @@
 <h2 id="v2instrument">/v2/instrument</h2>
 <h3 id="list-available-instruments">List available instruments</h3>
 <p>Returns list of instruments</p>
-<div class="highlight"><pre><span></span><code>GET /v2/instrument
+<div class="highlight"><pre><span></span><code>GET /v2/instrument?instrument={{instrument}}&amp;model={{model}}
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>instrument</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Instrument name, like CRYPTO_BUY or CRYPTO_SELL</td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Model name, like Default or GoldClient</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Permission:</strong> <a href="#order-permission">Order</a> or <a href="#view-permission">View</a></p>
 <p><strong>Response body</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -2319,7 +2384,78 @@
             <span class="nt">&quot;COMPLETED&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order fully completed (receive necessary blockchain&#39;s confirmations).&quot;</span>
             <span class="p">}</span>
-        <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;models&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;pairs&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;commissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.015&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.015&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FIXED&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.20&quot;</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MIN&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MAX&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1999.99&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MIN&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.001&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MAX&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;9.99999999&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXPIRATION_SECONDS&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">900</span> <span class="err">//</span> <span class="mi">15</span> <span class="err">minutes</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;XRP&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;commissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">...</span><span class="p">],</span>
+                        <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">...</span><span class="p">],</span>
+                    <span class="p">},</span>
+                    <span class="err">...</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="err">...</span>
+        <span class="p">]</span>
     <span class="p">},</span>
     <span class="nt">&quot;CRYPTO_SELL&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;breakpoints&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2339,7 +2475,101 @@
             <span class="nt">&quot;COMPLETED&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order fully completed (receive necessary blockchain&#39;s confirmations).&quot;</span>
             <span class="p">}</span>
-        <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;models&quot;</span><span class="p">:</span> <span class="p">[</span> 
+            <span class="err">...</span><span class="p">,</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GoldClient&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;pairs&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;commissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.015&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGE&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.015&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FACTOR&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FIXED&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.20&quot;</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MIN&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MAX&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1999.99&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MIN&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.001&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;ORDER_MAX&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;DEVIATION_PAID_MIN_FIXED&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">DEVIATION_PAID_MIN_FACTOR</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.00005&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;DEVIATION_PAID_MAX_FIXED&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">DEVIATION_PAID_MAX_FACTOR</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0001&quot;</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;DEVIATION_OVERPAID_FACTOR&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">DEVIATION_OVERPAID_FIXED</span>
+                                <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span> <span class="err">//</span> <span class="mi">50</span><span class="err">%</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;EXPIRATION_SECONDS&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">900</span> <span class="err">//</span> <span class="mi">15</span> <span class="err">minutes</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;CONFIRMATION_ACCEPT&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;CONFIRMATION_COMPETE&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">6</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;XRP&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;commissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">...</span><span class="p">],</span>
+                        <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">...</span><span class="p">],</span>
+                    <span class="p">},</span>
+                    <span class="err">...</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></p>
@@ -2711,7 +2941,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">optional</span>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
         <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;150.42&quot;</span>
@@ -2734,7 +2963,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -2775,7 +3003,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">optional</span>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span>
     <span class="p">},</span>
@@ -2798,7 +3025,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -2839,7 +3065,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">optional</span>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
         <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-4bd95e67ddd842908b3225ba64950f7c&quot;</span> <span class="err">//</span> <span class="err">optional</span><span class="p">,</span> <span class="err">will</span> <span class="err">create</span> <span class="err">new</span> <span class="err">if</span> <span class="err">skipped</span>
@@ -2858,7 +3083,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -2901,7 +3125,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">optional</span>
     <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
         <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.05142111&quot;</span><span class="p">,</span>
@@ -2920,7 +3143,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3011,7 +3233,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3056,7 +3277,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3101,7 +3321,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3153,7 +3372,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3211,7 +3429,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3269,7 +3486,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3327,7 +3543,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3388,7 +3603,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3433,7 +3647,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3479,7 +3692,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;rejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;Expired. The order was not paid in appropriate time limit.&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3543,7 +3755,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3588,7 +3799,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3633,7 +3843,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3685,7 +3894,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;SLEEPING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3744,7 +3952,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;rejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;Over paid. The order was rejected due received large amount.&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3888,7 +4095,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3931,7 +4137,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -3976,7 +4181,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_BUY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -4023,7 +4227,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NEW&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -4070,7 +4273,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -4128,7 +4330,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;EXCHANGED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -4186,7 +4387,6 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ACCEPTED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:19.128Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:25:12.550Z&quot;</span><span class="p">,</span>
@@ -4250,16 +4450,23 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
     <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPO-b3987b14439543c0b7c3f627cb8d0e87&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
     <span class="nt">&quot;breakpoints&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;NEW&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order was created. Ready start processing.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order is waiting for deposit.&quot;</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;READY_TO_EXCHANGE&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Ready to exchange.&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="nt">&quot;breakpoints&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;NEW&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order was created. Ready start processing.&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order is waiting for deposit.&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;EXCHANGING&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order&#39;s balance enough to make exchange. Order making exchange operations.&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;EXCHANGED&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order was successfully exchanged (aka Ready To Ship).&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;COMPLETED&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Order fully completed (receive necessary blockchain&#39;s confirmations).&quot;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -4276,6 +4483,70 @@ with <code>clientOrderId</code> prevents potential order duplicates.</p>
 <p>The method will return HTTP 403 if breakpoint in not signal state</p>
 </div>
 <hr />
+<h2 id="v2rate">/v2/rate</h2>
+<h3 id="get-rates">Get rates</h3>
+<div class="highlight"><pre><span></span><code>GET /v2/rate/{{instrument}}/{{model}}?from={{fromCurrency}}&amp;to={{toCurrency}}
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>instrument</strong></td>
+<td>STRING</td>
+<td>YES</td>
+<td>Instrument name, like CRYPTO_BUY or CRYPTO_SELL</td>
+</tr>
+<tr>
+<td><strong>model</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Model name, like Default or GoldClient</td>
+</tr>
+<tr>
+<td><strong>fromCurrency</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>From currency, like BTC</td>
+</tr>
+<tr>
+<td><strong>toCurrency</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>To currency, like USD</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permission:</strong> <a href="#view-permission">View</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYTPO_BUY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;Default&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;9561.44980498&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC/USD&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;9333.00001234&quot;</span>
+        <span class="p">},</span>
+        <span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <h2 id="v2risk">/v2/risk</h2>
 <p>We uses screening tools that monitor illicit cryptocurrency addresses and tag addresses that interact with them. These tools can let us know with a high degree of certainty if cryptocurrency transactions we process have been linked to (or originated from) illicit activities online (terrorist funding, ML, dark marketplace activities, trafficking and so on). 
 We take the data received with these tools very seriously as they help us monitor compliance with AML standards. Purpose of monitoring these transactions/addresses is, we do not want to process these funds, and neither do merchants.
