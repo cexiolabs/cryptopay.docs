@@ -15,7 +15,7 @@
     
     
       
-        <title>Basics - CryptoPay Service API (v2.alpha)</title>
+        <title>Accounting - CryptoPay Service API (v2.alpha)</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#callbacks" class="md-skip">
+        <a href="#accounting" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Basics
+              Accounting
             
           </span>
         </div>
@@ -205,12 +205,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Callbacks
@@ -232,67 +230,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Basics
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../callbacks/" title="Basics" class="md-nav__link">
       Basics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use-case
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delivery" class="md-nav__link">
-    Delivery
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -363,23 +305,63 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
-    Topics
+  <a href="#properties" class="md-nav__link">
+    Properties
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    Use-case
+  <a href="#database-objects" class="md-nav__link">
+    Database objects
   </a>
+  
+    <nav class="md-nav" aria-label="Database objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset" class="md-nav__link">
+    asset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction" class="md-nav__link">
+    transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sp_add_transaction" class="md-nav__link">
+    sp_add_transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#delivery" class="md-nav__link">
-    Delivery
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-categories" class="md-nav__link">
+    Asset categories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -399,84 +381,96 @@
                   
                 
                 
-                <h1 id="callbacks">Callbacks</h1>
-<p>Callbacks are based on <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish–Subscribe</a> pattern via a <code>Notifier</code> service. The <code>Notifier</code> service's responsibility is to deliver callback messages via Webhooks and other messaging providers.</p>
-<div class="admonition note">
-<p class="admonition-title">Recommendation</p>
-<p>Although notification includes real and valid data, we recommend to use notifications just as notifications and retrieve data via appropriate method of Pull API (<a href="../api">REST API</a> for example).
-In general, any notifications system by design may delay messages. Good practice for end-application is to check status via Pull API if expected message was not received in expected time frame.</p>
+                <h1 id="accounting">Accounting</h1>
+<p><strong>Accounting</strong> - это компонент системы который ведет учет движения денежных средств между участниками системы. Этот компонент находится в самом начале дерева зависимостей компонентов. Accounting <strong>не</strong> знает ничего о системе в целом, а лишь предоставляет интерфейс для хранения <code>asset</code>(счетов) и <code>transaction</code>(проводок). Более глубокие компоненты системы ссылаются на <code>asset</code> и <code>transaction</code>.</p>
+<h2 id="properties">Properties</h2>
+<ol>
+<li><code>asset</code> имеет аттрибут <code>name</code> уникальный в разрезе валюты. Можно создать счет одинаковым именем для каждой валюты. </li>
+<li>
+<p><code>transaction</code> проводки (вход и выход по счету) могут иметь одинаковый идентификатор <code>name</code>, только в разрезе одного счета. Это свойство аккаунтинга позволяет провести длинную операцию по аккантингу, используя единый идентификатор, и защищает от разветвлений (только одна цепочка прохождения). Это очень важное свойство, которое лежит в основе защиты от <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B9%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">double spend</a>.</p>
+<ol>
+<li>
+<p>Пример. Проводку 3:DENY создать не предстваляется возможным.</p>
+<div class="mermaid">graph LR;
+Asset1 -- 1:ALLOW trans42 --&gt; Asset3;
+Asset2 -- 2:DENY trans42 --&gt; Asset3;</div>
+
+</li>
+<li>
+<p>Пример. Проводку 3:DENY создать не предстваляется возможным.</p>
+<div class="mermaid">graph LR;
+Asset1 -- 1:ALLOW trans42 --&gt; Asset2;
+Asset1 -- 2:DENY trans42 --&gt; Asset3;</div>
+
+</li>
+<li>
+<p>Пример. Проводки 3:DENY и 4:DENY создать не предстваляется возможным.</p>
+<div class="mermaid">graph LR;
+Asset1 -- 1:ALLOW trans42 --&gt; Asset2;
+Asset2 -- 2:ALLOW trans42 --&gt; Asset1;
+Asset1 -- 3:DENY trans42 --&gt; Asset3;
+Asset2 -- 4:DENY trans42 --&gt; Asset4;</div>
+
+</li>
+<li>
+<p>Пример. Проводку 4:DENY создать не предстваляется возможным.</p>
+<div class="mermaid">graph LR;
+Asset1 -- 1:ALLOW trans42 --&gt; Asset2;
+Asset2 -- 2:ALLOW trans42 --&gt; Asset3;
+Asset3 -- 3:ALLOW trans42 --&gt; Asset1;
+Asset3 -- 4:DENY trans42 --&gt; Asset4;</div>
+
+</li>
+<li>
+<p>Пример. Проводку 4:DENY создать не предстваляется возможным.</p>
+<div class="mermaid">graph LR;
+Asset1 -- 1:ALLOW trans42 --&gt; Asset2;
+Asset2 -- 2:ALLOW trans42 --&gt; Asset3;
+Asset3 -- 3:ALLOW trans42 --&gt; Asset4;
+Asset3 -- 4:DENY trans42 --&gt; Asset1;</div>
+
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="database-objects">Database objects</h2>
+<h3 id="asset">asset</h3>
+<p>Таблица счетов, включают в себя:</p>
+<p>TBD</p>
+<h3 id="transaction">transaction</h3>
+<p>Таблица проводок, включают в себя:</p>
+<p>TBD</p>
+<h3 id="sp_add_transaction">sp_add_transaction</h3>
+<p>Функция (aka процедура) для вставки новой проводки. Она же обновляет балансы на счетах.</p>
+<p>TBD</p>
+<h2 id="usage">Usage</h2>
+<h3 id="asset-categories">Asset categories</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Имена <code>name</code> счетов носят сугубо информационный характер. Любые связи со счетами строятся через идентификаторы <code>id</code>.</p>
 </div>
-<h2 id="topics">Topics</h2>
 <table>
 <thead>
 <tr>
-<th>Topic Name</th>
-<th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>ORDER</strong></td>
-<td>Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+<td>EXT:<BlockChainAddress></td>
+<td>Счет отражающий баланс блокчейн адреса в минусовой нотации. Например, при депозите 0.125 BTC, баланс этого счета уменьшается на 0.125 BTC (баланс = -0.125)</td>
 </tr>
 <tr>
-<td><strong>DEPOSIT</strong></td>
-<td>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></td>
+<td>TRN:<BlockChainTxHash></td>
+<td>Транзитный счет для проведения крипто депозита. На 0-ом конфирмейшене сети, сумма депозита зачисляется на данный счет со счета EXT:<BlockChainAddress>. При достижении требуемого колличество конфирмейшенов суммаа депозита уходит с этого счета на счет MERCH:<BlockChainAddress></td>
 </tr>
 <tr>
-<td><strong>WITHDRAWAL</strong></td>
-<td>Emit messages when <code>withdrawal</code> created/updated. Message body same as response of <a href="../api/#fetch-withdrawal">Fetch withdrawal</a></td>
+<td>MERCH:<BlockChainAddress></td>
+<td>Счет мерчанта связанный с со счетом EXT:<BlockChainAddress> (работает в паре). Крипто депозит увеличивает баланс данного счета. Например, при депозите 0.125 BTC, баланс этого счета увеличиватся на 0.125 BTC (баланс = 0.125)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="use-case">Use-case</h2>
-<ol>
-<li>Client subscribe a desired topic</li>
-<li><code>Notifier</code> deliver events</li>
-<li>Client unsubscribe the topic</li>
-<li>No delivery</li>
-</ol>
-<div class="mermaid">sequenceDiagram
-    participant Subscriber1
-    participant Subscriber2
-    participant Notifier
-    opt Event A
-        Notifier-&gt;&gt;Notifier: Skip, just audit
-    end
-    Subscriber2-&gt;&gt;+Notifier: Subscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber2: OK
-    opt Event B
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message B for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-    end
-    Subscriber1-&gt;&gt;+Notifier: Subscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber1: OK
-    opt Event C
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message C for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-        Notifier-&gt;&gt;+Subscriber1: Message C for "ORDER"
-        Subscriber1--&gt;&gt;-Notifier: OK
-    end
-    Subscriber1-&gt;&gt;+Notifier: Unsubscribe "ORDER" topic
-    Notifier--&gt;&gt;-Subscriber1: OK
-    opt Event D
-        Notifier-&gt;&gt;Notifier: Schedule delivery
-        Notifier-&gt;&gt;+Subscriber2: Message D for "ORDER"
-        Subscriber2--&gt;&gt;-Notifier: OK
-    end</div>
-
-<h2 id="delivery">Delivery</h2>
-<p>Messages are sent immediately after an operation was performed.</p>
-<p><code>Notifier</code> records the fact of message delivery to your system after receiving the response from your system.</p>
-<p>In case of delivery fail the server retries delivery according to next law:</p>
-<ol>
-<li>First 100 attempts with delay increasing from 1.3 sec to 15 minutes (see curve belows);</li>
-<li>After 100 attempts each attempt with constant 15 minutes delay;</li>
-<li>Stop retrying if notification can't be delirived while 72 hours.</li>
-</ol>
-<p><img alt="Delivery delay curve" src="../images/Delay-from-attempt.png" /></p>
                 
               
               
@@ -491,41 +485,6 @@ In general, any notifications system by design may delay messages. Good practice
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../api/" title="REST API" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                REST API
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../callbacks-webhooks/" title="Webhooks" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Webhooks
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

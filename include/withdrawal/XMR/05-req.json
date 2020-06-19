@@ -2,5 +2,6 @@
 	"tag": "Return funds to end-user by L3 ticket XYZ",
 	"amount": "0.052",
 	"networkFeeLevel": "AVERAGE",
-	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"destinationTag": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }

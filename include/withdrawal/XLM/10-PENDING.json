@@ -3,9 +3,13 @@
 	"accountId": "CPA-a64e2b0dbd4144cdab993d4f99c8030f",
 	"tag": "Return funds to end-user by L3 ticker XYZ",
 	"amount": "0.052",
-	"currency": "BTC",
+	"currency": "XLM",
 	"networkFeeLevel": "AVERAGE",
 	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"destinationTag": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "PENDING",
-	"createdAt": "2020-01-16T12:56:07.111Z"
+	"date": null,
+	"networkFee": null,
+	"transactionAmount": null,
+	"txHash": null
 }

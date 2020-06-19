@@ -7,6 +7,8 @@
 	"networkFeeLevel": "AVERAGE",
 	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "ACCEPTED",
+	"createdAt": "2020-01-16T12:56:07.111Z",
+	"commitAt": "2020-01-16T12:57:22.765Z",
 	"date": "2020-04-03T07:32:11.718Z",
 	"networkFee": "0.001",
 	"transactionAmount": "0.051",

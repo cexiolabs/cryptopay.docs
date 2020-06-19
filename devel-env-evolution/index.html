@@ -267,6 +267,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" title="Change Log" class="md-nav__link">
+      Change Log
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -300,8 +312,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#wallets" class="md-nav__link">
+    Wallets (Кошельки)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hot-" class="md-nav__link">
-    Hot-кошельки
+    Hot-адреса
   </a>
   
 </li>
@@ -327,49 +346,19 @@
 <h2 id="_1">Назначение окружения</h2>
 <p><code>Evolution</code> окружение - это среда разработки (другими словами  <code>dev</code>). Любая новая функциональность начинает жизнь в этом окружении.</p>
 <p><i class="fa fa-bullhorn"></i> Части этого окружения используются локально разработчиками. Например хот-кошельки от <code>INTERMEDIATE</code> мерчанта, для разработки/тестирования выплаты/сеттлементов.</p>
-<h2 id="hot-">Hot-кошельки</h2>
-<table>
-<thead>
-<tr>
-<th>Валюта</th>
-<th>Адрес</th>
-<th>Провайдер</th>
-<th>Детали</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.cardano.org/">ADA</a></td>
-<td><a href="https://shelleyexplorer.cardano.org/en/address/2cWKMJemoBajB4bxUnQnGveCN3BWpoFeVKt7UgBAY2kypfSHuRTHmxb87mdZqhxnY1etS/">2cWKMJemoBajB4bxUnQnGveCN3BWpoFeVKt7UgBAY2kypfSHuRTHmxb87mdZqhxnY1etS</a></td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-qrcode"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/ADA-address-evolution-intermediate-merchant-hot.json">Address Raw Data</a><br/><i class="fa fa-suitcase"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/ADA-wallet-evolution-intermediate-merchant-hot.json">Wallet Raw Data</a></td>
-</tr>
-<tr>
-<td><a href="https://cosmos.network/">ATOM</a></td>
-<td><a href="https://github.com/cosmos/testnets">cosmos1z6zr3v47g53sqzdpxzlhnvr44nvvmmdl4uckfv</a></td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-qrcode"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/ATOM-address-evolution-intermediate-merchant-hot.json">Address Raw Data</a><br/><i class="fa fa-suitcase"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/ATOM-wallet-evolution-intermediate-merchant-hot.json">Wallet Raw Data</a></td>
-</tr>
-<tr>
-<td><a href="TODO">ETH</a></td>
-<td>???</td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-qrcode"></i> <a href="???">Address Raw Data</a><br/><i class="fa fa-suitcase"></i> <a href="???">Wallet Raw Data</a></td>
-</tr>
-<tr>
-<td><a href="https://neo.org/">NEO</a></td>
-<td><a href="https://neoscan-testnet.io/address/AdN4MGouXjTmhkzYbV36Ud4X8xLxCdA8bs">AdN4MGouXjTmhkzYbV36Ud4X8xLxCdA8bs</a></td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-qrcode"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/NEO-address-evolution-intermediate-merchant-hot.json">Address Raw Data</a><br/><i class="fa fa-suitcase"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/NEO-wallet-evolution-intermediate-merchant-hot.json">Wallet Raw Data</a></td>
-</tr>
-<tr>
-<td><a href="https://www.trongrid.io/shasta">TRX</a></td>
-<td><a href="https://shasta.tronscan.org/#/address/TVmK1i9qhPgVzTx5NzDNGfr61fymQcofvm">TVmK1i9qhPgVzTx5NzDNGfr61fymQcofvm</a></td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-qrcode"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/TRX-address-evolution-intermediate-merchant-hot.json">Address Raw Data</a><br/><i class="fa fa-suitcase"></i> <a href="https://gitlab.wnb:28443/cryptopay/psses-keys-setup/-/raw/master/env0-evolution/TRX-wallet-evolution-intermediate-merchant-hot.json">Wallet Raw Data</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="wallets">Wallets (Кошельки)</h2>
+<p>Кошелек "хостит" крипто-адреса. Любой изданный крипто-адрес пренадлежит какому то кошельку. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Кошельки общие на devlocal, evolution и presentation окружения. Это следствие того, что PSS не может выдать больше одного wallet per currency мерчанту <code>cpwtf</code> (нам).</p>
+</div>
+<p>--crytopay.wallets:cpwtf</p>
+<h2 id="hot-">Hot-адреса</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>WTF2 для валют <strong>XRP</strong>/<strong>XLM</strong> создают всего ОДИН адрес на Wallet. Платежи принимается через <code>destinationTag</code>/<code>memo</code> (c) Ivan Drondov 2020-06-18 WTF/PSS integration Telegram Channel.</p>
+</div>
+<p>--crytopay.hotaddresses:cpwtf,INTERNAL_DEV</p>
                 
               
               

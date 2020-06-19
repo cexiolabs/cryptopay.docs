@@ -15,7 +15,7 @@
     
     
       
-        <title>Devel env preproduction - CryptoPay Service API (v2.alpha)</title>
+        <title>Pre production - CryptoPay Service API (v2.alpha)</title>
       
     
     
@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#pre-production" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Devel env preproduction
+              Pre production
             
           </span>
         </div>
@@ -262,12 +267,70 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" title="Change Log" class="md-nav__link">
+      Change Log
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Назначение окружения
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallets" class="md-nav__link">
+    Wallets (Кошельки)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hot-" class="md-nav__link">
+    Hot-адреса
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           <div class="md-content">
@@ -278,9 +341,19 @@
                   
                 
                 
-                  <h1>Devel env preproduction</h1>
-                
-                
+                <h1 id="pre-production">Pre production</h1>
+<p>Здесь собраны заметки по настройке <code>Pre production</code> окружения</p>
+<h2 id="_1">Назначение окружения</h2>
+<p><code>Pre production</code> окружение - это среда пред-релизного тестировния. Релиз попадает в эту среду, непосредственно перед релизом в продуктив.</p>
+<h2 id="wallets">Wallets (Кошельки)</h2>
+<p>Кошелек "хостит" крипто-адреса. Любой изданный крипто-адрес пренадлежит какому то кошельку. </p>
+<p>--crytopay.wallets:cpwtf-demo</p>
+<h2 id="hot-">Hot-адреса</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>WTF2 для валют <strong>XRP</strong>/<strong>XLM</strong> создают всего ОДИН адрес на Wallet. Платежи принимается через <code>destinationTag</code>/<code>memo</code> (c) Ivan Drondov 2020-06-18 WTF/PSS integration Telegram Channel.</p>
+</div>
+<p>--crytopay.hotaddresses:cpwtf-demo,INTERNAL_PREPROD</p>
                 
               
               

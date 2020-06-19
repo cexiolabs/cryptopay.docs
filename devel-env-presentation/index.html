@@ -267,6 +267,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" title="Change Log" class="md-nav__link">
+      Change Log
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -300,8 +312,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#wallets" class="md-nav__link">
+    Wallets (Кошельки)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hot-" class="md-nav__link">
-    Hot-кошельки
+    Hot-адреса
   </a>
   
 </li>
@@ -327,31 +346,19 @@
 <h2 id="_1">Назначение окружения</h2>
 <p><code>Presentation</code> окружение - это среда тестирования для мерчантов (мерчанты ее называют <a href="../#testnet-orange"><code>Testnet (​orange​)</code></a>). Любая новая функциональность продолжает жизнь в этом окружении после <code>Evolution</code>.</p>
 <p><i class="fa fa-bullhorn"></i> Выключать/Ломать это окружение запрешено, т.к. оно используется для анонимного мерчанта лендинга.</p>
-<h2 id="hot-">Hot-кошельки</h2>
-<table>
-<thead>
-<tr>
-<th>Валюта</th>
-<th>Адрес</th>
-<th>Провайдер</th>
-<th>Детали</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="TODO">ATOM</a></td>
-<td>cosmos1tdlcvywgyx27sm5pm7qk5y9c983hvutmj6kz9t</td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-upload"></i><br/><pre>{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"currency":"ATOM",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"type":"hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"walletId":"64459625-70ff-49cf-8f2a-4c3ebb20f4db",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"chain":0,<br/>&nbsp;&nbsp;&nbsp;&nbsp;name":"cryptopay-presentation-atom-intermediate-merchant-hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"info":{}<br/>}</pre><br/><i class="fa fa-download"></i> <br/><pre>{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"name":"cryptopay-presentation-atom-intermediate-merchant-hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"type":"hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"walletId":59,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"info":{},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"address":"cosmos1tdlcvywgyx27sm5pm7qk5y9c983hvutmj6kz9t",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"version":null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"options":{},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"id":6824,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"createdAt":"2020-04-17T11:00:59.480Z",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"updatedAt":"2020-04-17T11:00:59.480Z"<br/>}</pre></td>
-</tr>
-<tr>
-<td><a href="https://www.trongrid.io/shasta">TRX</a></td>
-<td>TSSGNKQyuhoJX6K1YBzY3KptGhUQJKiCEw</td>
-<td><a href="https://pss-provider-wtf2.dev.kube/api">pss-provider-wtf2</a></td>
-<td><i class="fa fa-upload"></i><br/><pre>{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"currency":"TRX",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"type":"hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"walletId":"f69cacc4-8a56-462f-928e-7f04e4445480",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"chain":0,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"name":"cryptopay-presentation-trx-intermediate-merchant-hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"info":{}<br/>}</pre><br/><i class="fa fa-download"></i><br/><pre>{<br/>&nbsp;&nbsp;&nbsp;&nbsp;"name":"cryptopay-presentation-trx-intermediate-merchant-hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"type":"hot",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"walletId": 38,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"info":{},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"address":"TSSGNKQyuhoJX6K1YBzY3KptGhUQJKiCEw",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"version":null,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"options":{},<br/>&nbsp;&nbsp;&nbsp;&nbsp;"id":6825,<br/>&nbsp;&nbsp;&nbsp;&nbsp;"createdAt":"2020-04-17T11:06:46.573Z",<br/>&nbsp;&nbsp;&nbsp;&nbsp;"updatedAt":"2020-04-17T11:06:46.573Z"<br/>}</pre></td>
-</tr>
-</tbody>
-</table>
+<h2 id="wallets">Wallets (Кошельки)</h2>
+<p>Кошелек "хостит" крипто-адреса. Любой изданный крипто-адрес пренадлежит какому то кошельку. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Кошельки общие на devlocal, evolution и presentation окружения. Это следствие того, что PSS не может выдать больше одного wallet per currency мерчанту <code>cpwtf</code> (нам).</p>
+</div>
+<p>--crytopay.wallets:cpwtf</p>
+<h2 id="hot-">Hot-адреса</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>WTF2 для валют <strong>XRP</strong>/<strong>XLM</strong> создают всего ОДИН адрес на Wallet. Платежи принимается через <code>destinationTag</code>/<code>memo</code> (c) Ivan Drondov 2020-06-18 WTF/PSS integration Telegram Channel.</p>
+</div>
+<p>--crytopay.hotaddresses:cpwtf,INTERNAL_TESTNET</p>
                 
               
               
