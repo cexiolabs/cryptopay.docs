@@ -376,6 +376,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#list-of-withdrawals" class="md-nav__link">
+    List of withdrawals
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -718,6 +725,76 @@
     <span class="nt">&quot;blockHash&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span> <span class="err">//</span> <span class="err">or</span> <span class="err">string,</span> <span class="err">like</span> <span class="nt">&quot;00000000004340f3813671cdcbb5692d4722dece53db74f7b6fa11c96a5a7714&quot;</span>
     <span class="s2">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-06T09:08:39.537Z&quot;</span>
 <span class="p">}</span>
+</code></pre></div></p>
+<h5 id="list-of-withdrawals">List of withdrawals</h5>
+<div class="highlight"><pre><span></span><code>GET /api/{{walletId}}/withdrawal
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>walletId</strong></td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>Wallet identifier</td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Filter by <code>address</code>. Comma separated combination of addresses.</td>
+</tr>
+<tr>
+<td><strong>startDate</strong></td>
+<td>ISO 8601</td>
+<td>NO</td>
+<td>Date of create deposit, from INCLUSIVE</td>
+</tr>
+<tr>
+<td><strong>endDate</strong></td>
+<td>ISO 8601</td>
+<td>NO</td>
+<td>Date of create deposit, until EXCLUSIVE</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>INT</td>
+<td>NO</td>
+<td>Number of results per request. Default 500; max 1000.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body</strong>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;withdrawalUuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d3e8abfa-7f75-443d-83ee-240d7e9c759b&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;1200.42&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-06T09:08:39.537Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;TRX&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">Peer</span> <span class="err">currency</span>
+        <span class="nt">&quot;sourceAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;TRXemulatorUqcqbCwAtkS8pAxYCw2kNgv&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;TRXemulatorUqcqbCwAtkS8pAxYCw2kNgv&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;withdrawalUuid&quot;</span><span class="p">:</span> <span class="s2">&quot;d3e8abfa-7f75-443d-83ee-240d7e9c759b&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.042&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-06T09:08:39.537Z&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">Utxo</span> <span class="err">currency</span>
+        <span class="nt">&quot;destinationAddresses&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;BTCemulatorUqcqbCwAtkS8pAxYCw2kNg1&quot;</span><span class="p">:</span> <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;BTCemulatorUqcqbCwAtkS8pAxYCw2kNg2&quot;</span><span class="p">:</span> <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.032&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+<span class="p">]</span>
 </code></pre></div></p>
 <h4 id="web">/web</h4>
 <p>Web - приложение позволяет управлять виртуальными кошельками (инстансами <code>VirtualCryptoWallet</code>):</p>

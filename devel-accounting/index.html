@@ -358,6 +358,46 @@
     Asset categories
   </a>
   
+    <nav class="md-nav" aria-label="Asset categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-chain-address-assets" class="md-nav__link">
+    Block Chain Address Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hot-assets" class="md-nav__link">
+    Hot Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merchant-accounts" class="md-nav__link">
+    Merchant Accounts
+  </a>
+  
+    <nav class="md-nav" aria-label="Merchant Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-accounts" class="md-nav__link">
+    Default Accounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -449,28 +489,72 @@ Asset3 -- 4:DENY trans42 --&gt; Asset1;</div>
 <p class="admonition-title">Warning</p>
 <p>Имена <code>name</code> счетов носят сугубо информационный характер. Любые связи со счетами строятся через идентификаторы <code>id</code>.</p>
 </div>
+<h4 id="block-chain-address-assets">Block Chain Address Assets</h4>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Name prefix</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EXT:<BlockChainAddress></td>
+<td><code>EXT:&lt;BlockChainAddress&gt;</code></td>
 <td>Счет отражающий баланс блокчейн адреса в минусовой нотации. Например, при депозите 0.125 BTC, баланс этого счета уменьшается на 0.125 BTC (баланс = -0.125)</td>
 </tr>
 <tr>
-<td>TRN:<BlockChainTxHash></td>
-<td>Транзитный счет для проведения крипто депозита. На 0-ом конфирмейшене сети, сумма депозита зачисляется на данный счет со счета EXT:<BlockChainAddress>. При достижении требуемого колличество конфирмейшенов суммаа депозита уходит с этого счета на счет MERCH:<BlockChainAddress></td>
+<td><code>TRN:&lt;BlockChainTxHash&gt;</code></td>
+<td>Транзитный счет для проведения крипто депозита. На 0-ом конфирмейшене сети, сумма депозита зачисляется на данный счет со счета EXT:<BlockChainAddress>. При достижении требуемого колличество конфирмейшенов суммаа депозита уходит с этого счета на счет INT:<BlockChainAddress></td>
 </tr>
 <tr>
-<td>MERCH:<BlockChainAddress></td>
+<td><code>INT:&lt;BlockChainAddress&gt;</code></td>
 <td>Счет мерчанта связанный с со счетом EXT:<BlockChainAddress> (работает в паре). Крипто депозит увеличивает баланс данного счета. Например, при депозите 0.125 BTC, баланс этого счета увеличиватся на 0.125 BTC (баланс = 0.125)</td>
 </tr>
 </tbody>
 </table>
+<h4 id="hot-assets">Hot Assets</h4>
+<p>Hot Accounts - это технические буферные счета которые накапливают средства мерчанта(или нескольких мерчантов). По-сути они отражают долговые отношения с внешними участниками сичтемы (CEX Aggregator, PSS, etc).</p>
+<h4 id="merchant-accounts">Merchant Accounts</h4>
+<p>Merchant Account - это биндинг на конкретный asset(счет), который виден мерчанту через API <a href="../api/#v2account">/v2/account</a>. По-сути мерчант видит/управляет только небольшой частью от всего "зоопарка" счетов. Видимая мерчанту часть счетов и называется <code>Merchant Account</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Asset binding</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CRYPTO_BLOCKCHAIN</code></td>
+<td><code>INT:&lt;BlockChainAddress&gt;</code></td>
+<td>(Только криптовалюты) Account связанный с крипто-адресом. Все депозиты из блокчейна падают на этот аккаунт (после прохождения транзитныйх счетов)</td>
+</tr>
+<tr>
+<td><code>DEFAULT</code></td>
+<td><code>DEFAULT:&lt;MERCHANT_NAME&gt;:&lt;CURRENCY&gt;</code></td>
+<td>(Любая валюта) Виртуальный Account без каких либо связей с внешним миром. Используется в ордерах, когда мерчант не указывает Account явно. См. <a href="#default-accountss">Default Accounts</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="default-accounts">Default Accounts</h5>
+<p>Мерчант имеет ОДИН дефолтный (по-умолчанию) счет по каждой валюте, который создается on-demand (по требованию). Эти счета подставляются в ордер, если мерчант не указывает конкретный счет при создании ордера. Например:</p>
+<ul>
+<li>
+<p>CRYPTO_BUY инстурумент позволяет упускать из запроса <code>from.accountId</code> и <code>to.accountId</code></p>
+<ul>
+<li>упущенный <code>from.accountId</code> использует <strong>дефолтный</strong> счет фиата (USR, EUR, etc.) с которого будут списаны средства на счет обменника.</li>
+<li>упущенный <code>to.accountId</code> использует <strong>дефолтный</strong> счет крипы (BTC, MHC, etc.) куда прийдут средства от обменника (и потом уйдут на withdrawal)</li>
+</ul>
+</li>
+<li>
+<p>CRYPTO_SELL инстурумент позволяет упускать из запроса <code>from.accountId</code> и <code>to.accountId</code></p>
+<ul>
+<li>упущенный <code>from.accountId</code> создает(захватывает из пула) депозитный <code>EXT:&lt;BlockChainAddress&gt;</code> криптосчет, куда зачисляется депозит крипты (и потом уходят на обменник)</li>
+<li>упущенный <code>to.accountId</code> использует <strong>дефолтный</strong> счет фиата (USR, EUR, etc.), куда прийдут средства от обменника (и будут лежать тут до settlement)</li>
+</ul>
+</li>
+</ul>
                 
               
               

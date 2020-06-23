@@ -3,7 +3,7 @@
 	"orderId": "CPO-b3987b14439543c0b7c3f627cb8d0e87",
 	"clientOrderId": "1490548887804-XA-1112-TU",
 	"clientOrderTag": "Any merchant's data",
-	"status": "SLEEPING",
+	"status": "PENDING",
 	"state": "AWAIT_DEPOSIT",
 	"instrument": "CRYPTO_SELL",
 	"createdAt": "2020-01-17T15:10:12.550Z",

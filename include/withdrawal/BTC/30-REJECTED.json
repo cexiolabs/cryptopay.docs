@@ -1,6 +1,7 @@
 {
 	"withdrawalId": "CPW-f248fb235227473e8a2e95d125f8fd80",
 	"accountId": "CPA-a64e2b0dbd4144cdab993d4f99c8030f",
+	"clientWithdrawalId": "XXU-12434-41241-124121224",
 	"tag": "Return funds to end-user by L3 ticker XYZ",
 	"amount": "0.052",
 	"currency": "BTC",
