@@ -468,7 +468,7 @@
 <li>В отдельной SQL транзакции выполняет запись о намерении создать адрес в таблицу <code>address_declaration</code></li>
 <li>В следующей SQL транзакции выполняет:<ol>
 <li>Блокировку записи из <code>address_declaration</code> через <code>SELECT ... FOR UPDATE</code></li>
-<li>Создает два <code>asset</code>-а: <code>EXT:${accountUuid}</code> и <code>INT:${accountUuid}</code> (будущие депозиты отражаются как проводки <code>EXT:${accountUuid}</code> -&gt; <code>INT:${accountUuid}</code>)</li>
+<li>Создает два <code>asset</code>-а: <code>CWEXT:${accountUuid}</code> и <code>CWINT:${accountUuid}</code> (будущие депозиты отражаются как проводки <code>CWEXT:${accountUuid}</code> -&gt; <code>CWINT:${accountUuid}</code>)</li>
 <li>Запрашивает новый адрес у <code>CryptoWallet#generateNewAddress(...)</code></li>
 <li>Информацию по сформированному адресу записывает в таблицу <code>address_pool</code></li>
 <li>В этом месте новый адрес читается как добавленный в пул адресов.</li>
@@ -479,14 +479,14 @@
 <h3 id="deposit-">Deposit-ы</h3>
 <p>Движение средств по аккаунтингу выполняемые <code>CryptoWalletComponent</code>-ом:</p>
 <ul>
-<li><code>EXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - Cчет источник, с которого расходуются деньги. Этот счет ВСЕГДА , в минусовой нотации, отображает РЕАЛЬНЫЙ баланс адреса в блокчейне. Где <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - UUID адреса зарегистрированного в таблице <code>address_declaration</code>.</li>
+<li><code>CWEXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - Cчет источник, с которого расходуются деньги. Этот счет ВСЕГДА , в минусовой нотации, отображает РЕАЛЬНЫЙ баланс адреса в блокчейне. Где <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - UUID адреса зарегистрированного в таблице <code>address_declaration</code>.</li>
 <li><code>DEPOSIT_PROCESSING:tx_hash</code> - счет который хранит деньги во время ожидания подтверждения депозита (набор необходимого колличества подтверждений или через <code>isTrustedTransaction(...)</code>)</li>
-<li><code>INT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - Cчет назначения, куда приходят деньги. Это счет мерчанта, с ВИРТУЛЬНЫМИ деньгами, которые мерчант может использовать для операций внутри системы. Где <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - UUID адреса зарегистрированного в таблице <code>address_declaration</code>.</li>
+<li><code>CWEXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - Cчет назначения, куда приходят деньги. Это счет мерчанта, с ВИРТУЛЬНЫМИ деньгами, которые мерчант может использовать для операций внутри системы. Где <code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code> - UUID адреса зарегистрированного в таблице <code>address_declaration</code>.</li>
 </ul>
 <div class="mermaid">graph LR;
-  EXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -- pending --&gt; DEPOSIT_PROCESSING:tx_hash;
-  DEPOSIT_PROCESSING:tx_hash -- rejected --&gt; EXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx;
-  DEPOSIT_PROCESSING:tx_hash -- accepted --&gt; INT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx;</div>
+  CWEXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -- pending --&gt; DEPOSIT_PROCESSING:tx_hash;
+  DEPOSIT_PROCESSING:tx_hash -- rejected --&gt; CWEXT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx;
+  DEPOSIT_PROCESSING:tx_hash -- accepted --&gt; CWINT:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx;</div>
 
 <ul>
 <li>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx - UUID адреса зарегистрированного в таблице <code>address_declaration</code></li>

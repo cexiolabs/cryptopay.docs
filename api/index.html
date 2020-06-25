@@ -1428,7 +1428,7 @@
                 
                 
                 <h1 id="rest-api">REST API</h1>
-<p>Checkout our <a href="https://www.getpostman.com/collections/73e9fe3b6ef4dc3ac7db">Postman Collection</a> for the API.</p>
+<p>Checkout our <a href="../api.postman_collection.json">Postman Collection</a> for the API.</p>
 <hr />
 <h2 id="basics">Basics</h2>
 <ul>
@@ -2241,10 +2241,10 @@ with client identifier prevents potential order duplicates.</p>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Withdrawal section difference according currency selector</p>
-<p>Most of crytpo currencies provide just "address" as target for funds transfer. But some crypto currencies have extended fields. For example XRP, XLM and XMR has field "destinationTag". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
+<p>Most of crytpo currencies provide just "address" as target for funds transfer. But some crypto currencies have extended fields. For example XRP has field "destinationTag" and XLM has field "memo". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
 </div>
 <p><strong>Request/Response</strong></p>
-<div class="tabbed-set" data-tabs="4:5">
+<div class="tabbed-set" data-tabs="4:4">
 <input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">BTC (Bitcoin)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;clientWithdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;XXU-12434-41241-124121224&quot;</span><span class="p">,</span>
@@ -2279,7 +2279,7 @@ with client identifier prevents potential order duplicates.</p>
     <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.052&quot;</span><span class="p">,</span>
     <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+    <span class="nt">&quot;memo&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
 <span class="p">}</span>
 
 <span class="err">&lt;--</span>
@@ -2291,7 +2291,7 @@ with client identifier prevents potential order duplicates.</p>
     <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;XLM&quot;</span><span class="p">,</span>
     <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;memo&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
     <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="nt">&quot;networkFee&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -2299,34 +2299,7 @@ with client identifier prevents potential order duplicates.</p>
     <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<input name="__tabbed_4" type="radio" id="__tabbed_4_4" /><label for="__tabbed_4_4">XMR (Monero)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="err">--&gt;</span>
-<span class="p">{</span>
-    <span class="nt">&quot;clientWithdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;XXU-12434-41241-124121224&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Return funds to end-user by L3 ticket XYZ&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.052&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
-<span class="p">}</span>
-
-<span class="err">&lt;--</span>
-<span class="p">{</span>
-    <span class="nt">&quot;withdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPW-f248fb235227473e8a2e95d125f8fd80&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;CPA-a64e2b0dbd4144cdab993d4f99c8030f&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Return funds to end-user by L3 ticker XYZ&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;0.052&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;XMR&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PENDING&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;networkFee&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;transactionAmount&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;txHash&quot;</span><span class="p">:</span> <span class="kc">null</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<input name="__tabbed_4" type="radio" id="__tabbed_4_5" /><label for="__tabbed_4_5">XRP (Ripple)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="err">--&gt;</span>
+<input name="__tabbed_4" type="radio" id="__tabbed_4_4" /><label for="__tabbed_4_4">XRP (Ripple)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="err">--&gt;</span>
 <span class="p">{</span>
     <span class="nt">&quot;clientWithdrawalId&quot;</span><span class="p">:</span> <span class="s2">&quot;XXU-12434-41241-124121224&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;Return funds to end-user by L3 ticket XYZ&quot;</span><span class="p">,</span>
@@ -3243,16 +3216,16 @@ There is no way to get generated key again, only generation of new key available
 <h5 id="withdrawal-exceptions">Withdrawal exceptions</h5>
 <div class="admonition warning">
 <p class="admonition-title">Withdrawal section difference according kind selector</p>
-<p>Most of crytpo currencies provide just "address" as target for funds transfer. But some crypto currencies have extended fields. For example XRP, XLM and XMR has field "destinationTag". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
+<p>Most of crytpo currencies provide just "address" as target for funds transfer. But some crypto currencies have extended fields. For example XRP has field "destinationTag" and XLM has field "memo". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
 </div>
-<div class="tabbed-set" data-tabs="6:3">
+<div class="tabbed-set" data-tabs="6:2">
 <input name="__tabbed_6" type="radio" id="__tabbed_6_1" checked="checked" /><label for="__tabbed_6_1">XRP (Ripple)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="err">...</span>
     <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;XRP&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
         <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+        <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;0123456789&quot;</span> <span class="err">//</span> <span class="mi">32</span><span class="err">-bit</span> <span class="err">unsigned</span> <span class="err">integer.</span> <span class="err">See</span> <span class="err">https</span><span class="p">:</span><span class="err">//xrpl.org/source-and-destination-tags.html</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -3262,17 +3235,7 @@ There is no way to get generated key again, only generation of new key available
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;XLM&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
         <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<input name="__tabbed_6" type="radio" id="__tabbed_6_3" /><label for="__tabbed_6_3">XMR (Monero)</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="err">...</span>
-    <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;XMR&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+        <span class="nt">&quot;memo&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span> <span class="err">//</span> <span class="err">See</span> <span class="err">https</span><span class="p">:</span><span class="err">//www.stellar.org/developers/guides/concepts/transactions.html#memo</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>

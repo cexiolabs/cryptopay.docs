@@ -499,16 +499,16 @@ Asset3 -- 4:DENY trans42 --&gt; Asset1;</div>
 </thead>
 <tbody>
 <tr>
-<td><code>EXT:&lt;BlockChainAddress&gt;</code></td>
+<td><code>CWEXT:&lt;BlockChainAddress&gt;</code></td>
 <td>Счет отражающий баланс блокчейн адреса в минусовой нотации. Например, при депозите 0.125 BTC, баланс этого счета уменьшается на 0.125 BTC (баланс = -0.125)</td>
 </tr>
 <tr>
-<td><code>TRN:&lt;BlockChainTxHash&gt;</code></td>
-<td>Транзитный счет для проведения крипто депозита. На 0-ом конфирмейшене сети, сумма депозита зачисляется на данный счет со счета EXT:<BlockChainAddress>. При достижении требуемого колличество конфирмейшенов суммаа депозита уходит с этого счета на счет INT:<BlockChainAddress></td>
+<td><code>CWTRN:&lt;BlockChainTxHash&gt;</code></td>
+<td>Транзитный счет для проведения крипто депозита. На 0-ом конфирмейшене сети, сумма депозита зачисляется на данный счет со счета CWEXT:<BlockChainAddress>. При достижении требуемого колличество конфирмейшенов суммаа депозита уходит с этого счета на счет CWINT:<BlockChainAddress></td>
 </tr>
 <tr>
-<td><code>INT:&lt;BlockChainAddress&gt;</code></td>
-<td>Счет мерчанта связанный с со счетом EXT:<BlockChainAddress> (работает в паре). Крипто депозит увеличивает баланс данного счета. Например, при депозите 0.125 BTC, баланс этого счета увеличиватся на 0.125 BTC (баланс = 0.125)</td>
+<td><code>CWINT:&lt;BlockChainAddress&gt;</code></td>
+<td>Счет мерчанта связанный с со счетом CWEXT:<BlockChainAddress> (работает в паре). Крипто депозит увеличивает баланс данного счета. Например, при депозите 0.125 BTC, баланс этого счета увеличиватся на 0.125 BTC (баланс = 0.125)</td>
 </tr>
 </tbody>
 </table>
@@ -527,7 +527,7 @@ Asset3 -- 4:DENY trans42 --&gt; Asset1;</div>
 <tbody>
 <tr>
 <td><code>CRYPTO_BLOCKCHAIN</code></td>
-<td><code>INT:&lt;BlockChainAddress&gt;</code></td>
+<td><code>CWINT:&lt;BlockChainAddress&gt;</code></td>
 <td>(Только криптовалюты) Account связанный с крипто-адресом. Все депозиты из блокчейна падают на этот аккаунт (после прохождения транзитныйх счетов)</td>
 </tr>
 <tr>
@@ -550,7 +550,7 @@ Asset3 -- 4:DENY trans42 --&gt; Asset1;</div>
 <li>
 <p>CRYPTO_SELL инстурумент позволяет упускать из запроса <code>from.accountId</code> и <code>to.accountId</code></p>
 <ul>
-<li>упущенный <code>from.accountId</code> создает(захватывает из пула) депозитный <code>EXT:&lt;BlockChainAddress&gt;</code> криптосчет, куда зачисляется депозит крипты (и потом уходят на обменник)</li>
+<li>упущенный <code>from.accountId</code> создает(захватывает из пула) депозитный <code>CWEXT:&lt;BlockChainAddress&gt;</code> криптосчет, куда зачисляется депозит крипты (и потом уходят на обменник)</li>
 <li>упущенный <code>to.accountId</code> использует <strong>дефолтный</strong> счет фиата (USR, EUR, etc.), куда прийдут средства от обменника (и будут лежать тут до settlement)</li>
 </ul>
 </li>

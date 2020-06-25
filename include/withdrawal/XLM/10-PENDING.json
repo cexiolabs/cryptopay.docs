@@ -6,7 +6,7 @@
 	"currency": "XLM",
 	"networkFeeLevel": "AVERAGE",
 	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-	"destinationTag": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"memo": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "PENDING",
 	"date": null,
 	"networkFee": null,
