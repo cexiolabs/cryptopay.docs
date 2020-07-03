@@ -170,10 +170,52 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
       Release Notes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Release Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="History" class="md-nav__link">
+      History
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releases/2.0/" title="2.0" class="md-nav__link">
+      2.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -661,8 +703,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#over-paid" class="md-nav__link">
-    Over Paid
+  <a href="#overpaid" class="md-nav__link">
+    Overpaid
   </a>
   
 </li>
@@ -835,6 +877,72 @@
     <a href="../support-notes/" title="Support Notes" class="md-nav__link">
       Support Notes
     </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Test Cases
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Test Cases" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Test Cases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testcases/001-cryptosell-sunshine/" title="001" class="md-nav__link">
+      001
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testcases/002-cryptosell-sunshine-little-overpaid/" title="002" class="md-nav__link">
+      002
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testcases/003-cryptosell-sunshine-little-underpaid/" title="003" class="md-nav__link">
+      003
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1307,8 +1415,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#over-paid" class="md-nav__link">
-    Over Paid
+  <a href="#overpaid" class="md-nav__link">
+    Overpaid
   </a>
   
 </li>
@@ -1428,7 +1536,7 @@
                 
                 
                 <h1 id="rest-api">REST API</h1>
-<p>Checkout our <a href="../api.postman_collection.json">Postman Collection</a> for the API.</p>
+<p>Checkout our <a href="../Cryptopay-Api.postman_collection.json">Postman Collection</a> for the API, and correcsponding environment <a href="../Cryptopay.postman_environment.json">Postman Environment</a>. </p>
 <hr />
 <h2 id="basics">Basics</h2>
 <ul>
@@ -3763,7 +3871,7 @@ There is no way to get generated key again, only generation of new key available
     NONE --&gt; OVER_PAID
     PARTLY_PAID --&gt; OVER_PAID</div>
 
-<h4 id="over-paid">Over Paid</h4>
+<h4 id="overpaid">Overpaid</h4>
 <div class="tabbed-set" data-tabs="9:5">
 <input name="__tabbed_9" type="radio" id="__tabbed_9_1" checked="checked" /><label for="__tabbed_9_1">NEW</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cexiolabs.github.io/cryptopay.schemas/v2/order.CRYPTO_SELL.json&quot;</span><span class="p">,</span>
@@ -3967,7 +4075,7 @@ There is no way to get generated key again, only generation of new key available
     <span class="nt">&quot;clientOrderId&quot;</span><span class="p">:</span> <span class="s2">&quot;1490548887804-XA-1112-TU&quot;</span><span class="p">,</span>
     <span class="nt">&quot;clientOrderTag&quot;</span><span class="p">:</span> <span class="s2">&quot;Any merchant&#39;s data&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;REJECTED&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;rejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;Over paid. The order was rejected due received large amount.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rejectReason&quot;</span><span class="p">:</span> <span class="s2">&quot;Overpaid. The order was rejected due received large amount.&quot;</span><span class="p">,</span>
     <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;AWAIT_DEPOSIT&quot;</span><span class="p">,</span>
     <span class="nt">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;CRYPTO_SELL&quot;</span><span class="p">,</span>
     <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-17T15:10:12.550Z&quot;</span><span class="p">,</span>

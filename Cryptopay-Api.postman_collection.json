@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f8bb9fac-4d49-45c1-a0d1-2a866864f0dc",
+		"_postman_id": "6ff55eef-64f4-4ed5-a5af-0ed85a7fe46b",
 		"name": "CryptoPay Processing API",
 		"description": "https://developers.cryptopay.band/api/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -610,7 +610,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"tag\": \"Return funds to end-user by L3 ticket XYZ\",\n    \"amount\": \"0.052\",\n    \"currency\": \"BTC\",\n    \"feeLevel\": \"AVERAGE\",\n    \"destinationAddress\": \"emulateAddrxmfkpbfpfm9ih8q9e160fsdr\"\n}",
+									"raw": "{\n    \"tag\": \"Return funds to end-user by L3 ticket XYZ\",\n    \"amount\": \"0.052\",\n    \"feeLevel\": \"AVERAGE\",\n    \"destinationAddress\": \"blockchain-destination-address\"\n}",
 									"options": {
 										"raw": {}
 									}
@@ -1898,6 +1898,241 @@
 									""
 								]
 							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/v2/notification",
+					"item": [
+						{
+							"name": "Generate Callback Key",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "{{apiBaseUrl}}/v2/notification/key",
+									"host": [
+										"{{apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notification",
+										"key"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Topics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "CP-ACCESS-KEY",
+										"value": "{{CP-ACCESS-KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"value": "{{CP-ACCESS-TIMESTAMP}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"value": "{{CP-ACCESS-PASSPHRASE}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"value": "{{CP-ACCESS-SIGN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{apiBaseUrl}}/v2/notification/topic",
+									"host": [
+										"{{apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notification",
+										"topic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscriptions List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{apiBaseUrl}}/v2/notification/subscription",
+									"host": [
+										"{{apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notification",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subscribe",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"value": "{{CP-ACCESS-KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"value": "{{CP-ACCESS-TIMESTAMP}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"value": "{{CP-ACCESS-PASSPHRASE}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"value": "{{CP-ACCESS-SIGN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"topic\": \"ORDER\",\n\t\"config\": {\n\t\t\"kind\": \"Webhook\",\n\t\t\"url\": \"https://callback.mycompany.com/onDeposit\",\n        \"rootCertificate\": \"-----BEGIN CERTIFICATE-----\\nMIIFDjCCAvagAwIBAgIITGxDjF....\\n-----END CERTIFICATE-----\\n\",\n        \"token\": \"SALO\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{apiBaseUrl}}/v2/notification/subscription",
+									"host": [
+										"{{apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notification",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unsubscribe",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"value": "{{CP-ACCESS-KEY}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"value": "{{CP-ACCESS-TIMESTAMP}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"value": "{{CP-ACCESS-PASSPHRASE}}",
+										"type": "text"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"value": "{{CP-ACCESS-SIGN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"kind\": \"Webhook\",\n\t\"topic\": \"DEPOSIT\",\n\t\"url\": \"https://www.google.com\",\n\t\"method\": \"GET\",\n\t\"rootCertificate\": \"Some CA\",\n\t\"token\": \"SALO\"\n}"
+								},
+								"url": {
+									"raw": "{{apiBaseUrl}}/v2/notification/subscription/{{subscription_Id}}",
+									"host": [
+										"{{apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notification",
+										"subscription",
+										"{{subscription_Id}}"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},

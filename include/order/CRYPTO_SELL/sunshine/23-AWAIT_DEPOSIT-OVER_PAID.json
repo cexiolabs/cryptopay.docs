@@ -4,7 +4,7 @@
 	"clientOrderId": "1490548887804-XA-1112-TU",
 	"clientOrderTag": "Any merchant's data",
 	"status": "REJECTED",
-	"rejectReason": "Over paid. The order was rejected due received large amount.",
+	"rejectReason": "Overpaid. The order was rejected due received large amount.",
 	"state": "AWAIT_DEPOSIT",
 	"instrument": "CRYPTO_SELL",
 	"createdAt": "2020-01-17T15:10:12.550Z",
