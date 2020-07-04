@@ -40,9 +40,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/time",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/time",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -142,9 +142,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -212,9 +212,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -278,9 +278,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -345,9 +345,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -413,9 +413,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit/CPD-c52b445b0bf84fc0bab517594e6063b7",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit/CPD-c52b445b0bf84fc0bab517594e6063b7",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -482,9 +482,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -550,9 +550,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -616,9 +616,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -681,9 +681,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80/commit",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80/commit",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -781,9 +781,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/instrument?instrument=CRYPTO_SELL&model=Default",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/instrument?instrument=CRYPTO_SELL&model=Default",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -857,9 +857,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/instrument?instrument=CRYPTO_BUY&model=GoldClient",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/instrument?instrument=CRYPTO_BUY&model=GoldClient",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -963,9 +963,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/network/BTC/fee",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/network/BTC/fee",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1061,9 +1061,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1124,9 +1124,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1187,9 +1187,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1250,9 +1250,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1313,9 +1313,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1379,9 +1379,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1446,9 +1446,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1513,9 +1513,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1581,9 +1581,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1680,9 +1680,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1758,9 +1758,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1863,9 +1863,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/risk/score",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/risk/score",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1942,9 +1942,9 @@
 									"raw": "{}"
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/notification/key",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/key",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -1982,9 +1982,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/notification/topic",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/topic",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -2022,9 +2022,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/notification/subscription",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -2071,9 +2071,9 @@
 									"raw": "{\n\t\"topic\": \"ORDER\",\n\t\"config\": {\n\t\t\"kind\": \"Webhook\",\n\t\t\"url\": \"https://callback.mycompany.com/onDeposit\",\n        \"rootCertificate\": \"-----BEGIN CERTIFICATE-----\\nMIIFDjCCAvagAwIBAgIITGxDjF....\\n-----END CERTIFICATE-----\\n\",\n        \"token\": \"SALO\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/notification/subscription",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -2120,9 +2120,9 @@
 									"raw": "{\n\t\"kind\": \"Webhook\",\n\t\"topic\": \"DEPOSIT\",\n\t\"url\": \"https://www.google.com\",\n\t\"method\": \"GET\",\n\t\"rootCertificate\": \"Some CA\",\n\t\"token\": \"SALO\"\n}"
 								},
 								"url": {
-									"raw": "{{apiBaseUrl}}/v2/notification/subscription/{{subscription_Id}}",
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription/{{subscription_Id}}",
 									"host": [
-										"{{apiBaseUrl}}"
+										"{{cryptopay.apiBaseUrl}}"
 									],
 									"path": [
 										"v2",
@@ -2185,9 +2185,9 @@
 							"    return value;",
 							"}",
 							"",
-							"const key = readEnvValue(\"apiKey\");",
-							"const passphrase = readEnvValue(\"apiPassphrase\");",
-							"const secret = readEnvValue(\"apiSecret\");",
+							"const key = readEnvValue(\"cryptopay.apiKey\");",
+							"const passphrase = readEnvValue(\"cryptopay.apiPassphrase\");",
+							"const secret = readEnvValue(\"cryptopay.apiSecret\");",
 							"",
 							"const timestamp = Date.now() / 1000;",
 							"const sign = signature(secret, timestamp);",
@@ -2225,15 +2225,15 @@
 					"// Libs",
 					"const pc = require(\"postman-collection\");",
 					"",
-					"// Default apiBaseUrl is https://sandbox.cryptopay.band",
-					"if (!pm.environment.has(\"apiBaseUrl\")) {",
-					"    pm.environment.set(\"apiBaseUrl\", \"https://sandbox.cryptopay.band\");",
+					"// Default cryptopay.apiBaseUrl is https://sandbox.cryptopay.band",
+					"if (!pm.environment.has(\"cryptopay.apiBaseUrl\")) {",
+					"    pm.environment.set(\"cryptopay.apiBaseUrl\", \"https://sandbox.cryptopay.band\");",
 					"} else {",
-					"    let apiUrl = pm.environment.get(\"apiBaseUrl\")",
+					"    let apiUrl = pm.environment.get(\"cryptopay.apiBaseUrl\")",
 					"    while(apiUrl.endsWith(\"/\")) {",
 					"        apiUrl = apiUrl.substring(0, apiUrl.length - 1);",
 					"    }",
-					"    pm.environment.set(\"apiBaseUrl\", apiUrl);",
+					"    pm.environment.set(\"cryptopay.apiBaseUrl\", apiUrl);",
 					"}",
 					""
 				]
