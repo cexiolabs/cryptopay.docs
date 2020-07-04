@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6ff55eef-64f4-4ed5-a5af-0ed85a7fe46b",
+		"_postman_id": "84dbcc75-55e9-46f5-9e13-552d26532011",
 		"name": "CryptoPay Processing API",
 		"description": "https://developers.cryptopay.band/api/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -18,7 +18,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "259c7f6d-031c-40c5-b2d0-674d8efb25c4",
+										"id": "39ae9913-e438-4c9d-86ef-131ad4d30bb8",
 										"exec": [
 											""
 										],
@@ -28,7 +28,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c36f465c-be5a-47b5-930f-70e03175edfa",
+										"id": "5cf78d55-80d9-4a68-9f65-a0aaa73dd4c5",
 										"exec": [
 											""
 										],
@@ -58,7 +58,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "343e48a9-e1ca-4644-b568-92535e7dafe4",
+								"id": "015d84f7-e405-4455-b828-37b8a8c1478a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -68,7 +68,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6beae184-9794-47cb-bb30-1289f5093870",
+								"id": "c00607ef-aa9b-4cec-9ffd-2387daa6c379",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -94,7 +94,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4b0bd536-df10-4941-93c2-c99a6d334ea4",
+										"id": "09803a30-37e7-446f-a15a-728a01d4d215",
 										"exec": [
 											""
 										],
@@ -167,7 +167,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f32725fe-c42c-455b-8d31-b21d1280b0ac",
+										"id": "14194048-27c3-43a0-8d71-8b92a87c743b",
 										"exec": [
 											""
 										],
@@ -230,7 +230,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6ceb21e9-8b42-473c-a31e-4a6e41e08b93",
+										"id": "f3d365f6-2cdb-42de-9092-7e4f3e699c80",
 										"exec": [
 											""
 										],
@@ -297,7 +297,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1b65d6da-0532-439d-beea-c52316f99973",
+										"id": "898c9b41-222d-48dc-bf34-0d4c4b77edc5",
 										"exec": [
 											""
 										],
@@ -365,7 +365,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "32d2b0d4-60d4-44c1-9349-b35d5e93024e",
+										"id": "cf7caf84-59bb-47ac-8d7c-50aacd01e2a7",
 										"exec": [
 											""
 										],
@@ -434,7 +434,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ba5d5fa9-0a8d-46f8-ac7b-5ac11d7c99b2",
+										"id": "ee10c315-0d69-41c6-a19f-e1459e6dbb45",
 										"exec": [
 											""
 										],
@@ -502,7 +502,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "15ef2764-2dda-42c6-8ca5-033c79b91775",
+										"id": "726f5c02-c7a5-4360-bfb3-b6720609893f",
 										"exec": [
 											""
 										],
@@ -571,7 +571,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "59710708-d667-4590-a900-7ada25b56005",
+										"id": "8129b185-4def-4a42-8944-3927282a74ae",
 										"exec": [
 											""
 										],
@@ -636,7 +636,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bdb7d248-dc43-4712-992e-3074d87f9b68",
+										"id": "20119c13-4638-47af-8e2d-ae0199eaa360",
 										"exec": [
 											""
 										],
@@ -703,7 +703,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "88010d48-476a-45a5-94c0-2ad8c57b4b97",
+								"id": "9f1bfefb-e760-43e6-8ebc-8137a2ef5e24",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -713,7 +713,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "192ea5da-0998-42a5-a92f-1a31a2d28b0d",
+								"id": "f3853e9a-9003-43d7-ab3a-c61e97071800",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -733,7 +733,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b16f62b8-5f20-43c4-8677-5e1ff9570a7d",
+										"id": "d20b1b06-6fb8-4081-9aee-1d7a224a0e39",
 										"exec": [
 											""
 										],
@@ -743,7 +743,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "900275a6-4c8d-415c-811e-f4a1aaffee1d",
+										"id": "585b98a5-576b-458f-9c3b-092bc56e841c",
 										"exec": [
 											""
 										],
@@ -809,7 +809,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "93ba864b-44c1-4a2f-8020-d145c008015d",
+										"id": "17221958-bdfe-4481-9f35-be28d96aba9a",
 										"exec": [
 											""
 										],
@@ -819,7 +819,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "17427f5d-2d4d-4a92-8714-d85b2632abc6",
+										"id": "3f894a50-3969-4ca4-a967-9cab6d15a571",
 										"exec": [
 											""
 										],
@@ -885,7 +885,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "93a5f87d-3eb2-41db-9265-b7d739b69d2e",
+								"id": "81aacecc-c5bb-44e6-8eab-37679bd9e2bb",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -895,7 +895,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0dbe2b1d-f654-4a3e-850d-6cac327371a3",
+								"id": "20044f4c-513d-4dcc-be6d-c69945dac718",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -915,7 +915,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1a759703-4839-467c-957f-3782f6706aec",
+										"id": "9529cc90-1092-4b67-b54d-88fb63383062",
 										"exec": [
 											""
 										],
@@ -983,7 +983,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f39d0c72-6f4f-48ac-adf3-83a96c715702",
+								"id": "d3c239e3-c08d-4270-8381-6b0069b569d0",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -993,906 +993,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3c504b75-75c2-479c-aefa-fda5c1a1fbbc",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "/v2/order",
-					"item": [
-						{
-							"name": "List orders",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "fde1c009-b8b7-4936-b4d6-d345d624a0bb",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "966c825f-9a8d-4c73-a644-b0468e2f2b2a",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Register a new order (CRYPTO_SELL#1)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "f5d395f8-9750-4a06-b297-9b56cc9af410",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-1\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_SELL\",\n\t\"from\": {\n\t\t\"currency\": \"BTC\",\n\t\t\"amount\": \"0.01\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"USD\"\n\t}\n}",
-									"options": {
-										"raw": {}
-									}
-								},
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Register a new order (CRYPTO_SELL#2)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "ad5a4c47-05e8-433f-8bea-7c30a59b3461",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-2\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_SELL\",\n\t\"from\": {\n\t\t\"currency\": \"BTC\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"USD\",\n\t\t\"amount\": \"100\"\n\t}\n}",
-									"options": {
-										"raw": {}
-									}
-								},
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Register a new order (CRYPTO_BUY#1)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "7812bccd-0218-4d4e-bf48-3202c3452cd1",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-3\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_BUY\",\n\t\"from\": {\n\t\t\"currency\": \"USD\",\n\t\t\"amount\": \"50.50\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"BTC\"\n\t},\n    \"withdrawal\": {\n        \"kind\": \"BTC\",\n        \"networkFeeLevel\": \"AVERAGE\",\n        \"address\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n    }\n}",
-									"options": {
-										"raw": {}
-									}
-								},
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Register a new order (CRYPTO_BUY#2)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8f1167af-6cee-491c-93cc-d3e018dc9bb1",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-4\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_BUY\",\n\t\"from\": {\n\t\t\"currency\": \"USD\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"BTC\",\n\t\t\"amount\": \"0.05142111\"\n\t},\n    \"withdrawal\": {\n        \"kind\": \"BTC\",\n        \"networkFeeLevel\": \"AVERAGE\",\n        \"address\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n    }\n}",
-									"options": {
-										"raw": {}
-									}
-								},
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Cancel order",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "98e69b66-8925-4bae-a2ce-48f0cbbe43ac",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c56dbed5-a583-4b74-9549-2caa47148ef7",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order",
-										"CPO-4a03dea5c9c242619340705f0545e65b"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Fetch order",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "efac8af6-ca33-4204-9008-07b4146ed6d1",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "b9c6a73e-b25b-47ee-98f1-827bb37ec32e",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order",
-										"CPO-4a03dea5c9c242619340705f0545e65b"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "List breakpoints",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2842085a-7c72-4594-9cdb-f26873412b71",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "fa26a1b5-b45e-49bd-8df3-92d809911a07",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order",
-										"CPO-4a03dea5c9c242619340705f0545e65b",
-										"breakpoint"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Resume breakpoint (NEW)",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "fed06b1f-b9e1-4dcc-8edd-4a6e999711bf",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "ba02a7e5-6426-45cc-8ebc-8ac17169544c",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"order",
-										"CPO-4a03dea5c9c242619340705f0545e65b",
-										"breakpoint",
-										"NEW"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"description": "https://developers.cryptopay.band/api/#v2order",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "0fd8baf8-13c6-4014-a515-cbceef36c5cf",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "3eb02a6b-a1e8-418e-be97-847fbb46a5f8",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "/v2/rate",
-					"item": [
-						{
-							"name": "Get rates for CRYPTO-SELL",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "826fccef-65a8-427b-84bb-f8d48899e0c9",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a1a3806d-8f30-4c2c-b917-b8757f14cd92",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"rate",
-										"CRYPTO-SELL",
-										"Default"
-									],
-									"query": [
-										{
-											"key": "from",
-											"value": "BTC"
-										},
-										{
-											"key": "to",
-											"value": "USD"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get rates for CRYPTO-BUY",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "3b12ab49-381c-41f1-a627-e5e020ef3ad7",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "fb49db36-ce72-48ce-a6c1-55fc530deffc",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"rate",
-										"CRYPTO-BUY",
-										"Default"
-									],
-									"query": [
-										{
-											"key": "from",
-											"value": "USD"
-										},
-										{
-											"key": "to",
-											"value": "BTC"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"description": "https://developers.cryptopay.band/api/#v2rate",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "1f0de4a0-510b-4d44-b393-1bbf8207f888",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "015e06ed-f770-42d0-bf12-f72693cf4a3e",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "/v2/risk",
-					"item": [
-						{
-							"name": "Score",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "1148cf13-11a1-4692-9f2a-df1336913e5b",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "CP-ACCESS-KEY",
-										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
-									},
-									{
-										"key": "CP-ACCESS-TIMESTAMP",
-										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
-									},
-									{
-										"key": "CP-ACCESS-PASSPHRASE",
-										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
-									},
-									{
-										"key": "CP-ACCESS-SIGN",
-										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"address\": \"emulateAddrj1up625xi5oebxvbxkwcsc2s\"\n}",
-									"options": {
-										"raw": {}
-									}
-								},
-								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/risk/score",
-									"host": [
-										"{{cryptopay.apiBaseUrl}}"
-									],
-									"path": [
-										"v2",
-										"risk",
-										"score"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"description": "https://developers.cryptopay.band/api/#v2risk",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "ac243e84-bdbf-47cc-81df-217db590047f",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "f2f3a8b5-b540-4ef0-8563-f9183ffde967",
+								"id": "ec982ed4-fc65-47a2-a28d-b5ea9f603af2",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2137,13 +1238,912 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/v2/order",
+					"item": [
+						{
+							"name": "List orders",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "519c8330-e1a4-422a-8a49-cf87858fa114",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "35e1eecd-a833-4a0c-baf0-90c0127df850",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register a new order (CRYPTO_SELL#1)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b319e2fc-8e6c-4d1b-9dbe-02de433a2103",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-1\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_SELL\",\n\t\"from\": {\n\t\t\"currency\": \"BTC\",\n\t\t\"amount\": \"0.01\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"USD\"\n\t}\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register a new order (CRYPTO_SELL#2)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e126aec6-0a16-4846-b695-32b3ef72183b",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-2\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_SELL\",\n\t\"from\": {\n\t\t\"currency\": \"BTC\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"USD\",\n\t\t\"amount\": \"100\"\n\t}\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register a new order (CRYPTO_BUY#1)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6b8363e6-ecc1-48b2-9f2f-dfb6a88e2811",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-3\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_BUY\",\n\t\"from\": {\n\t\t\"currency\": \"USD\",\n\t\t\"amount\": \"50.50\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"BTC\"\n\t},\n    \"withdrawal\": {\n        \"kind\": \"BTC\",\n        \"networkFeeLevel\": \"AVERAGE\",\n        \"address\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n    }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register a new order (CRYPTO_BUY#2)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c20c0bdc-e2b2-4da6-a858-c6fc9d136c56",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"clientOrderId\": \"generate-random-order-id-4\",\n\t\"clientOrderTag\": \"Postman\",\n\t\"instrument\": \"CRYPTO_BUY\",\n\t\"from\": {\n\t\t\"currency\": \"USD\"\n\t},\n\t\"to\": {\n\t\t\"currency\": \"BTC\",\n\t\t\"amount\": \"0.05142111\"\n\t},\n    \"withdrawal\": {\n        \"kind\": \"BTC\",\n        \"networkFeeLevel\": \"AVERAGE\",\n        \"address\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n    }\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3c51e782-b58f-4862-b33b-de73ea83b6ad",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "3ca896b4-fe05-44a6-b117-bc4c7b13a74e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order",
+										"CPO-4a03dea5c9c242619340705f0545e65b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0f4a2ffa-64fc-4e6e-bcf4-efe7b27f4212",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "71ddbf11-6907-4f44-bee3-5d1cd21e105a",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order",
+										"CPO-4a03dea5c9c242619340705f0545e65b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List breakpoints",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c1d7e2b3-83ec-4004-b19e-80708cb7199d",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "80fa1a8a-8f5f-437b-8958-fbfe9aa76284",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order",
+										"CPO-4a03dea5c9c242619340705f0545e65b",
+										"breakpoint"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resume breakpoint (NEW)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c6de9af2-d37f-48c6-a11d-ebf4b38749a4",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "dd4fff0d-a8fd-447c-90d7-d95f5e15969e",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"order",
+										"CPO-4a03dea5c9c242619340705f0545e65b",
+										"breakpoint",
+										"NEW"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "https://developers.cryptopay.band/api/#v2order",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "784f241f-ddca-4463-8d19-b4fe12dc07fc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f2539675-dbd8-4a41-9040-82a585707812",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/v2/rate",
+					"item": [
+						{
+							"name": "Get rates for CRYPTO-SELL",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "85f9e41b-1f11-4ff3-b431-9a479e7fa040",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ec89af20-5711-424b-a7a7-dfa4878e2eb1",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"rate",
+										"CRYPTO-SELL",
+										"Default"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "BTC"
+										},
+										{
+											"key": "to",
+											"value": "USD"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get rates for CRYPTO-BUY",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "cf04163d-a708-4fe7-9cbd-998ec825ae52",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c692dde0-d1f8-4ef8-aff1-02a93a404a75",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"rate",
+										"CRYPTO-BUY",
+										"Default"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "USD"
+										},
+										{
+											"key": "to",
+											"value": "BTC"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "https://developers.cryptopay.band/api/#v2rate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "952b5cb7-57ce-48b8-b440-97f3e079eaf4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ffebb4a-700a-42f6-ad90-53998e7cf3a4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/v2/risk",
+					"item": [
+						{
+							"name": "Score",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4c6d4b43-6ce3-4c53-a1d7-d26f7312c138",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "CP-ACCESS-KEY",
+										"type": "text",
+										"value": "{{CP-ACCESS-KEY}}"
+									},
+									{
+										"key": "CP-ACCESS-TIMESTAMP",
+										"type": "text",
+										"value": "{{CP-ACCESS-TIMESTAMP}}"
+									},
+									{
+										"key": "CP-ACCESS-PASSPHRASE",
+										"type": "text",
+										"value": "{{CP-ACCESS-PASSPHRASE}}"
+									},
+									{
+										"key": "CP-ACCESS-SIGN",
+										"type": "text",
+										"value": "{{CP-ACCESS-SIGN}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"emulateAddrj1up625xi5oebxvbxkwcsc2s\"\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{cryptopay.apiBaseUrl}}/v2/risk/score",
+									"host": [
+										"{{cryptopay.apiBaseUrl}}"
+									],
+									"path": [
+										"v2",
+										"risk",
+										"score"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "https://developers.cryptopay.band/api/#v2risk",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e2aed966-62a9-428c-a988-c8975c413131",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "de3a1d5c-f679-4875-a432-b324f34fa2a2",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "6b4735bc-6aa5-48f4-9760-ed7a9432c755",
+						"id": "77c88635-b84d-41e0-91e2-c671a6d5b691",
 						"type": "text/javascript",
 						"exec": [
 							"// Libs",
@@ -2204,7 +2204,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6187744c-ee7f-400f-b4fd-d19fe0a94cbc",
+						"id": "953f40d9-70ca-44a4-a2f1-a327dc77a8a0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2219,7 +2219,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c9e9fb0f-abdb-4ceb-b80f-57f7c1dd50c1",
+				"id": "458cfc6a-c990-47bb-893f-828aae604bdc",
 				"type": "text/javascript",
 				"exec": [
 					"// Libs",
@@ -2242,7 +2242,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2df405a0-ab8a-4592-98f1-b625060ecf83",
+				"id": "eafd08a4-79e2-4b86-96b1-1fe16189c612",
 				"type": "text/javascript",
 				"exec": [
 					""
