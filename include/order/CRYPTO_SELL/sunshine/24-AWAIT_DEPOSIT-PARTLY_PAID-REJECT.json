@@ -44,7 +44,8 @@
 				"depositId": "CPD-eabb9d8e575145fc9a05d778592c0e3d",
 				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 				"confirmations": 0,
-				"status": "PENDING"
+				"status": "PENDING",
+				"explorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 			}
 		]
 	}

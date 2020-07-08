@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#002-crypto-sell-sunshine-with-litte-over-paid" class="md-skip">
+        <a href="#002-crypto-sell-sunshine-with-litte-overpaid" class="md-skip">
           Skip to content
         </a>
       
@@ -429,6 +429,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../004-cryptosell-overpaid/" title="004" class="md-nav__link">
+      004
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../005-cryptosell-underpaid/" title="005" class="md-nav__link">
+      005
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../006-cryptobuy-sunshine/" title="006" class="md-nav__link">
+      006
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -508,30 +544,105 @@
                   
                 
                 
-                <h1 id="002-crypto-sell-sunshine-with-litte-over-paid">002 Crypto Sell Sunshine With Litte Over Paid</h1>
+                <h1 id="002-crypto-sell-sunshine-with-litte-overpaid">002 Crypto Sell Sunshine With Litte Overpaid</h1>
 <h2 id="description">Description</h2>
+<p>Успешный сценарий оплаты (продажи) криптовалюты с переплатой суммы ордера. Сумма переплаты - фиксированное значение, заданное в конфигурации. </p>
+<p><img alt="Little overpaid and underpaid" src="../../images/devel/Overpaid-underpaid.png" /></p>
 <h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Check your API Key related to TARGET Merchant</li>
 <li>Check your are use a correct environment</li>
+<li>Prepare JSON body for <a href="../../api/#create-order">Create order</a> request</li>
+<li>Grab info from service settings:<ul>
+<li>How many confirmations need to process an order on choosen currency</li>
+<li>Amount needed for "litte overpaid"</li>
+</ul>
+</li>
 <li>Configure TARGET Merchant configuration like a limits, commissions, order timeouts, etc.</li>
 <li>Subscribe HTTP callbacks for the topic DEPOSIT, ORDER</li>
 </ul>
 <h2 id="steps">Steps</h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Expected Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<ol>
+<li>Create a CRYPTO_SELL order by call API <a href="../../api/#create-order">Create order</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> HTTP 201</li>
+<li class="task-list-item"><input type="checkbox"/> proper body content</li>
+<li>check NEW order notification in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> NEW order notification received</li>
+<li class="task-list-item"><input type="checkbox"/> proper body content</li>
+</ul>
+</li>
+<li>check AWAIT_DEPOSIT order notification in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received</li>
+<li class="task-list-item"><input type="checkbox"/> proper body content</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Grab <code>amount.from</code> and <code>deposit.address</code>. Make crypto deposit with exactly amount + amount needed for "litte overpaid". Wait for 0-confirmation (transaction in memory pool).<ul>
+<li>Check for second notification in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received</li>
+<li class="task-list-item"><input type="checkbox"/> <code>status</code> = "PENDING"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>state</code> = "AWAIT_DEPOSIT"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>paidStatus</code> = "PAID"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>deposit.transactions</code> includes info of blockchain transaction</li>
+</ul>
+</li>
+<li>Check notification in DEPOSIT <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wait for next blockchain confirmations and monitor notifications<ul>
+<li>Check for notifications in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received for each blockchain confirmations</li>
+<li class="task-list-item"><input type="checkbox"/> <code>status</code> = "PENDING"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>state</code> = "AWAIT_DEPOSIT"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>paidStatus</code> = "PAID"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>deposit.transactions</code> includes info of blockchain transaction</li>
+</ul>
+</li>
+<li>Check notification in DEPOSIT <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>After necessary blockchain confirmations will received, order should move to next stage - going to exchange<ul>
+<li>Check for notifications in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received for each blockchain confirmations</li>
+<li class="task-list-item"><input type="checkbox"/> <code>status</code> = "PENDING"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>state</code> = "EXCHANGING"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>paidStatus</code> = "PAID"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>deposit.transactions</code> includes info of blockchain transaction</li>
+</ul>
+</li>
+<li>Check for notifications in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received for each blockchain confirmations</li>
+<li class="task-list-item"><input type="checkbox"/> <code>status</code> = "PENDING"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>state</code> = "EXCHANGED"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>paidStatus</code> = "PAID"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>deposit.transactions</code> includes info of blockchain transaction</li>
+</ul>
+</li>
+<li>Check for notifications in ORDER <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> AWAIT_DEPOSIT order notification received for each blockchain confirmations</li>
+<li class="task-list-item"><input type="checkbox"/> <code>status</code> = "ACCEPTED"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>state</code> = "COMPLETED"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>paidStatus</code> = "PAID"</li>
+<li class="task-list-item"><input type="checkbox"/> <code>deposit.transactions</code> includes info of blockchain transaction            </li>
+</ul>
+</li>
+<li>Check notification in DEPOSIT <a href="../../callbacks/#topics">topic</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+<li class="task-list-item"><input type="checkbox"/> TBD</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
                 
               
               
