@@ -34,9 +34,10 @@
 	"withdrawalFeeLevel": "AVERAGE",
 	"withdrawal": {
 		"kind": "BTC",
-		"network": "mainnet",
+		"network": "bitcoin/mainnet",
 		"networkFeeLevel": "AVERAGE",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"addressExplorerUrl": "https://blockstream.info/testnet/address/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"transactions": []
 	}
 }

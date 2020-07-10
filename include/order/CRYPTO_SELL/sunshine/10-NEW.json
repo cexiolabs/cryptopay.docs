@@ -34,10 +34,12 @@
 	"paidStatus": "NONE",
 	"deposit": {
 		"kind": "BTC",
-		"network": "mainnet",
+		"network": "bitcoin/mainnet",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"amount": "0",
-		"uri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.05142111&label=Sell%20some%20BTC%20for%20150.42",
+		"addressExplorerUrl": "https://blockstream.info/testnet/address/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"paidAmount": "0",
+		"remainAmount": "0.05142111",
+		"paymentUri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.05142111&label=Sell%20some%20BTC%20for%20150.42",
 		"transactions": []
 	}
 }

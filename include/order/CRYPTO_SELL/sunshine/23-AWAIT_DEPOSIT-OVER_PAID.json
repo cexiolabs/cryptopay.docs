@@ -35,31 +35,36 @@
 	"paidStatus": "OVER_PAID",
 	"deposit": {
 		"kind": "BTC",
-		"network": "mainnet",
+		"network": "bitcoin/mainnet",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"amount": "0.07180448",
-		"uri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.05142111&label=Sell%20some%20BTC%20for%20150.42",
+		"addressExplorerUrl": "https://blockstream.info/testnet/address/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"paidAmount": "0.07180448",
+		"remainAmount": "0",
+		"paymentUri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?label=Sell%20some%20BTC%20for%20150.42",
 		"transactions": [
 			{
-				"depositId": "CPD-3138b55160a54174ab6e8116cc533bfc",
-				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"confirmations": 0,
-				"status": "PENDING",
-				"explorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-			},
-			{
 				"depositId": "CPD-d57cb20a736b4703ba21d401e55c3d41",
-				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"confirmations": 0,
 				"status": "PENDING",
-				"explorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+				"confirmations": 1,
+				"amount": "0.02",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"txExplorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 			},
 			{
 				"depositId": "CPD-eabb9d8e575145fc9a05d778592c0e3d",
-				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"confirmations": 2,
 				"status": "PENDING",
-				"explorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+				"confirmations": 0,
+				"amount": "0.03142111",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"txExplorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+			},
+			{
+				"depositId": "CPD-3138b55160a54174ab6e8116cc533bfc",
+				"status": "PENDING",
+				"confirmations": 0,
+				"amount": "0.020383370",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"txExplorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 			}
 		]
 	}

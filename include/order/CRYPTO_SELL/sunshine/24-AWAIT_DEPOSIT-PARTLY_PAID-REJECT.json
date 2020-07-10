@@ -35,17 +35,20 @@
 	"paidStatus": "PARTLY_PAID",
 	"deposit": {
 		"kind": "BTC",
-		"network": "mainnet",
+		"network": "bitcoin/mainnet",
 		"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"amount": "0.02",
-		"uri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.05142111&label=Sell%20some%20BTC%20for%20150.42",
+		"addressExplorerUrl": "https://blockstream.info/testnet/address/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"paidAmount": "0.02",
+		"remainAmount": "0.03142111",
+		"paymentUri": "bitcoin:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?amount=0.03142111&label=Sell%20some%20BTC%20for%20150.42",
 		"transactions": [
 			{
-				"depositId": "CPD-eabb9d8e575145fc9a05d778592c0e3d",
-				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-				"confirmations": 0,
+				"depositId": "CPD-d57cb20a736b4703ba21d401e55c3d41",
 				"status": "PENDING",
-				"explorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+				"confirmations": 0,
+				"amount": "0.02",
+				"txHash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"txExplorerUrl": "https://blockstream.info/testnet/tx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 			}
 		]
 	}
