@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f8b5506e-a7c4-4420-9974-67f9d4030af6",
+		"_postman_id": "acfe4704-84b4-40a9-8792-582d7e706c3b",
 		"name": "CryptoPay Processing API",
 		"description": "https://developers.cryptopay.band/api/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -18,7 +18,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0e277032-de5f-419c-8e82-ef3cb4aca9a4",
+										"id": "bc335f94-8494-470d-a00a-61e68e264ab8",
 										"exec": [
 											""
 										],
@@ -28,7 +28,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "6bc894f1-66a5-40d8-9508-177e84a91867",
+										"id": "a9298968-1898-49eb-bffa-a0cd8a317dee",
 										"exec": [
 											""
 										],
@@ -40,9 +40,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/time",
+									"raw": "{{CPProcHost}}/v2/time",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -58,7 +58,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9c481161-ae80-49e4-a227-5b05cfa5995e",
+								"id": "d39b602a-faf4-4f56-a670-7c06c04c3783",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -68,7 +68,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2fa35b02-c114-4125-84f5-8c208aac393b",
+								"id": "1e8c79ff-1900-4f68-aac1-9e51d44b1143",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -94,7 +94,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "de10e2be-43a4-4890-99f5-ad19c68e136a",
+										"id": "c2818fbf-c91e-4ceb-a676-552e7e35000c",
 										"exec": [
 											""
 										],
@@ -116,22 +116,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -142,9 +142,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account",
+									"raw": "{{CPProcHost}}/v2/account",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -167,7 +167,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3599b8ac-359f-49fc-a37d-824a9fb8c497",
+										"id": "1f8b53f1-6ac6-4fdc-9e61-276c2181f5e3",
 										"exec": [
 											""
 										],
@@ -186,22 +186,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -212,9 +212,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account",
+									"raw": "{{CPProcHost}}/v2/account",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -230,7 +230,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c1f59519-5c1a-4b6e-827c-37f27500ebd0",
+										"id": "68f5c8c2-c8e8-43e8-bf1c-01b23f0a58eb",
 										"exec": [
 											""
 										],
@@ -252,22 +252,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -278,9 +278,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1",
+									"raw": "{{CPProcHost}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -297,7 +297,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8bb02a25-faf0-4171-979d-d28a7ec3ed37",
+										"id": "292b173f-a8c5-4c11-b7f5-6e46e402e29a",
 										"exec": [
 											""
 										],
@@ -319,22 +319,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -345,9 +345,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit",
+									"raw": "{{CPProcHost}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -365,7 +365,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "00b4a7b5-e1be-497a-a900-84adcc714989",
+										"id": "488745b8-5eb6-4117-9c57-8bab7ef7d3c5",
 										"exec": [
 											""
 										],
@@ -387,22 +387,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -413,9 +413,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit/CPD-c52b445b0bf84fc0bab517594e6063b7",
+									"raw": "{{CPProcHost}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/deposit/CPD-c52b445b0bf84fc0bab517594e6063b7",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -434,7 +434,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "de7d9edc-e012-4936-b33b-759cd134519d",
+										"id": "10e8d4f3-65f0-4b11-b412-512c19ea14b5",
 										"exec": [
 											""
 										],
@@ -456,22 +456,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -482,9 +482,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
+									"raw": "{{CPProcHost}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -502,7 +502,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0a273d83-77de-4b90-81b4-7034dfe60067",
+										"id": "819cac12-de31-440d-8e93-d2a973862f19",
 										"exec": [
 											""
 										],
@@ -524,22 +524,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -550,9 +550,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80",
+									"raw": "{{CPProcHost}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -571,7 +571,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "135af6cf-2c29-49c1-a8a9-452618683c40",
+										"id": "b123a79c-7d5e-48cc-a530-9c92cd3fc377",
 										"exec": [
 											""
 										],
@@ -590,22 +590,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -616,9 +616,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
+									"raw": "{{CPProcHost}}/v2/account/CPA-92b2affb1e29424fa955509cdc5aaad1/withdrawal",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -636,7 +636,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3e75c287-42c7-43c5-851f-814de79f422d",
+										"id": "00f2a016-a124-43bf-8874-1078d2707353",
 										"exec": [
 											""
 										],
@@ -655,22 +655,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -681,9 +681,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80/commit",
+									"raw": "{{CPProcHost}}/v2/account/CPA-e6885a4f29c344f99d13c3308f730b9e/withdrawal/CPW-f248fb235227473e8a2e95d125f8fd80/commit",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -703,7 +703,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "cede6443-1816-4b6f-8e0b-f4f4c70a8424",
+								"id": "91ce4507-55b7-4a2d-ac35-c7cd385a8ec7",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -713,7 +713,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a7c6e2a2-2c18-4c22-bd88-4ef6d05cea66",
+								"id": "fcbb5ae6-740a-4b11-a0dd-a59cd1285ab5",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -733,7 +733,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4a6bf24e-df16-42a4-a6b7-29c7347ba694",
+										"id": "4acdcbe8-505e-4579-b8d3-4159619e37d3",
 										"exec": [
 											""
 										],
@@ -743,7 +743,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3baf9870-d411-4d23-9c8b-e47eab48df9e",
+										"id": "cfe35a11-db8d-4b60-8ada-2f6ac5ccafe2",
 										"exec": [
 											""
 										],
@@ -762,28 +762,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/instrument?instrument=CRYPTO_SELL&model=Default",
+									"raw": "{{CPProcHost}}/v2/instrument?instrument=CRYPTO_SELL&model=Default",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -809,7 +809,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a9a320d3-1f45-4db2-9e40-4e7864640c10",
+										"id": "f88b6603-a4cc-4686-a161-8e39767a44eb",
 										"exec": [
 											""
 										],
@@ -819,7 +819,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "0fde27c5-e0a3-40ea-91f2-8fd3b7fbe70f",
+										"id": "aeefed47-289c-4f1e-82af-bea0029ea809",
 										"exec": [
 											""
 										],
@@ -838,28 +838,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/instrument?instrument=CRYPTO_BUY&model=GoldClient",
+									"raw": "{{CPProcHost}}/v2/instrument?instrument=CRYPTO_BUY&model=GoldClient",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -885,7 +885,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "08098813-6e46-423d-9984-921a83861c01",
+								"id": "10dec446-63a2-489d-aef7-4775dcf78f9f",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -895,7 +895,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a99bbc2d-5a7e-4f01-adbe-315fc8e3f3ac",
+								"id": "c29807f5-9b4a-4789-b6f3-7ca36c51326f",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -915,7 +915,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2823c9d6-10be-4506-98d5-30daabd4b8df",
+										"id": "6e2cb033-57b2-40d1-bd54-3fdafc1cd208",
 										"exec": [
 											""
 										],
@@ -937,22 +937,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -963,9 +963,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/network/BTC/fee",
+									"raw": "{{CPProcHost}}/v2/network/BTC/fee",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -983,7 +983,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9aee52e1-74c0-4d38-a4a2-296a439409ac",
+								"id": "6f18b33f-3fca-46ee-a2e0-29ebf7723427",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -993,7 +993,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "50b4c936-a3f1-41cc-961c-48ff4e0f1aff",
+								"id": "3874a40d-e763-48e3-a4bd-8bd5d1783698",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1043,9 +1043,9 @@
 									"raw": "{}"
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/key",
+									"raw": "{{CPProcHost}}/v2/notification/key",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1083,9 +1083,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/topic",
+									"raw": "{{CPProcHost}}/v2/notification/topic",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1123,9 +1123,9 @@
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription",
+									"raw": "{{CPProcHost}}/v2/notification/subscription",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1172,9 +1172,9 @@
 									"raw": "{\n\t\"topic\": \"ORDER\",\n\t\"config\": {\n\t\t\"kind\": \"Webhook\",\n\t\t\"url\": \"https://callback.mycompany.com/onDeposit\",\n        \"rootCertificate\": \"-----BEGIN CERTIFICATE-----\\nMIIFDjCCAvagAwIBAgIITGxDjF....\\n-----END CERTIFICATE-----\\n\",\n        \"token\": \"SALO\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription",
+									"raw": "{{CPProcHost}}/v2/notification/subscription",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1221,9 +1221,9 @@
 									"raw": "{\n\t\"kind\": \"Webhook\",\n\t\"topic\": \"DEPOSIT\",\n\t\"url\": \"https://www.google.com\",\n\t\"method\": \"GET\",\n\t\"rootCertificate\": \"Some CA\",\n\t\"token\": \"SALO\"\n}"
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/notification/subscription/{{subscription_Id}}",
+									"raw": "{{CPProcHost}}/v2/notification/subscription/{{subscription_Id}}",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1248,7 +1248,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "30fe307d-0889-4ed3-9ab0-6038d9a55396",
+										"id": "b94ed131-1a41-451f-890d-13644129427f",
 										"exec": [
 											""
 										],
@@ -1258,7 +1258,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "78db35a5-e3d3-45a3-b994-ca5e263724c9",
+										"id": "aba2aaac-6ecd-4ebd-a3e0-bc046b68029e",
 										"exec": [
 											""
 										],
@@ -1277,28 +1277,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"raw": "{{CPProcHost}}/v2/order",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1314,7 +1314,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c4689190-5f3c-4f1c-bda3-44d6d8dcc343",
+										"id": "d7e14f05-ccbc-4416-a5ba-f61d788f4389",
 										"exec": [
 											""
 										],
@@ -1333,22 +1333,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -1359,9 +1359,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"raw": "{{CPProcHost}}/v2/order",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1377,7 +1377,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ebee5649-96eb-4337-b34c-34f793c95cc7",
+										"id": "3486af45-361f-4358-8977-8e7133228647",
 										"exec": [
 											""
 										],
@@ -1396,22 +1396,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -1422,9 +1422,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"raw": "{{CPProcHost}}/v2/order",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1440,7 +1440,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "420f32d1-7909-4ff8-aba1-d6fa114f0468",
+										"id": "07b45c22-b9c4-4054-ba67-4ea816924bed",
 										"exec": [
 											""
 										],
@@ -1459,22 +1459,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -1485,9 +1485,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"raw": "{{CPProcHost}}/v2/order",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1503,7 +1503,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4b9cb2b5-bb36-44bd-adc6-b6a42f2d4be9",
+										"id": "1c9d8a8d-7dec-4ef5-9ebc-e27ae31eaa56",
 										"exec": [
 											""
 										],
@@ -1522,22 +1522,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -1548,9 +1548,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order",
+									"raw": "{{CPProcHost}}/v2/order",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1566,7 +1566,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b8102ce7-701b-4a0e-95d8-ab72c68664ae",
+										"id": "a6582533-512a-49a9-8037-34f273b6901b",
 										"exec": [
 											""
 										],
@@ -1576,7 +1576,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "230e6c2c-2da7-4012-82ed-718e32782f50",
+										"id": "f080b15c-a9bb-47de-a1ac-bad4418a722c",
 										"exec": [
 											""
 										],
@@ -1595,28 +1595,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"raw": "{{CPProcHost}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1633,7 +1633,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c6dd5f9b-ec71-425a-aaea-9c66cb416d61",
+										"id": "72c98cda-a105-4c86-9e53-f0f6c024601a",
 										"exec": [
 											""
 										],
@@ -1643,7 +1643,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2ef6b243-15f5-495e-9440-6f928a71be0d",
+										"id": "2ff76227-a4c0-4406-8996-644c9d36c4c6",
 										"exec": [
 											""
 										],
@@ -1662,28 +1662,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
+									"raw": "{{CPProcHost}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1700,7 +1700,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d04a5c1a-a48d-4ab3-ab95-e357ae25dfc7",
+										"id": "86997e3f-b905-4378-9146-ad187e1eaad1",
 										"exec": [
 											""
 										],
@@ -1710,7 +1710,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f00d1ead-d337-4de9-a871-5593bb284b29",
+										"id": "7165ff27-2f66-41b8-a5d0-f620782a99be",
 										"exec": [
 											""
 										],
@@ -1729,28 +1729,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
+									"raw": "{{CPProcHost}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1768,7 +1768,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "34dfa1e0-7317-4dcb-91eb-6375e19fd7c9",
+										"id": "d31b07bd-f9dc-4ea4-b208-0d7b72fb0a4c",
 										"exec": [
 											""
 										],
@@ -1778,7 +1778,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "48c63d92-9e11-447c-8584-b7b1d410c3bd",
+										"id": "4941c1fe-1085-4081-9566-3ac6d24fd94f",
 										"exec": [
 											""
 										],
@@ -1797,28 +1797,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
+									"raw": "{{CPProcHost}}/v2/order/CPO-4a03dea5c9c242619340705f0545e65b/breakpoint/NEW",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1837,7 +1837,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "52842aa8-b124-403d-9de9-a9387c493eec",
+								"id": "d5c161b8-2753-4656-b026-1f8d9eb0bade",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1847,7 +1847,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ac570a43-3a07-4559-92fb-65829ff3f8eb",
+								"id": "5f32e39a-3b20-4c88-ad4f-1038986275ba",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1867,7 +1867,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4fa7f86a-2b02-4409-907e-7e17c6b51a8e",
+										"id": "788ff120-e89f-4673-ac30-63870b73edcc",
 										"exec": [
 											""
 										],
@@ -1877,7 +1877,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45e722dc-4609-4a45-a7d8-dd05847621e0",
+										"id": "c2e0e678-2d93-447c-b98b-1883346e9039",
 										"exec": [
 											""
 										],
@@ -1896,28 +1896,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
+									"raw": "{{CPProcHost}}/v2/rate/CRYPTO-SELL/Default?from=BTC&to=USD",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -1945,7 +1945,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "71b3eb8b-2bfb-4cca-8785-aed1bb892413",
+										"id": "a0c0a4f7-aed8-4b13-8b5e-3e9774b259a0",
 										"exec": [
 											""
 										],
@@ -1955,7 +1955,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "d53d7083-90ae-4f57-aa91-c3f59106d7c7",
+										"id": "4d908ef5-f1db-4857-8f0d-db75d142d1ec",
 										"exec": [
 											""
 										],
@@ -1974,28 +1974,28 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
+									"raw": "{{CPProcHost}}/v2/rate/CRYPTO-BUY/Default?from=USD&to=BTC",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -2023,7 +2023,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "a24ccc39-4c06-4cab-af05-79d07add25a3",
+								"id": "9265b381-c3d9-4e7d-929a-b5cfaaf83063",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2033,7 +2033,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "61f562fa-8d39-4b2c-869a-46a397a2979e",
+								"id": "0471d742-de3c-44a0-9f61-256f886da444",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2053,7 +2053,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d3dc66ce-d9ed-406c-8a42-9c3099897f8e",
+										"id": "7d2b87cc-f8c5-4019-863d-dec1355c01df",
 										"exec": [
 											""
 										],
@@ -2072,22 +2072,22 @@
 									{
 										"key": "CP-ACCESS-KEY",
 										"type": "text",
-										"value": "{{CP-ACCESS-KEY}}"
+										"value": "{{CPProcAccessKey}}"
 									},
 									{
 										"key": "CP-ACCESS-TIMESTAMP",
 										"type": "text",
-										"value": "{{CP-ACCESS-TIMESTAMP}}"
+										"value": "{{$CPProcAccessTimestamp}}"
 									},
 									{
 										"key": "CP-ACCESS-PASSPHRASE",
 										"type": "text",
-										"value": "{{CP-ACCESS-PASSPHRASE}}"
+										"value": "{{CPProcPassphrase}}"
 									},
 									{
 										"key": "CP-ACCESS-SIGN",
 										"type": "text",
-										"value": "{{CP-ACCESS-SIGN}}"
+										"value": "{{$CPProcSignature}}"
 									}
 								],
 								"body": {
@@ -2098,9 +2098,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cryptopay.apiBaseUrl}}/v2/risk/score",
+									"raw": "{{CPProcHost}}/v2/risk/score",
 									"host": [
-										"{{cryptopay.apiBaseUrl}}"
+										"{{CPProcHost}}"
 									],
 									"path": [
 										"v2",
@@ -2117,7 +2117,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "da42242f-c613-4969-9985-e2a74cfd5f88",
+								"id": "0a69dad7-4ca8-4f8b-93a3-2c5595b74e80",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2127,7 +2127,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b2d5ef44-6df3-416e-949b-153fbb65e6f0",
+								"id": "81d4d262-33af-4d10-a35f-48d6ef468f9c",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2143,7 +2143,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "fe3cf7c2-af94-49ce-ae3d-4eae1d68023c",
+						"id": "5934e2c1-899e-4b95-b324-38a36bf8ced4",
 						"type": "text/javascript",
 						"exec": [
 							"// Libs",
@@ -2185,18 +2185,14 @@
 							"    return value;",
 							"}",
 							"",
-							"const key = readEnvValue(\"cryptopay.apiKey\");",
-							"const passphrase = readEnvValue(\"cryptopay.apiPassphrase\");",
-							"const secret = readEnvValue(\"cryptopay.apiSecret\");",
-							"",
+							"const secret = readEnvValue(\"CPProcSecret\");",
 							"const timestamp = Date.now() / 1000;",
+							"",
 							"const sign = signature(secret, timestamp);",
 							"",
 							"// Save variables to use inside requests",
-							"pm.variables.set(\"CP-ACCESS-TIMESTAMP\", timestamp);",
-							"pm.variables.set(\"CP-ACCESS-KEY\", key);",
-							"pm.variables.set(\"CP-ACCESS-PASSPHRASE\", passphrase);",
-							"pm.variables.set(\"CP-ACCESS-SIGN\", sign);",
+							"pm.variables.set(\"$CPProcAccessTimestamp\", timestamp);",
+							"pm.variables.set(\"$CPProcSignature\", sign);",
 							""
 						]
 					}
@@ -2204,7 +2200,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "97aa4084-7d3d-4d05-9dba-856fbccd585e",
+						"id": "bb08951b-051e-4aaa-9945-27b0b750d6d4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2219,30 +2215,29 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8352a33d-9bd4-4ed9-9c12-933fe7e16bf5",
+				"id": "823db975-4ec2-4684-bf35-b34cfa0fe8bf",
 				"type": "text/javascript",
 				"exec": [
 					"// Libs",
 					"const pc = require(\"postman-collection\");",
 					"",
 					"// Default cryptopay.apiBaseUrl is https://sandbox.cryptopay.band",
-					"if (!pm.environment.has(\"cryptopay.apiBaseUrl\")) {",
-					"    pm.environment.set(\"cryptopay.apiBaseUrl\", \"https://sandbox.cryptopay.band\");",
+					"if (!pm.environment.has(\"CPProcHost\")) {",
+					"    pm.environment.set(\"CPProcHost\", \"https://sandbox.cryptopay.band\");",
 					"} else {",
-					"    let apiUrl = pm.environment.get(\"cryptopay.apiBaseUrl\")",
+					"    let apiUrl = pm.environment.get(\"CPProcHost\")",
 					"    while(apiUrl.endsWith(\"/\")) {",
 					"        apiUrl = apiUrl.substring(0, apiUrl.length - 1);",
 					"    }",
-					"    pm.environment.set(\"cryptopay.apiBaseUrl\", apiUrl);",
-					"}",
-					""
+					"    pm.environment.set(\"CPProcHost\", apiUrl);",
+					"}"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "b25595c0-3440-4fbd-9fef-a0e67d01ce96",
+				"id": "061c5f97-fd3e-4a77-b0da-3cdd830ffa3f",
 				"type": "text/javascript",
 				"exec": [
 					""
