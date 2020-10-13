@@ -6,7 +6,7 @@
 	"amount": "0.052",
 	"currency": "BTC",
 	"networkFeeLevel": "AVERAGE",
-	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"destinationAddress": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "PENDING",
 	"createdAt": "2020-01-16T12:56:07.111Z"
 }

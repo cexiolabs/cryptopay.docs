@@ -5,7 +5,7 @@
 	"amount": "0.052",
 	"currency": "XRP",
 	"networkFeeLevel": "AVERAGE",
-	"address": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"destinationAddress": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"destinationTag": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	"status": "PENDING",
 	"date": null,
