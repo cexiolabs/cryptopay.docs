@@ -621,6 +621,18 @@ In general, any notifications system by design may delay messages. Good practice
 <td>Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
 </tr>
 <tr>
+<td><strong>ORDER-CRYPTO_BUY</strong></td>
+<td>CRYPTO_BUY instument related messages ONLY. Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+</tr>
+<tr>
+<td><strong>ORDER-CRYPTO_SELL</strong></td>
+<td>CRYPTO_SELL instument related messages ONLY. Emit messages when <code>order</code>'s <code>status</code> and/or <code>state</code> have been changed. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+</tr>
+<tr>
+<td><strong>ORDER-CRYPTO_SELL-PAIDSTATUS</strong></td>
+<td>CRYPTO_SELL instument related messages ONLY. Emit a message when <code>status</code> = PENDING, <code>state</code> = AWAT_DEPOSIT and <code>paidStatus</code> in (PAID, OVERPAID, PARTLY_PAID) situation happened. Message body same as response of <a href="../api/#fetch-order">Fetch order</a></td>
+</tr>
+<tr>
 <td><strong>DEPOSIT</strong></td>
 <td>Emit messages when <code>deposit</code> detected/updated. Message body same as response of <a href="../api/#fetch-deposit">Fetch deposit</a></td>
 </tr>

@@ -2483,7 +2483,7 @@ with client identifier prevents potential order duplicates.</p>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Withdrawal section difference according currency selector</p>
-<p>Most of crytpo currencies provide just "address" as target for funds transfer. But some crypto currencies have extended fields. For example XRP has field "destinationTag" and XLM has field "memo". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
+<p>Most of crytpo currencies provide just "destinationAddress" as target for funds transfer. But some crypto currencies have extended fields. For example XRP has field "destinationTag" and XLM has field "memo". See <a href="https://medium.com/atomic-wallet/what-is-destination-tag-for-xrp-xlm-and-monero-transfers-b956628b1ede">this</a> post to get knowledge.</p>
 </div>
 <p><strong>Request/Response</strong></p>
 <div class="tabbed-set" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">BTC (Bitcoin)</label><div class="tabbed-content">
@@ -3234,7 +3234,7 @@ There is no way to get generated key again, only generation of new key available
     <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+        <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="err">&lt;--</span>
@@ -3300,7 +3300,7 @@ There is no way to get generated key again, only generation of new key available
     <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+        <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="err">&lt;--</span>
@@ -3496,7 +3496,7 @@ There is no way to get generated key again, only generation of new key available
     <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;XRP&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
         <span class="nt">&quot;destinationTag&quot;</span><span class="p">:</span> <span class="s2">&quot;0123456789&quot;</span> <span class="err">//</span> <span class="mi">32</span><span class="err">-bit</span> <span class="err">unsigned</span> <span class="err">integer.</span> <span class="err">See</span> <span class="err">https</span><span class="p">:</span><span class="err">//xrpl.org/source-and-destination-tags.html</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -3509,7 +3509,7 @@ There is no way to get generated key again, only generation of new key available
     <span class="nt">&quot;withdrawal&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;XLM&quot;</span><span class="p">,</span>
         <span class="nt">&quot;networkFeeLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;AVERAGE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;destinationAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="p">,</span>
         <span class="nt">&quot;memo&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span> <span class="err">//</span> <span class="err">See</span> <span class="err">https</span><span class="p">:</span><span class="err">//www.stellar.org/developers/guides/concepts/transactions.html#memo</span>
     <span class="p">}</span>
 <span class="p">}</span>
